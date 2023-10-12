@@ -16,11 +16,11 @@ const products = [
     {id: '9', key: '9', title:'Остров', price: 50000000, description: 'Маленький остров в Тихом океане'},
     {id: '10', key: '10', title:'Молоко', price: 100, description: 'Домик в деревне 3,2%'},
 ]
- const getTotalPrice = (items) => {
-    return items.reduce((acc, item)=>{
-        return acc+= item.price * item.count
+const getTotalPrice = (items = []) => {
+    return items.reduce((acc, item) => {
+        return acc += item.price
     }, 0)
- }
+}
 const ProductList = () => {
 
     const [addedItems, setAddedItems] = useState([])

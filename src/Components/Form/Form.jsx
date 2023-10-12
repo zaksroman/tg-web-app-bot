@@ -48,7 +48,6 @@ const Form = () => {
     }
 
     const inputElement = document.getElementById("input");
-
     const handleOutsideClick = (event) => {
         if (event.target !== inputElement) {
             inputElement.blur();
