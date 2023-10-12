@@ -47,6 +47,17 @@ const Form = () => {
         setSubject(e.target.value)
     }
 
+    const inputElement = document.getElementById("input");
+
+    const handleOutsideClick = (event) => {
+        // Проверяем, был ли клик выполнен вне инпута
+        if (event.target !== inputElement) {
+            // Скрытие клавиатуры и отключение активного состояния инпута
+            inputElement.blur();
+        }
+    };
+    document.addEventListener("click", handleOutsideClick);
+
     return (
         <div className={'form'}>
             <h3>Введите ваши данные</h3>
@@ -56,6 +67,7 @@ const Form = () => {
                 placeholder={'Город'}
                 value={city}
                 onChange={onChangeCity}
+                id={"input"}
             />
             <input
                 className={'input'}
@@ -63,6 +75,7 @@ const Form = () => {
                 placeholder={'Уица'}
                 value={street}
                 onChange={onChangeStreet}
+                id={"input"}
             />
             <select value={subject} onChange={onChangeSubject} className={'select'}>
                 <option value={'physical'}>Физ. лицо</option>
