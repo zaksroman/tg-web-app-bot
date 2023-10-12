@@ -50,9 +50,7 @@ const Form = () => {
     const inputElement = document.getElementById("input");
 
     const handleOutsideClick = (event) => {
-        // Проверяем, был ли клик выполнен вне инпута
         if (event.target !== inputElement) {
-            // Скрытие клавиатуры и отключение активного состояния инпута
             inputElement.blur();
         }
     };
