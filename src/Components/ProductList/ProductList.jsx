@@ -94,7 +94,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            <button onClick={onSendData}>test</button>
+            {/*<button onClick={onSendData}>test</button>*/}
             {products.map(product => {
                 const addedItem = addedItems.find(el => el.id === product.id)
                 return (
