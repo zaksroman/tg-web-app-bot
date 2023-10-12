@@ -32,7 +32,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('http://localhost:8000/web-data', {
+        fetch('http://localhost:3000', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            <button onClick={onSendData}>test</button>
+            {/*<button onClick={onSendData}>test</button>*/}
             {products.map(item => (
                 <ProductItem
                     product={item}
