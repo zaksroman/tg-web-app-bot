@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Counter.css'
 const Counter = (props) => {
 
     const onIncrease = (e) => {
@@ -11,10 +11,10 @@ const Counter = (props) => {
     }
 
     return (
-        <div>
-            <button onClick={onDecrease}>-</button>
-            <h3>{props.count}</h3>
-            <button onClick={onIncrease}>+</button>
+        <div className="counter">
+            <button onClick={onDecrease} className="btn">-</button>
+            <h3 className="number">{props.count}</h3>
+            <button onClick={onIncrease} className="btn">+</button>
         </div>
     );
 };

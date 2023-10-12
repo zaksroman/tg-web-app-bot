@@ -5,6 +5,7 @@ import Counter from "./Counter";
 
 const ProductItem = ({product, className, onAdd, count, increase, decrease}) => {
 
+
     const onAddHandler = () => {
         onAdd({...product, count:1})
     }
