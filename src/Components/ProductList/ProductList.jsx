@@ -82,7 +82,6 @@ const ProductList = () => {
         setAddedItems(newCount)
     }
     const decrease = (id) => {
-        debugger
         const newCount = addedItems.map(obj => {
             if (obj.id === id) {
                 return { ...obj, count: obj.count - 1 };
@@ -94,7 +93,7 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            {/*<button onClick={onSendData}>test</button>*/}
+            <button onClick={onSendData}>test</button>
             {products.map(product => {
                 const addedItem = addedItems.find(el => el.id === product.id)
                 return (
