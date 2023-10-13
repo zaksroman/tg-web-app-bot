@@ -51,14 +51,16 @@ const ProductList = () => {
 
     const onAdd = (product) => {
 
-        const alreadyAdded = addedItems.find(item => item.id === product.id)
+        // const alreadyAdded = addedItems.find(item => item.id === product.id)
         let newItems = []
 
-        if (alreadyAdded) {
-            newItems = addedItems.filter(item => item.count !== 0)
-        } else {
+        if (product.count !== 0) {
+            // newItems = addedItems.filter(item => item.count !== 0)
             newItems = [...addedItems, product]
         }
+        // else {
+        //     newItems = [...addedItems, product]
+        // }
 
         setAddedItems(newItems)
 
@@ -81,6 +83,7 @@ const ProductList = () => {
         })
         setAddedItems(newCount)
     }
+
     const decrease = (id) => {
         const newCount = addedItems.map(obj => {
             if (obj.id === id) {
