@@ -1,18 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './Form.css'
 import {useTelegram} from "../hooks/useTelegram";
-import { StyleSheet, View, TextInput } from 'react-native';
-import { Input } from 'react-native-elements';
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    input: {
-    },
-});
 
 const Form = () => {
 
@@ -72,18 +61,16 @@ const Form = () => {
     return (
         <div className={'form'}>
             <h3>Введите ваши данные</h3>
-            <Input
-                inputStyle={styles.input}
-                // className={'input'}
+            <input
+                className={'input'}
                 type="text"
                 placeholder={'Город'}
                 value={city}
                 onChange={onChangeCity}
                 id={"input"}
             />
-            <Input
-                inputStyle={styles.input}
-                // className={'input'}
+            <input
+                className={'input'}
                 type="text"
                 placeholder={'Уица'}
                 value={street}
