@@ -83,7 +83,6 @@ const ProductList = () => {
             return obj;
         })
         setAddedItems(newCount)
-        onAdd()
     }
 
     const decrease = (id) => {
@@ -94,7 +93,6 @@ const ProductList = () => {
             return obj;
         }).filter(obj => obj.count!==0)
         setAddedItems(newCount)
-        onAdd()
     }
 
     return (

@@ -4,10 +4,12 @@ const Counter = (props) => {
 
     const onIncrease = (e) => {
         props.increase(props.id)
+        props.onAddHandler()
     }
 
     const onDecrease = (e) => {
         props.decrease(props.id)
+        props.onAddHandler()
     }
 
     return (
