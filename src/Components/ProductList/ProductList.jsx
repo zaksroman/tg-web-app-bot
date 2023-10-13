@@ -5,16 +5,16 @@ import {useTelegram} from "../hooks/useTelegram";
 
 
 const products = [
-    {id: '1', key: '1', title:'Рюкзак', price: 5000, description: 'Походный, большого объема'},
-    {id: '2', key: '2', title:'Подушка для сна', price: 1000, description: 'Самая мягкая подушка'},
-    {id: '3', key: '3', title:'Мягкая игрушка "Гусь"', price: 2000, description: 'Согреет вас ночью'},
-    {id: '4', key: '4', title:'Зарядка для телефона', price: 1000, description: 'Высокой мощьности'},
-    {id: '5', key: '5', title:'Зубная паста', price: 200, description: 'Отбеливающая'},
-    {id: '6', key: '6', title:'Уран 235', price: 1, description: 'Топливо для вашей АЭС'},
-    {id: '7', key: '7', title:'Телевизор', price: 50000, description: 'Высокого разрешения'},
-    {id: '8', key: '8', title:'Нефтяная вышка', price: 10000000, description: 'Высокодебитная'},
-    {id: '9', key: '9', title:'Остров', price: 50000000, description: 'Маленький остров в Тихом океане'},
-    {id: '10', key: '10', title:'Молоко', price: 100, description: 'Домик в деревне 3,2%'},
+    {id: '1', key: '1', title:'Рюкзак', price: 5000, description: 'Походный, большого объема', img: new Image()  },
+    {id: '2', key: '2', title:'Подушка для сна', price: 1000, description: 'Самая мягкая подушка', img: new Image()  },
+    {id: '3', key: '3', title:'Мягкая игрушка "Гусь"', price: 2000, description: 'Согреет вас ночью', img: new Image()  },
+    {id: '4', key: '4', title:'Зарядка для телефона', price: 1000, description: 'Высокой мощьности', img: new Image()  },
+    {id: '5', key: '5', title:'Зубная паста', price: 200, description: 'Отбеливающая', img: new Image()  },
+    {id: '6', key: '6', title:'Уран 235', price: 1, description: 'Топливо для вашей АЭС', img: new Image()  },
+    {id: '7', key: '7', title:'Телевизор', price: 50000, description: 'Высокого разрешения', img: new Image()  },
+    {id: '8', key: '8', title:'Нефтяная вышка', price: 10000000, description: 'Высокодебитная', img: new Image()  },
+    {id: '9', key: '9', title:'Остров', price: 50000000, description: 'Маленький остров в Тихом океане', img: new Image()  },
+    {id: '10', key: '10', title:'Молоко', price: 100, description: 'Домик в деревне 3,2%', img: new Image()  },
 ]
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
@@ -33,7 +33,7 @@ const ProductList = () => {
             queryId: queryId,
         }
 
-        fetch('http://localhost:8000/web-data', {
+        fetch('http://45.140.179.236:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

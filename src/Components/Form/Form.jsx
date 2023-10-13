@@ -7,6 +7,7 @@ const Form = () => {
 
     const [city, setCity] = useState('')
     const [street, setStreet] = useState('')
+    const [fio, setFio] = useState('')
     const [subject, setSubject] = useState('physical')
     const {tg} = useTelegram()
 
@@ -45,6 +46,9 @@ const Form = () => {
     const onChangeStreet = (e) =>{
         setStreet(e.target.value)
     }
+    const onChangeFio = (e) =>{
+        setFio(e.target.value)
+    }
     const onChangeSubject = (e) =>{
         setSubject(e.target.value)
     }
@@ -75,6 +79,14 @@ const Form = () => {
                 placeholder={'Уица'}
                 value={street}
                 onChange={onChangeStreet}
+                id={"input"}
+            />
+            <input
+                className={'input'}
+                type="text"
+                placeholder={'Имя Фамилия'}
+                value={fio}
+                onChange={onChangeFio}
                 id={"input"}
             />
             <select value={subject} onChange={onChangeSubject} className={'select'}>
