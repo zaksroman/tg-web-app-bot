@@ -30,7 +30,7 @@ const ProductList = () => {
         const data = {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
-            queryId,
+            queryId: queryId,
         }
 
         fetch('http://localhost:8000/web-data', {
@@ -87,7 +87,6 @@ const ProductList = () => {
 
     return (
         <div className={'list'}>
-            <button onClick={onSendData}>test</button>
             {products.map(product => {
                 const addedItem = addedItems.find(el => el.id === product.id)
                 return (
