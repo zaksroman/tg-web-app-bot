@@ -3,6 +3,17 @@ import './Form.css'
 import {useTelegram} from "../hooks/useTelegram";
 import { StyleSheet, View, TextInput } from 'react-native';
 import { Input } from 'react-native-elements';
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    input: {
+    },
+});
+
 const Form = () => {
 
     const [city, setCity] = useState('')
@@ -57,15 +68,6 @@ const Form = () => {
     };
     document.addEventListener("click", handleOutsideClick);
 
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-        },
-        input: {
-        },
-    });
 
     return (
         <div className={'form'}>
