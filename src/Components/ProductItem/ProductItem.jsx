@@ -29,7 +29,6 @@ const ProductItem = ({product, className, onAdd, count, increase, decrease}) => 
 
             {!!count && (
                 <Counter
-                    onAddHandler={onAddHandler}
                     id={product.id}
                     count={count}
                     increase={increase}
