@@ -76,6 +76,7 @@ const ProductList = () => {
         setAddedItems(newCount)
     }
 
+
     if (newItems.length === 0) {
         tg.MainButton.hide()
     } else {
@@ -100,6 +101,14 @@ const ProductList = () => {
                     className={'item'}
                 />
             )})}
+            {
+                newItems.length === 0 ?
+                    tg.MainButton.hide() :
+                    tg.MainButton.show()
+            //     tg.MainButton.setParams({
+            //     text: `Купить ${getTotalPrice(newItems)}`
+            // })
+            }
         </div>
     );
 };
