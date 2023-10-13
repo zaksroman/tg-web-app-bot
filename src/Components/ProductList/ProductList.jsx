@@ -53,7 +53,7 @@ const ProductList = () => {
 
         // const alreadyAdded = addedItems.find(item => item.id === product.id)
         let newItems = []
-        newItems = [...addedItems, product].filter(obj => product.count !== 0)
+        newItems = [...addedItems, product].filter(product => product.count !== 0)
 
         // if (product.count !== 0) {
         //     // newItems = addedItems.filter(item => item.id !== product.id)
