@@ -53,11 +53,12 @@ const ProductList = () => {
 
         // const alreadyAdded = addedItems.find(item => item.id === product.id)
         let newItems = []
+        newItems = [...addedItems, product]
 
-        if (product.count !== 0) {
-            // newItems = addedItems.filter(item => item.count !== 0)
-            newItems = [...addedItems, product]
-        }
+        // if (product.count !== 0) {
+        //     // newItems = addedItems.filter(item => item.id !== product.id)
+        //     newItems = [...addedItems, product]
+        // }
         // else {
         //     newItems = [...addedItems, product]
         // }
