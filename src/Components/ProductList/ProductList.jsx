@@ -64,6 +64,15 @@ const ProductList = () => {
             return obj;
         })
         setAddedItems(newCount)
+
+        if (newItems.length === 0) {
+            tg.MainButton.hide()
+        } else {
+            tg.MainButton.show()
+            tg.MainButton.setParams({
+                text: `Купить ${getTotalPrice(newItems)}`
+            })
+        }
     }
 
     const decrease = (id) => {
@@ -77,14 +86,7 @@ const ProductList = () => {
     }
 
 
-    if (newItems.length === 0) {
-        tg.MainButton.hide()
-    } else {
-        tg.MainButton.show()
-        tg.MainButton.setParams({
-            text: `Купить ${getTotalPrice(newItems)}`
-        })
-    }
+
 
     return (
         <div className={'list'}>
