@@ -8,6 +8,7 @@ const Form = () => {
     const [city, setCity] = useState('')
     const [street, setStreet] = useState('')
     const [fio, setFio] = useState('')
+    const [number, setNumber] = useState('')
     const [subject, setSubject] = useState('physical')
     const {tg} = useTelegram()
 
@@ -15,7 +16,8 @@ const Form = () => {
         const data = {
             city,
             street,
-            subject
+            subject,
+            fio
         }
         tg.sendData(JSON.stringify(data))
     },[city, street, subject])
@@ -34,7 +36,7 @@ const Form = () => {
     }, [])
 
     useEffect( ()=> {
-        if (!street || !city){
+        if (!street || !city || !fio || !number){
             tg.MainButton.hide()
         } else {
             tg.MainButton.show()
@@ -52,6 +54,11 @@ const Form = () => {
     const onChangeSubject = (e) =>{
         setSubject(e.target.value)
     }
+
+    const onChangeNumber = (e) =>{
+        setNumber(e.target.value)
+    }
+
 
     const inputElement = document.getElementById("input");
     const handleOutsideClick = (event) => {
@@ -76,7 +83,7 @@ const Form = () => {
             <input
                 className={'input'}
                 type="text"
-                placeholder={'Уица'}
+                placeholder={'Улица'}
                 value={street}
                 onChange={onChangeStreet}
                 id={"input"}
@@ -87,6 +94,14 @@ const Form = () => {
                 placeholder={'Имя Фамилия'}
                 value={fio}
                 onChange={onChangeFio}
+                id={"input"}
+            />
+            <input
+                className={'input'}
+                type="number"
+                placeholder={'Номер телефона'}
+                value={number}
+                onChange={onChangeNumber}
                 id={"input"}
             />
             <select value={subject} onChange={onChangeSubject} className={'select'}>
