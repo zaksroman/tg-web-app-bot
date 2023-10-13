@@ -51,9 +51,20 @@ const ProductList = () => {
 
 
     let newItems = []
+
+    if (newItems.length === 0) {
+        tg.MainButton.hide()
+    } else {
+        tg.MainButton.show()
+        tg.MainButton.setParams({
+            text: `Купить ${getTotalPrice(newItems)}`
+        })
+    }
+
     const onAdd = (product) => {
         newItems = [...addedItems, product].filter(product => product.count !== 0)
         setAddedItems(newItems)
+
     }
 
     const increase = (id) => {
@@ -64,15 +75,6 @@ const ProductList = () => {
             return obj;
         })
         setAddedItems(newCount)
-
-        if (newItems.length === 0) {
-            tg.MainButton.hide()
-        } else {
-            tg.MainButton.show()
-            tg.MainButton.setParams({
-                text: `Купить ${getTotalPrice(newItems)}`
-            })
-        }
     }
 
     const decrease = (id) => {
