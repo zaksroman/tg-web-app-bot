@@ -49,30 +49,11 @@ const ProductList = () => {
         }
     }, [onSendData])
 
+
+    let newItems = []
     const onAdd = (product) => {
-
-        // const alreadyAdded = addedItems.find(item => item.id === product.id)
-        let newItems = []
         newItems = [...addedItems, product].filter(product => product.count !== 0)
-
-        // if (product.count !== 0) {
-        //     // newItems = addedItems.filter(item => item.id !== product.id)
-        //     newItems = [...addedItems, product]
-        // }
-        // else {
-        //     newItems = [...addedItems, product]
-        // }
-
         setAddedItems(newItems)
-
-        if (newItems.length === 0) {
-            tg.MainButton.hide()
-        } else {
-            tg.MainButton.show()
-            tg.MainButton.setParams({
-                text: `Купить ${getTotalPrice(newItems)}`
-            })
-        }
     }
 
     const increase = (id) => {
@@ -93,6 +74,15 @@ const ProductList = () => {
             return obj;
         }).filter(obj => obj.count!==0)
         setAddedItems(newCount)
+    }
+
+    if (newItems.length === 0) {
+        tg.MainButton.hide()
+    } else {
+        tg.MainButton.show()
+        tg.MainButton.setParams({
+            text: `Купить ${getTotalPrice(newItems)}`
+        })
     }
 
     return (
