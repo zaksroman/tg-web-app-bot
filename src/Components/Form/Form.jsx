@@ -17,7 +17,8 @@ const Form = () => {
             city,
             street,
             subject,
-            fio
+            fio,
+            number
         }
         tg.sendData(JSON.stringify(data))
     },[city, street, subject])
@@ -41,7 +42,7 @@ const Form = () => {
         } else {
             tg.MainButton.show()
         }
-    },[city, street])
+    },[city, street, subject, fio, number])
     const onChangeCity = (e) =>{
         setCity(e.target.value)
     }
