@@ -52,7 +52,7 @@ const ProductList = () => {
     const onAdd = (product) => {
 
         let newItems = []
-        newItems = [...addedItems, product].filter(product => product.count !== 0)
+        newItems = [...addedItems, product]
         setAddedItems(newItems)
 
         if (newItems.length === 0) {
@@ -84,9 +84,6 @@ const ProductList = () => {
         }).filter(obj => obj.count!==0)
         setAddedItems(newCount)
     }
-
-
-
 
     return (
         <div className={'list'}>
