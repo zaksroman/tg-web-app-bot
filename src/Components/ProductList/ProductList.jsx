@@ -49,22 +49,20 @@ const ProductList = () => {
         }
     }, [onSendData])
 
-
-    let newItems = []
-
-    if (newItems.length === 0) {
-        tg.MainButton.hide()
-    } else {
-        tg.MainButton.show()
-        tg.MainButton.setParams({
-            text: `Купить ${getTotalPrice(newItems)}`
-        })
-    }
-
     const onAdd = (product) => {
+
+        let newItems = []
         newItems = [...addedItems, product].filter(product => product.count !== 0)
         setAddedItems(newItems)
 
+        if (newItems.length === 0) {
+            tg.MainButton.hide()
+        } else {
+            tg.MainButton.show()
+            tg.MainButton.setParams({
+                text: `Купить ${getTotalPrice(newItems)}`
+            })
+        }
     }
 
     const increase = (id) => {
