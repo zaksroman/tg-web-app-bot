@@ -15,11 +15,11 @@ const ProductItem = ({product, className, onAdd, count, increase, decrease}) => 
     }
 
     return (
-        <div className={'product ' + className} onClick={handleClick}>
-            <div className={'img'}></div>
-            <div className={'title'}>{product.title}</div>
-            <div className={'description'}>{product.description}</div>
-            <div className={'price'}>
+        <div className={'product ' + className} >
+            <div className={'img'} onClick={handleClick}></div>
+            <div className={'title'} onClick={handleClick}>{product.title}</div>
+            <div className={'description'} onClick={handleClick}>{product.description}</div>
+            <div className={'price'} onClick={handleClick}>
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
 
