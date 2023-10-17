@@ -3,9 +3,10 @@ import './ProductItem.css'
 import Button from "../../Button/Button";
 import Counter from "../Counter";
 import {useNavigate} from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
+const ProductItem = ({product, className, count, increase, decrease}) => {
 
-const ProductItem = ({product, className, onAdd, count, increase, decrease}) => {
-
+    const dispatch = useDispatch();
     const navigate = useNavigate()
     const handleClick = (event) => {
         if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
@@ -14,7 +15,7 @@ const ProductItem = ({product, className, onAdd, count, increase, decrease}) => 
     }
 
     const onAddHandler = () => {
-        onAdd({...product, count:1})
+        dispatch({ type: 'ADD_ITEM', payload: {...product, count:1} })
     }
 
     return (
