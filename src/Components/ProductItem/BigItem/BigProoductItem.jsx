@@ -37,6 +37,7 @@ const BigProoductItem = (props) => {
 
             {!!count && (
                 <Counter
+                    id={props.product.id}
                     count={count}
                 />)}
         </div>
