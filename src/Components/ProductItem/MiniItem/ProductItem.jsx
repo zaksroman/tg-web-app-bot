@@ -8,7 +8,7 @@ const ProductItem = ({product, className, onAdd, count, increase, decrease}) => 
 
     const navigate = useNavigate()
     const handleClick = (event) => {
-        if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'SPAN') {
+        if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
             navigate('/bigproructitem');
         }
     }
