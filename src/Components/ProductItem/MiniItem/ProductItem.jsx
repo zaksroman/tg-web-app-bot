@@ -8,18 +8,21 @@ const ProductItem = ({product, className, onAdd, count, increase, decrease}) => 
 
     const navigate = useNavigate()
     const handleClick = (event) => {
-        navigate('/bigproructitem');
+        if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'SPAN') {
+            navigate('/bigproructitem');
+        }
     }
+
     const onAddHandler = () => {
         onAdd({...product, count:1})
     }
 
     return (
-        <div className={'product ' + className} >
-            <div className={'img'} onClick={handleClick}></div>
-            <div className={'title'} onClick={handleClick}>{product.title}</div>
-            <div className={'description'} onClick={handleClick}>{product.description}</div>
-            <div className={'price'} onClick={handleClick}>
+        <div className={'product ' + className} onClick={handleClick}>
+            <div className={'img'} ></div>
+            <div className={'title'} >{product.title}</div>
+            <div className={'description'} >{product.description}</div>
+            <div className={'price'} >
                 <span>Стоимость: <b>{product.price}</b></span>
             </div>
 
