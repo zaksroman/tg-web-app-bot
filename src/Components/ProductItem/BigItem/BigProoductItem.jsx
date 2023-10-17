@@ -26,7 +26,7 @@ const BigProoductItem = (props) => {
     return (
         <div>
             <button onClick={handleClick}>BACK</button>
-            <h1>{title}</h1>
+            <h1>{title(id)}</h1>
             {!count && (
                 <Button
                     className={'add-btn'}
