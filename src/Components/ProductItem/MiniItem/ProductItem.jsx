@@ -4,8 +4,8 @@ import Button from "../../Button/Button";
 import Counter from "../Counter";
 import {useNavigate} from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-const ProductItem = ({product, className, count, increase, decrease}) => {
-
+const ProductItem = ({product, className}) => {
+    const addedItems = useSelector(state => state.addedItems);
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
@@ -18,6 +18,9 @@ const ProductItem = ({product, className, count, increase, decrease}) => {
     const onAddHandler = () => {
         dispatch({ type: 'ADD_ITEM', payload: {...product, count:1} })
     }
+
+    const addedItem = addedItems.find(el => el.id === product.id)
+    const count = addedItem?.count || 0
 
     return (
         <div className={'product ' + className} onClick={handleClick}>
@@ -40,8 +43,6 @@ const ProductItem = ({product, className, count, increase, decrease}) => {
                 <Counter
                     id={product.id}
                     count={count}
-                    increase={increase}
-                    decrease={decrease}
             />)}
         </div>
     );

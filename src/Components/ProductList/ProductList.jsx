@@ -3,7 +3,7 @@ import './ProductList.css'
 import ProductItem from "../ProductItem/MiniItem/ProductItem";
 import {useTelegram} from "../hooks/useTelegram";
 import {useNavigate} from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
+import {useSelector} from "react-redux";
 
 const products = [
     {id: '1', key: '1', title:'Рюкзак', price: 5000, description: 'Походный, большого объема', img: new Image()  },
@@ -34,8 +34,6 @@ const ProductList = () => {
         }
     }, [handleClick])
 
-
-
     if (addedItems.length === 0) {
         tg.MainButton.hide()
     } else {
@@ -45,14 +43,11 @@ const ProductList = () => {
         })
     }
 
-
     return (
         <div className={'list'}>
             {products.map(product => {
-                const addedItem = addedItems.find(el => el.id === product.id)
                 return (
                 <ProductItem
-                    count={addedItem ? addedItem.count : 0}
                     product={product}
                     className={'item'}
                 />
