@@ -16,7 +16,7 @@ const BigProoductItem = (props) => {
     }
 
     const onAddHandler = () => {
-        dispatch({ type: 'ADD_ITEM', payload: { id } })
+        dispatch({ type: 'ADD_ITEM', payload: id })
     }
 
     const title = (id) => {
@@ -27,7 +27,6 @@ const BigProoductItem = (props) => {
         <div>
             <button onClick={handleClick}>BACK</button>
             <h1>{title}</h1>
-
             {!count && (
                 <Button
                     className={'add-btn'}

@@ -11,7 +11,7 @@ const ProductItem = ({product, className}) => {
 
     const handleClick = (event) => {
         if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
-            navigate('/bigproructitem');
+            navigate(`/bigproructitem/${product.id}`);
         }
     }
 
