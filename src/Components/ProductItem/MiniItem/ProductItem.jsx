@@ -8,6 +8,7 @@ const ProductItem = ({product, className, count, increase, decrease}) => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate()
+
     const handleClick = (event) => {
         if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
             navigate('/bigproructitem');
@@ -37,7 +38,6 @@ const ProductItem = ({product, className, count, increase, decrease}) => {
 
             {!!count && (
                 <Counter
-                    onAddHandler={onAddHandler}
                     id={product.id}
                     count={count}
                     increase={increase}

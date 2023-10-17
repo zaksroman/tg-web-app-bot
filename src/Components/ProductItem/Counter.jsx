@@ -1,13 +1,16 @@
 import React from 'react';
 import './Counter.css'
+import {useDispatch} from "react-redux";
 const Counter = (props) => {
 
+    const dispatch = useDispatch()
+
     const onIncrease = (e) => {
-        props.increase(props.id)
+        dispatch({ type: 'INCREASE_ITEM', payload: props.id })
     }
 
     const onDecrease = (e) => {
-        props.decrease(props.id)
+        dispatch({ type: 'DECREASE_ITEM', payload: props.id })
     }
 
     return (

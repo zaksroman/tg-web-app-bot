@@ -20,7 +20,6 @@ const products = [
 
 const ProductList = () => {
     const addedItems = useSelector(state => state.addedItems);
-
     const navigate = useNavigate();
     const {tg, queryId} = useTelegram()
 
@@ -46,24 +45,6 @@ const ProductList = () => {
         })
     }
 
-    // const increase = (id) => {
-    //     const newCount = addedItems.map(obj => {
-    //         if (obj.id === id) {
-    //             return { ...obj, count: obj.count + 1 };
-    //         }
-    //         return obj;
-    //     })
-    //
-    // }
-    //
-    // const decrease = (id) => {
-    //     const newCount = addedItems.map(obj => {
-    //         if (obj.id === id) {
-    //             return { ...obj, count: obj.count - 1 };
-    //         }
-    //         return obj;
-    //     }).filter(obj => obj.count!==0)
-    // }
 
     return (
         <div className={'list'}>
