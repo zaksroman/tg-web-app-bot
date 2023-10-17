@@ -1,17 +1,21 @@
 import React, {useState} from 'react';
 import './ProductItem.css'
-import Button from "../Button/Button";
-import Counter from "./Counter";
+import Button from "../../Button/Button";
+import Counter from "../Counter";
+import {useNavigate} from "react-router-dom";
 
 const ProductItem = ({product, className, onAdd, count, increase, decrease}) => {
 
-
+    const navigate = useNavigate()
+    const handleClick = (event) => {
+        navigate('/bigproructitem');
+    }
     const onAddHandler = () => {
         onAdd({...product, count:1})
     }
 
     return (
-        <div className={'product ' + className}>
+        <div className={'product ' + className} onClick={handleClick}>
             <div className={'img'}></div>
             <div className={'title'}>{product.title}</div>
             <div className={'description'}>{product.description}</div>

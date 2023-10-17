@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './ProductList.css'
-import ProductItem from "../ProductItem/ProductItem";
+import ProductItem from "../ProductItem/MiniItem/ProductItem";
 import {useTelegram} from "../hooks/useTelegram";
 
 
@@ -61,7 +61,7 @@ const ProductList = () => {
     } else {
         tg.MainButton.show()
         tg.MainButton.setParams({
-            text: `Купить ${getTotalPrice(addedItems)}`
+            text: `Перейти в корзину`
         })
     }
 
