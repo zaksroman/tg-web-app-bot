@@ -5,6 +5,7 @@ import {Routes, Route} from "react-router-dom";
 import ProductList from "./Components/ProductList/ProductList";
 import BigProoductItem from "./Components/ProductItem/BigItem/BigProoductItem";
 import Basket from "./Components/Basket/Basket";
+import Search from "./Components/Search/Search";
 
 const products = [
     {id: '1', key: '1', title:'Рюкзак', price: 5000, description: 'Походный, большого объема', count: 0, img: new Image()  },
@@ -29,7 +30,6 @@ function App() {
 
   return (
     <div className="App">
-        <link rel="stylesheet" href=""/>
         <Routes>
             <Route index element={<ProductList products={products}/>}/>
             <Route path={'/bigproructitem/:id'} element={ <BigProoductItem products={products}/>}/>

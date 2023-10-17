@@ -1,11 +1,13 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './ProductList.css'
 import ProductItem from "../ProductItem/MiniItem/ProductItem";
 import {useTelegram} from "../hooks/useTelegram";
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
+import Search from "../Search/Search";
 
 const ProductList = (props) => {
+    const filteredProducts = useSelector(state => state.filteredProducts);
     const addedItems = useSelector(state => state.addedItems);
     const navigate = useNavigate();
     const {tg} = useTelegram()
@@ -31,14 +33,17 @@ const ProductList = (props) => {
     }
 
     return (
-        <div className={'list'}>
-            {props.products.map(product => {
-                return (
-                <ProductItem
-                    product={product}
-                    className={'item'}
-                />
-            )})}
+        <div>
+            <Search/>
+                <div className={'list'}>
+                    {filteredProducts.map(product => {
+                        return (
+                            <ProductItem
+                                product={product}
+                                className={'item'}
+                            />
+                        )})}
+                </div>
         </div>
     );
 };

@@ -1,9 +1,9 @@
 import { createStore } from 'redux';
 
 const initialState = {
-    addedItems: []
+    addedItems: [],
+    filteredProducts: []
 };
-
 
 function rootReducer(state = initialState, action) {
     switch (action.type) {
@@ -26,6 +26,8 @@ function rootReducer(state = initialState, action) {
                     item.id === action.payload ? { ...item, count: item.count - 1 } : item
                 ).filter(item => item.count !== 0)
             };
+        case 'SET_FILTERED_PRODUCTS':
+            return { ...state, filteredProducts: action.payload };
         default:
             return state;
     }
