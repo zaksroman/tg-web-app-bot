@@ -8,21 +8,25 @@ const BigProoductItem = (props) => {
 
     const { id } = useParams()
     const dispatch = useDispatch();
+    const addedItems = useSelector(state => state.addedItems)
     const count = useSelector(state => state.addedItems.find(el => el.id === id))?.count || 0
-
     const navigate = useNavigate()
     const handleClick = (event) => {
         navigate('/')
     }
 
     const onAddHandler = () => {
-        dispatch({ type: 'ADD_ITEM', payload: id })
+        dispatch({ type: 'ADD_ITEM', payload: { id } })
+    }
+
+    const title = (id) => {
+        return addedItems.find((product)=> product.id === id ).title
     }
 
     return (
         <div>
             <button onClick={handleClick}>BACK</button>
-            <h1>BigProoductItem</h1>
+            <h1>{title}</h1>
 
             {!count && (
                 <Button
