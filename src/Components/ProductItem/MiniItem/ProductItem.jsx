@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './ProductItem.css'
 import Button from "../../Button/Button";
 import Counter from "../Counter";
@@ -16,7 +16,7 @@ const ProductItem = ({product, className}) => {
     }
 
     const onAddHandler = () => {
-        dispatch({ type: 'ADD_ITEM', payload: {...product, count:1} })
+        dispatch({ type: 'ADD_ITEM', payload: {...product, count: +1} })
     }
 
     const addedItem = addedItems.find(el => el.id === product.id)
