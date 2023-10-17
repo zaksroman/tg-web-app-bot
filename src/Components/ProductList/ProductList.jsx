@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import './ProductList.css'
 import ProductItem from "../ProductItem/MiniItem/ProductItem";
 import {useTelegram} from "../hooks/useTelegram";
+import {useNavigate} from "react-router-dom";
 
 
 const products = [
@@ -26,28 +27,33 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([])
     const {tg, queryId} = useTelegram()
 
-    const onSendData = useCallback(()=> {
-        const data = {
-            products: addedItems,
-            totalPrice: getTotalPrice(addedItems),
-            queryId: queryId,
-        }
+    const navigate = useNavigate()
+    const handleClick = (event) => {
+        navigate('/basket');
+    }
 
-        fetch('http://localhost:8000/web-data', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-    },[addedItems])
+    // const onSendData = useCallback(()=> {
+    //     const data = {
+    //         products: addedItems,
+    //         totalPrice: getTotalPrice(addedItems),
+    //         queryId: queryId,
+    //     }
+    //
+    //     fetch('http://localhost:8000/web-data', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    // },[addedItems])
 
     useEffect(()=> {
-        tg.onEvent('mainButtonClicked', onSendData)
+        tg.onEvent('mainButtonClicked', handleClick)
         return () => {
-            tg.offEvent('mainButtonClicked', onSendData)
+            tg.offEvent('mainButtonClicked', handleClick)
         }
-    }, [onSendData])
+    }, [handleClick])
 
 
     const onAdd = (product) => {
