@@ -1,9 +1,10 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
-import {useSelector} from "react-redux";
+import BasketList from "./BasketList/BasketList";
+
 
 const Basket = () => {
-    const addedItems = useSelector(state => state.addedItems);
+
 
     const navigate = useNavigate()
     const handleClick = () => {
@@ -15,7 +16,7 @@ const Basket = () => {
             <button onClick={handleClick}>BACK</button>
             <h1>Basket</h1>
             <div>
-                {addedItems}
+                <BasketList/>
             </div>
         </div>
     );
