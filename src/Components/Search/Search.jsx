@@ -37,8 +37,8 @@ const Search = () => {
     }, []);
 
     return (
-            <div>
-                <input type="text" placeholder="Поиск" value={search} onChange={searchHandler} id={"input"}/>
+            <div className={'form'}>
+                <input type="text" placeholder="Поиск" value={search} onChange={searchHandler} id={"input"} className={'input'}/>
             </div>
         )
     }

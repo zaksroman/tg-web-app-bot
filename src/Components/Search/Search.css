@@ -1,0 +1,14 @@
+.input {
+    appearance: textfield;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    touch-action: pan-x pan-y;
+}
