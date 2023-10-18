@@ -8,7 +8,7 @@ const BasketList = () => {
 
     const amount = addedItems.reduce((acc, item) => {
         return acc += item.price
-    })
+    }, 0)
 
     return (
         <div>

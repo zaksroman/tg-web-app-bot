@@ -5,7 +5,6 @@ import BasketList from "./BasketList/BasketList";
 
 const Basket = () => {
 
-
     const navigate = useNavigate()
     const handleClick = () => {
         navigate('/');
