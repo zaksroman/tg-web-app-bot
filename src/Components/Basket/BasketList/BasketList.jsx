@@ -22,7 +22,8 @@ const BasketList = () => {
                 })}
             </div>
             <div>
-                <h2>`Общая стоимость заказа ${amount}`</h2>
+                <h2>Стоимость заказа</h2>
+                <h2>{amount}</h2>
             </div>
         </div>
     );
