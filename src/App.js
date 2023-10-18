@@ -1,7 +1,7 @@
 import './App.css';
 import {useEffect} from "react";
 import {useTelegram} from "./Components/hooks/useTelegram";
-import {Routes, Route} from "react-router-dom";
+import {Routes, Route, useNavigate} from "react-router-dom";
 import ProductList from "./Components/ProductList/ProductList";
 import BigProoductItem from "./Components/ProductItem/BigItem/BigProoductItem";
 import Basket from "./Components/Basket/Basket";
@@ -10,14 +10,27 @@ import {useSelector} from "react-redux";
 function App() {
   const {tg} = useTelegram()
   const addedItems = useSelector(state => state.addedItems);
+  const navigate = useNavigate();
 
   useEffect(()=> {
     tg.ready()
   }, [])
 
+  const handleClick = () => {
+        navigate('/basket');
+  }
+
+  useEffect(()=> {
+        tg.onEvent('mainButtonClicked', handleClick)
+        return () => {
+            tg.offEvent('mainButtonClicked', handleClick)
+        }
+  }, [handleClick])
+
+
   if (addedItems.length === 0) {
         tg.MainButton.hide()
-    } else {
+  } else {
         tg.MainButton.show()
         tg.MainButton.setParams({
             text: `Перейти в корзину`
