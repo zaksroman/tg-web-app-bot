@@ -8,7 +8,7 @@ import Search from "../Search/Search";
 
 const ProductList = () => {
     const filteredProducts = useSelector(state => state.filteredProducts);
-    const addedItems = useSelector(state => state.addedItems);
+
     const navigate = useNavigate();
     const {tg} = useTelegram()
 
@@ -23,14 +23,6 @@ const ProductList = () => {
         }
     }, [handleClick])
 
-    if (addedItems.length === 0) {
-        tg.MainButton.hide()
-    } else {
-        tg.MainButton.show()
-        tg.MainButton.setParams({
-            text: `Перейти в корзину`
-        })
-    }
 
     return (
         <div>
