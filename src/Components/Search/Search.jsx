@@ -1,37 +1,45 @@
-import { useDispatch } from 'react-redux';
-import {useCallback, useEffect, useState} from "react";
+import {useDispatch, useSelector} from 'react-redux';
+import {useEffect, useState} from "react";
 
-const Search = ({ products }) => {
-    const dispatch = useDispatch();
-    const [search, setSearch] = useState('');
+const Search = () => {
+    const products = useSelector(state => state.products)
+    const dispatch = useDispatch()
+    const [search, setSearch] = useState('')
+
+    useEffect(() => {
+        filteredProducts()
+    }, [search])
 
     const searchHandler = (e) => {
-            const value = e.target.value;
-            setSearch(value);
-            filterProducts(value);
-    };
-    const filterProducts = useCallback((value) => {
-            const filteredProducts = products.filter((item) => {
-                return item.title.toLowerCase().startsWith(value.toLowerCase()) || !value;
-            });
-            dispatch({type: 'SET_FILTERED_PRODUCTS', payload: filteredProducts});
-    }, [dispatch, products]);
+            setSearch(e.target.value)
+    }
 
-    useEffect(() => {filterProducts(search);}, [search, filterProducts]);
+    const filteredProducts = () => {
+        const filterProducts = products.filter((item) => {
+            return item.title.toLowerCase().startsWith(search.toLowerCase()) || !search
+        })
 
-    const inputElement = document.getElementById("input");
-    const handleOutsideClick = (event) => {
-        if (event.target !== inputElement) {
-            inputElement.blur();
-        }
-    };
-    document.addEventListener("click", handleOutsideClick);
+        dispatch({type: 'SET_FILTERED_PRODUCTS', payload: filterProducts})
+    }
 
+    useEffect(() => {
+        const inputElement = document.getElementById("input");
+
+        const handleOutsideClick = (event) => {
+            if (event.target !== inputElement) {
+                inputElement.blur();
+            }
+        };
+        document.addEventListener("click", handleOutsideClick);
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, []);
 
     return (
             <div>
                 <input type="text" placeholder="Поиск" value={search} onChange={searchHandler} id={"input"}/>
             </div>
-        );
-    };
-    export default Search;
+        )
+    }
+    export default Search

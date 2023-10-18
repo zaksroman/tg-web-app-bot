@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import './ProductList.css'
 import ProductItem from "../ProductItem/MiniItem/ProductItem";
 import {useTelegram} from "../hooks/useTelegram";
@@ -6,13 +6,13 @@ import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 import Search from "../Search/Search";
 
-const ProductList = (props) => {
+const ProductList = () => {
     const filteredProducts = useSelector(state => state.filteredProducts);
     const addedItems = useSelector(state => state.addedItems);
     const navigate = useNavigate();
     const {tg} = useTelegram()
 
-    const handleClick = (event) => {
+    const handleClick = () => {
         navigate('/basket');
     }
 
