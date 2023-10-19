@@ -6,11 +6,15 @@ const BasketList = () => {
 
     const addedItems = useSelector(state => state.addedItems);
 
-    const getTotalPrice = (items = []) => {
-        return items.reduce((acc, item) => {
+    // const getTotalPrice = (items = []) => {
+    //     return items.reduce((acc, item) => {
+    //         return acc += item.price
+    //     }, 0)
+    // }
+
+    const totalPrice = addedItems.reduce((acc, item) => {
             return acc += item.price
         }, 0)
-    }
 
     return (
         <div>
@@ -25,10 +29,10 @@ const BasketList = () => {
             </div>
             <div>
                 <h2>Стоимость заказа</h2>
-                <h2>{getTotalPrice(addedItems)}</h2>
+                <h2>{totalPrice}</h2>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default BasketList;
