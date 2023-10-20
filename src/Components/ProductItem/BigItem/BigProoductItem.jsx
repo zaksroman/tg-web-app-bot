@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import Counter from "../Counter";
 import Button from "../../Button/Button";
@@ -24,7 +24,11 @@ const BigProoductItem = () => {
     const onAddHandler = () => {
         dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(id), count: 1 }})
     }
-    tg.BackButton.isVisible.onClick(handleClick)
+    useEffect(() =>{
+        tg.BackButton.show().onClick(handleClick)
+    })
+
+
     return (
         <div>
             <button onClick={handleClick}>BACK</button>
