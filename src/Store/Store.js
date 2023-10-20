@@ -41,7 +41,7 @@ function rootReducer(state = initialState, action) {
                 ).filter(item => item.count !== 0)
             };
         case 'SET_FILTERED_PRODUCTS':
-            return { ...state, filteredProducts: action.payload };
+            return { ...state, filteredProducts: action.payload }
         default:
             return state;
     }

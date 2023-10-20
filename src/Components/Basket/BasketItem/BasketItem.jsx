@@ -12,7 +12,9 @@ const BasketItem = (props) => {
             <p>{props.item.count}</p>
             <Counter
                 id={props.item.id}
-                count={props.item.count}/>
+                count={props.item.count}
+                checkOnDelite={true}
+            />
         </div>
     );
 };
