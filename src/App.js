@@ -18,30 +18,26 @@ function App() {
     tg.expand()
   }, [])
 
-  const handleClick = () => {
-        navigate('/basket');
-  }
-
-
-  useEffect(()=> {
-        tg.onEvent('mainButtonClicked', handleClick)
-        return () => {
-            tg.offEvent('mainButtonClicked', handleClick)
-        }
-  }, [handleClick])
-
-
-
-
-
-  if (addedItems.length === 0) {
-        tg.MainButton.hide()
-  } else {
-        tg.MainButton.show()
-        tg.MainButton.setParams({
-            text: `Перейти в корзину`
-    })
-  }
+  // const handleClick = () => {
+  //       navigate('/basket');
+  // }
+  //
+  // useEffect(()=> {
+  //       tg.onEvent('mainButtonClicked', handleClick)
+  //       return () => {
+  //           tg.offEvent('mainButtonClicked', handleClick)
+  //       }
+  // }, [handleClick])
+  //
+  //
+  // if (addedItems.length === 0) {
+  //       tg.MainButton.hide()
+  // } else {
+  //       tg.MainButton.show()
+  //       tg.MainButton.setParams({
+  //           text: `Перейти в корзину`
+  //   })
+  // }
 
 
   return (

@@ -5,7 +5,6 @@ import BasketItem from "../BasketItem/BasketItem";
 
 
 const BasketList = () => {
-
     const addedItems = useSelector(state => state.addedItems);
 
     const totalPrice = addedItems.reduce((acc, item) => {

@@ -8,17 +8,26 @@ const Basket = () => {
     const {tg} = useTelegram()
 
     const navigate = useNavigate()
-    const handleClick = () => {
+    const handleClickBack = () => {
         navigate('/');
     }
+    const handleClick = () => {
+        navigate('/personaldata')
+    }
+    useEffect(() =>{
+        tg.BackButton.show().onClick(handleClickBack)
+    })
 
     useEffect(() =>{
         tg.BackButton.show().onClick(handleClick)
+        tg.MainButton.setParams({
+            text: 'Оформить заказ'
+        })
     })
 
     return (
         <div>
-            <button onClick={handleClick}>BACK</button>
+            {/*<button onClick={handleClickBack}>BACK</button>*/}
             <h1>Basket</h1>
             <div>
                 <BasketList/>

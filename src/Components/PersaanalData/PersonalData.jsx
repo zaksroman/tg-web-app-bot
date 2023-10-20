@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import './PersonalData.css'
 import {useTelegram} from "../hooks/useTelegram";
 import {useNavigate} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 
 const PersanalData = () => {
@@ -10,29 +11,32 @@ const PersanalData = () => {
     const [fio, setFio] = useState('')
     const [comment, setComment] = useState('')
     const [number, setNumber] = useState('')
-    const [subject, setSubject] = useState('physical')
-    const {tg} = useTelegram()
+    const addedItems = useSelector(state => state.addedItems);
+    const {tg, user} = useTelegram()
 
     const navigate = useNavigate()
-    const handleClick = () => {
+    const handleClickBack = () => {
         navigate('/basket');
     }
 
     useEffect(() =>{
-        tg.BackButton.show().onClick(handleClick)
+        tg.BackButton.show().onClick(handleClickBack)
     })
+
+    const tgName = user?.username
 
     const onSendData = useCallback(()=> {
         const data = {
             city,
             street,
-            subject,
             fio,
             number,
-            comment
+            comment,
+            addedItems,
+            tgName
         }
         tg.sendData(JSON.stringify(data))
-    },[city, street, subject, fio, number, comment])
+    },[city, street, fio, number, comment])
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', onSendData)
@@ -43,7 +47,7 @@ const PersanalData = () => {
 
     useEffect( ()=> {
         tg.MainButton.setParams({
-            text: 'Отправить данные'
+            text: 'Заказать/Оплатить'
         })
     }, [])
 
@@ -53,7 +57,7 @@ const PersanalData = () => {
         } else {
             tg.MainButton.show()
         }
-    },[city, street, subject, fio, number])
+    },[city, street, fio, number])
 
     const onChangeCity = (e) =>{
         setCity(e.target.value)
@@ -63,9 +67,6 @@ const PersanalData = () => {
     }
     const onChangeFio = (e) =>{
         setFio(e.target.value)
-    }
-    const onChangeSubject = (e) =>{
-        setSubject(e.target.value)
     }
 
     const onChangeNumber = (e) =>{
@@ -88,7 +89,7 @@ const PersanalData = () => {
 
     return (
         <div className={'form'}>
-            <button onClick={handleClick}>BACK</button>
+            {/*<button onClick={handleClick}>BACK</button>*/}
             <h3>Введите ваши данные</h3>
             <input
                 className={'input'}
@@ -130,10 +131,6 @@ const PersanalData = () => {
                 onChange={onChangeNumber}
                 id={"input"}
             />
-            <select value={subject} onChange={onChangeSubject} className={'select'}>
-                <option value={'physical'}>Физ. лицо</option>
-                <option value={'legal'}>Юр. лицо</option>
-            </select>
         </div>
     );
 };

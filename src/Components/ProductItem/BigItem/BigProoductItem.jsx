@@ -12,11 +12,14 @@ const BigProoductItem = () => {
     const dispatch = useDispatch()
     const count = useSelector(state => state.addedItems.find(el => el.id === id))?.count || 0
     const navigate = useNavigate()
+    const addedItems = useSelector(state => state.addedItems);
 
-    const handleClick = () => {
+    const handleClickBack = () => {
         navigate('/')
     }
-
+    const handleClick = () => {
+        navigate('/basket');
+    }
     const prodCaracteristics = (id) => {
         return products.find((product)=> product.id === id )
     }
@@ -26,8 +29,25 @@ const BigProoductItem = () => {
     }
 
     useEffect(() =>{
-        tg.BackButton.show().onClick(handleClick)
+        tg.BackButton.show().onClick(handleClickBack)
     })
+
+    useEffect(()=> {
+        tg.onEvent('mainButtonClicked', handleClick)
+        return () => {
+            tg.offEvent('mainButtonClicked', handleClick)
+        }
+    }, [handleClick])
+
+
+    if (addedItems.length === 0) {
+        tg.MainButton.hide()
+    } else {
+        tg.MainButton.show()
+        tg.MainButton.setParams({
+            text: `Перейти в корзину`
+        })
+    }
 
 
     return (
