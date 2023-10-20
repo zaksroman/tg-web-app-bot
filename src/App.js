@@ -30,6 +30,11 @@ function App() {
   }, [handleClick])
 
 
+  useEffect(() =>{
+        tg.BackButton.hide()
+  })
+
+
   if (addedItems.length === 0) {
         tg.MainButton.hide()
   } else {
