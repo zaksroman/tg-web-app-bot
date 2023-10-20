@@ -52,7 +52,7 @@ const BigProoductItem = () => {
 
     return (
         <div>
-            <button onClick={handleClick}>BACK</button>
+            {/*<button onClick={handleClick}>BACK</button>*/}
             <h1>{prodCaracteristics(id).title}</h1>
             <h2>{prodCaracteristics(id).description}</h2>
             <h3>{prodCaracteristics(id).price}</h3>
