@@ -24,6 +24,7 @@ const BigProoductItem = () => {
     const onAddHandler = () => {
         dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(id), count: 1 }})
     }
+
     useEffect(() =>{
         tg.BackButton.show().onClick(handleClick)
     })
