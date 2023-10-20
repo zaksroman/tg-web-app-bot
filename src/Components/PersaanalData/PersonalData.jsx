@@ -63,6 +63,10 @@ const PersanalData = () => {
         setNumber(e.target.value)
     }
 
+    const onChangeComment= (e) =>{
+        setComment(e.target.value)
+    }
+
 
     const inputElement = document.getElementById("input");
     const handleOutsideClick = (event) => {
@@ -105,7 +109,7 @@ const PersanalData = () => {
                 type="text"
                 placeholder={'Комментарий к заказу'}
                 value={comment}
-                onChange={onChangeFio}
+                onChange={onChangeComment}
                 id={"input"}
             />
             <input
