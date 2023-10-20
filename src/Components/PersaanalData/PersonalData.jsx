@@ -1,13 +1,14 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import './Form.css'
+import './PersonalData.css'
 import {useTelegram} from "../hooks/useTelegram";
 
 
-const Form = () => {
+const PersanalData = () => {
 
     const [city, setCity] = useState('')
     const [street, setStreet] = useState('')
     const [fio, setFio] = useState('')
+    const [comment, setComment] = useState('')
     const [number, setNumber] = useState('')
     const [subject, setSubject] = useState('physical')
     const {tg} = useTelegram()
@@ -18,10 +19,11 @@ const Form = () => {
             street,
             subject,
             fio,
-            number
+            number,
+            comment
         }
         tg.sendData(JSON.stringify(data))
-    },[city, street, subject, fio, number])
+    },[city, street, subject, fio, number, comment])
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', onSendData)
@@ -100,6 +102,14 @@ const Form = () => {
             />
             <input
                 className={'input'}
+                type="text"
+                placeholder={'Комментарий к заказу'}
+                value={comment}
+                onChange={onChangeFio}
+                id={"input"}
+            />
+            <input
+                className={'input'}
                 type="number"
                 placeholder={'Номер телефона'}
                 value={number}
@@ -114,4 +124,4 @@ const Form = () => {
     );
 };
 
-export default Form;
+export default PersanalData;

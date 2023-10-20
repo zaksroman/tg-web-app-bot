@@ -44,7 +44,7 @@ function App() {
             <Route index element={<ProductList />}/>
             <Route path={'/bigproructitem/:id'} element={ <BigProoductItem />}/>
             <Route path={'/basket'} element={<Basket/>}/>
-            <Route path={'/basket/personaldata'} element={<PersonalData/>}/>
+            <Route path={'/personaldata'} element={<PersonalData/>}/>
         </Routes>
     </div>
   );
