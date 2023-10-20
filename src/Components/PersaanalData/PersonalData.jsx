@@ -5,12 +5,6 @@ import {useNavigate} from "react-router-dom";
 
 
 const PersanalData = () => {
-
-    const navigate = useNavigate()
-    const handleClick = () => {
-        navigate('/basket');
-    }
-
     const [city, setCity] = useState('')
     const [street, setStreet] = useState('')
     const [fio, setFio] = useState('')
@@ -18,6 +12,15 @@ const PersanalData = () => {
     const [number, setNumber] = useState('')
     const [subject, setSubject] = useState('physical')
     const {tg} = useTelegram()
+
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/basket');
+    }
+
+    useEffect(() =>{
+        tg.BackButton.show().onClick(handleClick)
+    })
 
     const onSendData = useCallback(()=> {
         const data = {
