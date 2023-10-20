@@ -14,9 +14,6 @@ const Basket = () => {
     const handleClick = () => {
         navigate('/personaldata')
     }
-    useEffect(() =>{
-        tg.BackButton.show().onClick(handleClickBack)
-    })
 
     useEffect(() =>{
         tg.BackButton.show().onClick(handleClick)
@@ -24,6 +21,13 @@ const Basket = () => {
             text: 'Оформить заказ'
         })
     })
+
+    useEffect(()=> {
+        tg.onEvent('mainButtonClicked', handleClick)
+        return () => {
+            tg.offEvent('mainButtonClicked', handleClick)
+        }
+    }, [handleClick])
 
     return (
         <div>
