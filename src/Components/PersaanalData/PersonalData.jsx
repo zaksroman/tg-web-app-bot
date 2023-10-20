@@ -1,9 +1,15 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './PersonalData.css'
 import {useTelegram} from "../hooks/useTelegram";
+import {useNavigate} from "react-router-dom";
 
 
 const PersanalData = () => {
+
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/basket');
+    }
 
     const [city, setCity] = useState('')
     const [street, setStreet] = useState('')
@@ -79,6 +85,7 @@ const PersanalData = () => {
 
     return (
         <div className={'form'}>
+            <button onClick={handleClick}>BACK</button>
             <h3>Введите ваши данные</h3>
             <input
                 className={'input'}

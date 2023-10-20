@@ -21,6 +21,7 @@ function App() {
         navigate('/basket');
   }
 
+
   useEffect(()=> {
         tg.onEvent('mainButtonClicked', handleClick)
         return () => {
@@ -31,7 +32,9 @@ function App() {
 
   if (addedItems.length === 0) {
         tg.MainButton.hide()
+        tg.BackButton.hide()
   } else {
+        tg.BackButton.show()
         tg.MainButton.show()
         tg.MainButton.setParams({
             text: `Перейти в корзину`
