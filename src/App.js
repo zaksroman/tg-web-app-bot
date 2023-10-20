@@ -6,6 +6,7 @@ import ProductList from "./Components/ProductList/ProductList";
 import BigProoductItem from "./Components/ProductItem/BigItem/BigProoductItem";
 import Basket from "./Components/Basket/Basket";
 import {useSelector} from "react-redux";
+import PersonalData from "./Components/PersaanalData/PersonalData";
 
 function App() {
   const {tg} = useTelegram()
