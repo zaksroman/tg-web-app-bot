@@ -3,9 +3,10 @@ import {useNavigate, useParams} from "react-router-dom";
 import Counter from "../Counter";
 import Button from "../../Button/Button";
 import {useSelector, useDispatch} from "react-redux";
+import {useTelegram} from "../../hooks/useTelegram";
 
 const BigProoductItem = () => {
-
+    const {tg} = useTelegram()
     const products = useSelector(state => state.products)
     const { id } = useParams()
     const dispatch = useDispatch()
@@ -23,7 +24,7 @@ const BigProoductItem = () => {
     const onAddHandler = () => {
         dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(id), count: 1 }})
     }
-
+    tg.BackButton.isVisible.onClick(handleClick)
     return (
         <div>
             <button onClick={handleClick}>BACK</button>
