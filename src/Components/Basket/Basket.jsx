@@ -17,7 +17,7 @@ const Basket = () => {
 
     useEffect(() =>{
         tg.BackButton.show().onClick(handleClickBack)
-        tg.MainButton.setParams({
+        tg.MainButton.show().setParams({
             text: 'Оформить заказ'
         })
     })
