@@ -10,7 +10,7 @@ const products = [
     {id: '7', key: '7', title:'Телевизор', price: 50000, description: 'Высокого разрешения', count: 0, img: new Image()  },
     {id: '8', key: '8', title:'Нефтяная вышка', price: 10000000, description: 'Высокодебитная', count: 0, img: new Image()  },
     {id: '9', key: '9', title:'Остров', price: 50000000, description: 'Маленький остров в Тихом океане', count: 0, img: new Image()  },
-    {id: '10', key: '10', title:'Молоко', price: 100, description: 'Домик в деревне 3,2%', count: 0, img: new Image()  },
+    {id: '10', key: '10', title:'Молоко', price: 100, description: 'Домик в деревне 3,2%', count: 0, img: [{id:1, url: 'https://w.forfun.com/fetch/5c/5c667b51332990f7af3d3b20b4548883.jpeg'}] },
 ]
 
 const initialState = {

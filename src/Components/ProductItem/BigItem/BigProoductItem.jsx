@@ -4,6 +4,7 @@ import Counter from "../Counter";
 import Button from "../../Button/Button";
 import {useSelector, useDispatch} from "react-redux";
 import {useTelegram} from "../../hooks/useTelegram";
+import Circle from "./Circle";
 
 const BigProoductItem = () => {
     const {tg} = useTelegram()
@@ -53,6 +54,9 @@ const BigProoductItem = () => {
     return (
         <div>
             {/*<button onClick={handleClick}>BACK</button>*/}
+            <div>
+                <Circle/>
+            </div>
             <h1>{prodCaracteristics(id).title}</h1>
             <h2>{prodCaracteristics(id).description}</h2>
             <h3>{prodCaracteristics(id).price}</h3>
