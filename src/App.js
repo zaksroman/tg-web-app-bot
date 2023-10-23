@@ -13,7 +13,7 @@ function App() {
   useEffect(()=> {
     tg.ready()
     tg.expand()
-    tg.isClosingConfirmationEnabled(true)
+    tg.isClosingConfirmationEnabled = true
   }, [])
 
 
