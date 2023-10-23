@@ -38,7 +38,8 @@ const Circle = () => {
             {currentSlide < photos.length - 1 && (
                 <div className="carouse-swipe-area-right" onClick={handleSwipeLeft}></div>
             )}
-            <div className="indicators">
+            {photos.length !== 1 &&
+                <div className="indicators">
                 {photos.map((_, index) => (
                     <div
                         key={index}
@@ -46,7 +47,7 @@ const Circle = () => {
                         onClick={() => setCurrentSlide(index)}
                     ></div>
                 ))}
-            </div>
+            </div>}
         </div>
     );
 };

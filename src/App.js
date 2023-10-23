@@ -16,7 +16,10 @@ function App() {
   useEffect(()=> {
     tg.ready()
     tg.expand()
+    tg.isClosingConfirmationEnabled(true)
   }, [])
+
+
 
   // const handleClick = () => {
   //       navigate('/basket');
