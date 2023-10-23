@@ -16,7 +16,7 @@
 .carouse-swipe-area-right {
     position: absolute;
     top: 0;
-    width: 10%;
+    width: 50%;
     height: 100%;
     z-index: 10;
     background-color: transparent;
@@ -40,4 +40,28 @@
 
 .prev-slide {
     transform: translateX(-100%);
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #000;
 }
