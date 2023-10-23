@@ -50,7 +50,6 @@ const BigProoductItem = () => {
         })
     }
 
-
     return (
         <div>
             {/*<button onClick={handleClick}>BACK</button>*/}
