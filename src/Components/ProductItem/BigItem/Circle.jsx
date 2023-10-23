@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import './Circle.css'
 
 const Circle = () => {
-    const photos = ['https://appstorrent.ru/uploads/fotos/foto_90458.jpg', 'https://sun9-69.userapi.com/s/v1/ig2/gcOWJCE0-Ev3SVdrgkmyR-WuWIzpgljePQGjmaX0oq_vFTt-K-sOOUjoEdLf-VQurGL7XqheFlc_fhQMTc1PQGtV.jpg?size=200x200&quality=95&crop=0,0,841,841&ava=1', 'https://cdn.medal.tv/avatars/cf88c9fd261aacdca02d4e2b895fa6a0/1630530259614.png'  ]
-    const [currentSlide, setCurrentSlide] = useState(0); // индекс текущей фотографии
+    const photos = ['https://appstorrent.ru/uploads/fotos/foto_90458.jpg', 'https://sun9-69.userapi.com/s/v1/ig2/gcOWJCE0-Ev3SVdrgkmyR-WuWIzpgljePQGjmaX0oq_vFTt-K-sOOUjoEdLf-VQurGL7XqheFlc_fhQMTc1PQGtV.jpg?size=200x200&quality=95&crop=0,0,841,841&ava=1', 'https://cosplay2.ru/files/453/logo.png?preview&size=537x'  ]
+    const [currentSlide, setCurrentSlide] = useState(0);
     const [prevSlide, setPrevSlide] = useState(currentSlide);
 
     const handleSwipeLeft = () => {
@@ -24,8 +24,8 @@ const Circle = () => {
     const handlers = useSwipeable({
         onSwipedLeft: handleSwipeLeft,
         onSwipedRight: handleSwipeRight,
-        preventDefaultTouchmoveEvent: true, // предотвратить прокрутку страницы свайпом
-        trackMouse: true // допустить использование мыши на компьютере
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
     });
 
     return (
