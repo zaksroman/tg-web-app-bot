@@ -2,7 +2,7 @@ import {useSwipeable} from 'react-swipeable';
 import React, { useState } from 'react';
 
 const Circle = () => {
-    const photos = ['https://gas-kvas.com/uploads/posts/2023-02/1675489758_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-41.jpg', 'https://s1.1zoom.ru/big3/474/354282-admin.jpg'  ]
+    const photos = ['https://appstorrent.ru/uploads/fotos/foto_90458.jpg', 'https://sun9-69.userapi.com/s/v1/ig2/gcOWJCE0-Ev3SVdrgkmyR-WuWIzpgljePQGjmaX0oq_vFTt-K-sOOUjoEdLf-VQurGL7XqheFlc_fhQMTc1PQGtV.jpg?size=200x200&quality=95&crop=0,0,841,841&ava=1'  ]
     const [currentSlide, setCurrentSlide] = useState(0); // индекс текущей фотографии
 
 
