@@ -1,49 +1,43 @@
 .carousel {
     position: relative;
     /*overflow: hidden;*/
+    width: 100%;
+    height: 100%;
 }
 
 .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease-in-out;
 }
 
-.prev-slide {
+.carouse-swipe-area-left,
+.carouse-swipe-area-right {
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    width: 10%;
+    height: 100%;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.carouse-swipe-area-left {
+    left: 0;
+}
+
+.carouse-swipe-area-right {
+    right: 0;
 }
 
 .current-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    transform: translateX(0%);
 }
 
 .next-slide {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    cursor: pointer;
-}
-
-.carousel img.prev-slide,
-.carousel img.next-slide {
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel img.prev-slide {
-    transform: translateX(-100%);
-}
-
-.carousel img.next-slide {
     transform: translateX(100%);
+}
+
+.prev-slide {
+    transform: translateX(-100%);
 }

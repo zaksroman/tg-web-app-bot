@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './Circle.css'
 
 const Circle = () => {
-    const photos = ['https://appstorrent.ru/uploads/fotos/foto_90458.jpg', 'https://sun9-69.userapi.com/s/v1/ig2/gcOWJCE0-Ev3SVdrgkmyR-WuWIzpgljePQGjmaX0oq_vFTt-K-sOOUjoEdLf-VQurGL7XqheFlc_fhQMTc1PQGtV.jpg?size=200x200&quality=95&crop=0,0,841,841&ava=1', 'https://cosplay2.ru/files/453/logo.png?preview&size=537x'  ]
+    const photos = ['https://appstorrent.ru/uploads/fotos/foto_90458.jpg', 'https://sun9-69.userapi.com/s/v1/ig2/gcOWJCE0-Ev3SVdrgkmyR-WuWIzpgljePQGjmaX0oq_vFTt-K-sOOUjoEdLf-VQurGL7XqheFlc_fhQMTc1PQGtV.jpg?size=200x200&quality=95&crop=0,0,841,841&ava=1', 'https://cosplay2.ru/files/453/logo.png?preview&size=537x'];
     const [currentSlide, setCurrentSlide] = useState(0);
     const [prevSlide, setPrevSlide] = useState(currentSlide);
 
@@ -31,11 +31,7 @@ const Circle = () => {
     return (
         <div className="carousel" {...handlers}>
             {currentSlide > 0 && (
-                <img
-                    className="prev-slide"
-                    src={photos[prevSlide]}
-                    alt="previous slide"
-                />
+                <div className="carouse-swipe-area-left" onClick={handleSwipeRight}></div>
             )}
             <img
                 className="current-slide"
@@ -43,15 +39,10 @@ const Circle = () => {
                 alt="current slide"
             />
             {currentSlide < photos.length - 1 && (
-                <img
-                    className="next-slide"
-                    src={photos[currentSlide + 1]}
-                    alt="next slide"
-                />
+                <div className="carouse-swipe-area-right" onClick={handleSwipeLeft}></div>
             )}
         </div>
     );
 };
-
 
 export default Circle;
