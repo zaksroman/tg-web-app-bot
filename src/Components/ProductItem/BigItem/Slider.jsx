@@ -26,7 +26,6 @@ const Slider = () => {
         onSwipedRight: handleSwipeRight,
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
-        rotationAngle: 45
     });
 
     return (
