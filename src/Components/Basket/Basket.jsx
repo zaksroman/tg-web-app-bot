@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import BasketList from "./BasketList/BasketList";
 import {useTelegram} from "../hooks/useTelegram";
 import {useSelector} from "react-redux";
+import Carousel from "./Carousel/Carousel";
 
 
 const Basket = () => {
@@ -36,12 +37,22 @@ const Basket = () => {
         }
     }, [handleClick])
 
+    const totalPrice = addedItems.reduce((acc, item) => {
+        return acc += item.price * item.count
+    }, 0)
+
     return (
         <div>
             {/*<button onClick={handleClickBack}>BACK</button>*/}
             <h1>Basket</h1>
             <div>
                 <BasketList/>
+            </div>
+            <div>
+                <Carousel/>
+            </div>
+            <div>
+                <h2>{!totalPrice ? 'В корзине пусто' : `Стоимость заказа ${totalPrice}` }</h2>
             </div>
         </div>
     );

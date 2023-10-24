@@ -7,10 +7,6 @@ import BasketItem from "../BasketItem/BasketItem";
 const BasketList = () => {
     const addedItems = useSelector(state => state.addedItems);
 
-    const totalPrice = addedItems.reduce((acc, item) => {
-            return acc += item.price * item.count
-        }, 0)
-
     return (
         <div>
             <div>
@@ -21,9 +17,6 @@ const BasketList = () => {
                         />
                     )
                 })}
-            </div>
-            <div>
-                <h2>{!totalPrice ? 'В корзине пусто' : `Стоимость заказа ${totalPrice}` }</h2>
             </div>
         </div>
     )

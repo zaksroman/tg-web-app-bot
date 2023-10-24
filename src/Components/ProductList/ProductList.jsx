@@ -11,6 +11,7 @@ const ProductList = () => {
     const filteredProducts = useSelector(state => state.filteredProducts);
     const navigate = useNavigate();
     const addedItems = useSelector(state => state.addedItems);
+
     const handleClick = () => {
         navigate('/basket');
     }
