@@ -44,11 +44,11 @@ const Carousel = () => {
 
     return (
         <div>
-            <Slider {...settings}>
-                    {remainingItems(products, addedItems)?.map( item => {
-                        return <CarouselItem item={item}/>
-                    })}
-            </Slider>
+            {addedItems.length !==0 && <Slider {...settings}>
+                {remainingItems(products, addedItems)?.map(item => {
+                    return <CarouselItem item={item}/>
+                })}
+            </Slider>}
         </div>
     );
 };
