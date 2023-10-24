@@ -48,9 +48,9 @@ const Basket = () => {
             <div>
                 <BasketList/>
             </div>
-            <div>
-                <Carousel/>
-            </div>
+            {/*<div>*/}
+            {/*    <Carousel/>*/}
+            {/*</div>*/}
             <div>
                 <h2>{!totalPrice ? 'В корзине пусто' : `Стоимость заказа ${totalPrice}` }</h2>
             </div>
