@@ -2,7 +2,6 @@ import {useSwipeable} from 'react-swipeable';
 import React, { useState } from 'react';
 import './Slider.css'
 
-
 const SWIPE_ANGLE_THRESHOLD = Math.tan(45 * Math.PI/180)
 
 const Slider = () => {
@@ -13,20 +12,20 @@ const Slider = () => {
         if (currentSlide < photos.length - 1) {
             setCurrentSlide(currentSlide + 1);
         }
-    };
+    }
 
     const handleSwipeRight = () => {
         if (currentSlide > 0) {
-            setCurrentSlide(currentSlide - 1);
+            setCurrentSlide(currentSlide - 1)
         }
-    };
+    }
 
     const handlers = useSwipeable({
         onSwipedLeft: handleSwipeLeft,
         onSwipedRight: handleSwipeRight,
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
-    });
+    })
 
     return (
         <div className="carousel" {...handlers}>
@@ -52,7 +51,7 @@ const Slider = () => {
                 ))}
             </div>}
         </div>
-    );
-};
+    )
+}
 
 export default Slider;
