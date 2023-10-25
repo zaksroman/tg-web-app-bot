@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from 'react-redux';
 import {useEffect, useState} from "react";
-import  './Search.css'
+import styles from './Search.module.css'
 
 const Search = () => {
     const products = useSelector(state => state.products)
@@ -38,8 +38,8 @@ const Search = () => {
     }, []);
 
     return (
-            <div className='form'>
-                <input type="text" placeholder="Поиск" value={search} onChange={searchHandler} id={"input"} className='input'/>
+            <div className={styles.form}>
+                <input type="text" placeholder="Поиск" value={search} onChange={searchHandler} id={"input"} className={styles.input}/>
             </div>
         )
     }
