@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     touch-action: pan-x pan-y;
+    flex-direction: column;
 }
 
 .item {
