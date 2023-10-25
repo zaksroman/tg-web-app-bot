@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: center;
     touch-action: pan-x pan-y;
+    margin-top: 50px
 }
 
 .item {
