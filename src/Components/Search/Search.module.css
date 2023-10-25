@@ -1,8 +1,8 @@
 .input {
     appearance: textfield;
-    width: 90%;
+    width: 100%;
     padding: 10px;
-    height: 30px;
+    height: 50px;
     justify-content: center;
     /*margin-top: 15px;*/
 }
