@@ -28,7 +28,7 @@ const ProductItem = ({product, className}) => {
             <div className={'title'} >{product.title}</div>
             <div className={'description'} >{product.description}</div>
             <div className={'price'} >
-                <span>Стоимость: <b>{product.price}</b></span>
+                <span><b>{product.price}</b> р</span>
             </div>
 
             {!count && (
