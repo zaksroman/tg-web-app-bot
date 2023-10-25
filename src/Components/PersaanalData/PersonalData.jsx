@@ -88,7 +88,7 @@ const PersanalData = () => {
 
 
     return (
-        <div className={'form'}>
+        <div className={'box'}>
             {/*<button onClick={handleClick}>BACK</button>*/}
             <h3>Введите ваши данные</h3>
             <input
