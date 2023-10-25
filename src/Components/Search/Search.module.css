@@ -2,7 +2,8 @@
     appearance: textfield;
     width: 90%;
     padding: 10px;
-    height: 15px
+    height: 30px;
+    justify-content: center;
     /*margin-top: 15px;*/
 }
 
