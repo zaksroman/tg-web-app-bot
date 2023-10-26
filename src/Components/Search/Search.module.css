@@ -1,9 +1,10 @@
 .input {
     appearance: textfield;
     width: 100%;
-    padding: 10px;
+    padding: 1px;
     height: 50px;
     justify-content: center;
+    font-size: 5%;
     /*margin-top: 15px;*/
 }
 
