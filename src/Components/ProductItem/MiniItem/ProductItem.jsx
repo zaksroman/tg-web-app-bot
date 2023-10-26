@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductItem.module.css'
+import './ProductItem.css'
 import Button from "../../Button/Button";
 import Counter from "../Counter";
 import {useNavigate} from "react-router-dom";
@@ -35,7 +35,7 @@ const ProductItem = ({product, className}) => {
                 <Button
                     className={'add-btn'}
                     onClick={onAddHandler}>
-                корзину
+                В корзину
             </Button>)
             }
 
