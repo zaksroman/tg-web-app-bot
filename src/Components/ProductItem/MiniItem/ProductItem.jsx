@@ -33,7 +33,7 @@ const ProductItem = ({product, className}) => {
 
             {!count && (
                 <Button
-                    className={styles.add-btn}
+                    className={styles.addbtn}
                     onClick={onAddHandler}>
                 В корзину
             </Button>)
