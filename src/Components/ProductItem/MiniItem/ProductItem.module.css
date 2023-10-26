@@ -32,6 +32,8 @@
 
 .description {
     font-size: 0.8em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .addbtn {
