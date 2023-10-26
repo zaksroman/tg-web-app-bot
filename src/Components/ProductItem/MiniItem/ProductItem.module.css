@@ -36,8 +36,8 @@
 
 .addbtn {
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    /*position: fixed;*/
+    /*bottom: 0;*/
     font-size: 1em;
     padding-bottom: 15px;
 }
