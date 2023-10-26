@@ -16,7 +16,7 @@ input:focus {
 
 .form {
     /*display: flex;*/
-    position: sticky;
+    position: fixed;
     top: 0;
     flex-direction: column;
     width: 95%;
@@ -25,4 +25,5 @@ input:focus {
     margin-left: auto;
     margin-right: auto;
     touch-action: pan-x pan-y;
+
 }
