@@ -23,7 +23,7 @@ const ProductItem = ({product, className}) => {
     const count = addedItem?.count || 0
 
     return (
-        <div className={'product ' + className} onClick={handleClick}>
+        <div className={'product' } onClick={handleClick}>
             <div className={'img'}></div>
             <div className={'title'} >{product.title}</div>
             <div className={'description'} >{product.description}</div>
