@@ -3,8 +3,8 @@
     flex-direction: column;
     border: 1px solid var(--tg-theme-button-color);
     border-radius: 10px;
-    padding: 5px;
-    width: 100%;
+    padding: 15px;
+    width: 170px;
     /*box-shadow: 2px 2px 10px #7a7a7a*/
 }
 
@@ -21,8 +21,5 @@
 }
 
 .add-btn {
-    width: 100%;
-    font-size: 1em;
-    position: sticky;
-    bottom: 0;
+    width: 100%
 }
