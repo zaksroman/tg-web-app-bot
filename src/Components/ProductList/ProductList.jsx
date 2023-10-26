@@ -45,7 +45,7 @@ const ProductList = () => {
                         return (
                             <ProductItem
                                 product={product}
-                                className={styles.item}
+                                // className={styles.item}
                             />
                         )})}
                 </div>

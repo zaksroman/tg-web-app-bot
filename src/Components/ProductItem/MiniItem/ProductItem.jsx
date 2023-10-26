@@ -25,11 +25,12 @@ const ProductItem = ({product, className}) => {
     return (
         <div className={styles.product} onClick={handleClick}>
             <div className={styles.img}></div>
-            <div className={styles.title} >{product.title}</div>
-            <div className={styles.description} >{product.description}</div>
             <div className={styles.price} >
                 <span><b>{product.price}</b> р</span>
             </div>
+            <div className={styles.title} >{product.title}</div>
+            <div className={styles.description} >{product.description}</div>
+
 
             {!count && (
                 <Button
