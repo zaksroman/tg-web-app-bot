@@ -11,11 +11,11 @@
     margin-bottom: 15px;
     overflow: hidden;
     /*height: 14em;*/
-    position: relative;
-    transition: transform 0.2s ease
+    /*position: relative;*/
+    transition: transform 0.2s ease;
 }
 .product:active{
-    transform: scale(0.95)
+    transform: scale(0.95);
 }
 
 .img {
@@ -25,7 +25,7 @@
     margin: 0 auto;
     border-radius: 10px;
     background: var(--tg-theme-button-color);
-    position: relative;
+    /*position: relative;*/
     object-fit: cover;
 }
 
@@ -33,20 +33,20 @@
     margin-top: 10px;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    position: relative;
+    /*position: relative;*/
 }
 
 .title {
     padding-left: 0.5em;
     padding-right: 0.5em;
-    position: relative;
+    /*position: relative;*/
 }
 
 .container {
-    /*width: 300px; !* или любая другая ширина контейнера *!*/
-    /*height: 200px; !* или любая другая высота контейнера *!*/
+    /*width: 300px;*/
+    /*height: 200px;*/
     overflow: hidden;
-    position: relative;
+    /*position: relative;*/
 }
 
 .description {
@@ -54,11 +54,11 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
     width: 100%;
-    padding-top: 10px; /* Отступ сверху для создания эффекта размытия */
+    padding-top: 10px;
     position: relative;
     overflow: hidden;
-    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
-    text-overflow: ellipsis; /* Указываем, что конец текста должен быть обрезан и заменен многоточием */
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /*.backdrop {*/
