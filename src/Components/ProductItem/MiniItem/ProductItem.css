@@ -10,6 +10,7 @@
 
 .img {
     width: 100%;
+    padding: 0;
     background: lightgrey;
     height: 100px;
     margin: 0 auto;
@@ -23,6 +24,7 @@
 .add-btn {
     width: 100%;
     position: sticky;
-    font-size: 1.4em;
     bottom: 0;
+    font-size: 1em;
+
 }
