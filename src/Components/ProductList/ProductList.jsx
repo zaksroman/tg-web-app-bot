@@ -16,9 +16,9 @@ const ProductList = () => {
         navigate('/basket');
     }
 
-    useEffect(() =>{
-        tg.BackButton.hide()
-    })
+    // useEffect(() =>{
+    //     tg.BackButton.hide()
+    // })
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', handleClick)

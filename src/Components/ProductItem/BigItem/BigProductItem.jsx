@@ -8,7 +8,7 @@ import Slider from "./Slider";
 
 import styles from './BigProductItem.module.css'
 
-const BigProoductItem = () => {
+const BigProductItem = () => {
     const {tg} = useTelegram()
     const products = useSelector(state => state.products)
     const { id } = useParams()
@@ -17,9 +17,9 @@ const BigProoductItem = () => {
     const navigate = useNavigate()
     const addedItems = useSelector(state => state.addedItems);
 
-    const handleClickBack = () => {
-        navigate(-1)
-    }
+    // const handleClickBack = () => {
+    //     navigate(-1)
+    // }
 
     const handleClick = () => {
         navigate('/basket');
@@ -32,9 +32,9 @@ const BigProoductItem = () => {
         dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(id), count: 1 }})
     }
 
-    useEffect(() =>{
-        tg.BackButton.show().onClick(handleClickBack)
-    })
+    // useEffect(() =>{
+    //     tg.BackButton.show().onClick(handleClickBack)
+    // }, [])
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', handleClick)
@@ -80,4 +80,4 @@ const BigProoductItem = () => {
     );
 };
 
-export default BigProoductItem;
+export default BigProductItem;

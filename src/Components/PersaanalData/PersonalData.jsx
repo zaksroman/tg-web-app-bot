@@ -19,9 +19,9 @@ const PersanalData = () => {
         navigate('/basket');
     }
 
-    useEffect(() =>{
-        tg.BackButton.show().onClick(handleClickBack)
-    })
+    // useEffect(() =>{
+    //     tg.BackButton.show().onClick(handleClickBack)
+    // })
 
     const tgName = user?.username
 
