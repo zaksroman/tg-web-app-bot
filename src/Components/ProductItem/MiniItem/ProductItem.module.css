@@ -22,6 +22,7 @@
     border-radius: 10px;
     background: var(--tg-theme-button-color);
     position: relative;
+    object-fit: cover;
 }
 
 .price {
@@ -48,23 +49,22 @@
     font-size: 0.8em;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    width: 100%;
+    padding-top: 10px; /* Отступ сверху для создания эффекта размытия */
     position: relative;
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Максимальное количество строк текста */
-    -webkit-box-orient: vertical;
-    height: 100%;
-    line-height: 1.2em;
     overflow: hidden;
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+    text-overflow: ellipsis; /* Указываем, что конец текста должен быть обрезан и заменен многоточием */
 }
 
-.backdrop {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px); /* Измените значение радиуса размытия по вашему усмотрению */
-}
+/*.backdrop {*/
+/*    !*position: absolute;*!*/
+/*    !*bottom: 0;*!*/
+/*    !*left: 0;*!*/
+/*    !*width: 100%;*!*/
+/*    !*height: 100%;*!*/
+/*    !*background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(197, 197, 197) 120%); !* Измените значение радиуса размытия по вашему усмотрению *!*!*/
+/*}*/
 
 
 /*.addbtn {*/

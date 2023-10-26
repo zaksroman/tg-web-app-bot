@@ -29,12 +29,12 @@ const ProductItem = ({product, className}) => {
                 <span><b>{product.price}</b> р</span>
             </div>
             <div className={styles.title} >{product.title}</div>
-            <div className={styles.description} >{product.description}</div>
+            {/*<div className={styles.description} >{product.description}</div>*/}
             <div className={styles.container}>
                 <div className={styles.description}>
                     {product.description}
                 </div>
-                <div className={styles.backdrop}></div>
+                {/*<div className={styles.backdrop}></div>*/}
             </div>
             {/*{!count && (*/}
             {/*    <Button*/}
