@@ -1,5 +1,5 @@
 import {useSwipeable} from 'react-swipeable';
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './Slider.css'
 
 const SWIPE_ANGLE_THRESHOLD = Math.tan(45 * Math.PI/180)
@@ -9,15 +9,17 @@ const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const handleSwipeLeft = () => {
-        if (currentSlide < photos.length - 1) {
-            setCurrentSlide(currentSlide + 1);
-        }
+        // if (currentSlide < photos.length - 1) {
+        //     setCurrentSlide(currentSlide + 1);
+        // }
+        setCurrentSlide((currentSlide + 1) % photos.length);
     }
 
     const handleSwipeRight = () => {
-        if (currentSlide > 0) {
-            setCurrentSlide(currentSlide - 1)
-        }
+        // if (currentSlide > 0) {
+        //     setCurrentSlide((currentSlide - 1))
+        // }
+        setCurrentSlide((currentSlide - 1 + photos.length) % photos.length)
     }
 
     const handlers = useSwipeable({
@@ -26,6 +28,11 @@ const Slider = () => {
         preventDefaultTouchmoveEvent: true,
         trackMouse: true,
     })
+
+    useEffect(() => {
+        const timer = setInterval(handleSwipeLeft, 2000);
+        return () => clearInterval(timer);
+    }, [])
 
     return (
         <div className="carousel" {...handlers}>
