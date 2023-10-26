@@ -4,7 +4,7 @@
     padding: 1px;
     height: 50px;
     justify-content: center;
-    /*font-size: 15%;*/
+    font-size: 1em;
     margin-left: auto;
     margin-right: auto;
     /*margin-top: 15px;*/
@@ -20,7 +20,7 @@ input:focus {
     top: 0;
     flex-direction: column;
     width: 100%;
-    /*padding-bottom: 5px;*/
+    padding-bottom: 5px;
     /*height: 50px;*/
     touch-action: pan-x pan-y;
 }
