@@ -35,7 +35,7 @@ const ProductItem = ({product, className}) => {
                 <Button
                     className={'add-btn'}
                     onClick={onAddHandler}>
-                В корзину
+                корзину
             </Button>)
             }
 
