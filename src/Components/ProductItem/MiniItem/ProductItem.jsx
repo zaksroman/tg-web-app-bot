@@ -15,12 +15,12 @@ const ProductItem = ({product, className}) => {
         }
     }
 
-    const onAddHandler = () => {
-        dispatch({ type: 'ADD_ITEM', payload: {...product, count: count+1} })
-    }
+    // const onAddHandler = () => {
+    //     dispatch({ type: 'ADD_ITEM', payload: {...product, count: count+1} })
+    // }
 
-    const addedItem = addedItems.find(el => el.id === product.id)
-    const count = addedItem?.count || 0
+    // const addedItem = addedItems.find(el => el.id === product.id)
+    // const count = addedItem?.count || 0
 
     return (
         <div className={styles.product} onClick={handleClick}>
@@ -30,8 +30,12 @@ const ProductItem = ({product, className}) => {
             </div>
             <div className={styles.title} >{product.title}</div>
             <div className={styles.description} >{product.description}</div>
-
-
+            <div className={styles.container}>
+                <div className={styles.description}>
+                    {product.description}
+                </div>
+                <div className={styles.backdrop}></div>
+            </div>
             {/*{!count && (*/}
             {/*    <Button*/}
             {/*        className={styles.addbtn}*/}
