@@ -18,8 +18,9 @@ const BigProoductItem = () => {
     const addedItems = useSelector(state => state.addedItems);
 
     const handleClickBack = () => {
-        navigate('/')
+        navigate(-1)
     }
+
     const handleClick = () => {
         navigate('/basket');
     }
