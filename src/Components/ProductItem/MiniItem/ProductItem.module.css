@@ -12,6 +12,10 @@
     overflow: hidden;
     /*height: 14em;*/
     position: relative;
+    transition: transform 0.2s ease
+}
+.product:active{
+    transform: scale(0.95)
 }
 
 .img {

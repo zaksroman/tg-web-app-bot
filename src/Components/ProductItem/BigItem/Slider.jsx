@@ -29,10 +29,10 @@ const Slider = () => {
         trackMouse: true,
     })
 
-    useEffect(() => {
-        const timer = setInterval(handleSwipeLeft, 2000);
-        return () => clearInterval(timer);
-    }, [])
+    // useEffect(() => {
+    //     const timer = setInterval(handleSwipeLeft, 2000);
+    //     return () => clearInterval(timer);
+    // }, [])
 
     return (
         <div className="carousel" {...handlers}>
