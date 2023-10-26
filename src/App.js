@@ -16,9 +16,6 @@ function App() {
     tg.isClosingConfirmationEnabled = true
   }, [])
 
-    useEffect(() =>{
-        tg.BackButton.show()
-    }, [])
 
   return (
     <div className="App">

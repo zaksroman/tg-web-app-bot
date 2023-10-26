@@ -17,9 +17,12 @@ const Basket = () => {
         navigate('/personaldata')
     }
 
-    // useEffect(() =>{
-    //     tg.BackButton.show().onClick(handleClickBack)
-    // })
+    useEffect(() =>{
+        tg.BackButton.show().onClick(handleClickBack)
+        return () => {
+            tg.BackButton.offClick(handleClickBack)
+        }
+    })
 
     if (addedItems.length === 0) {
         tg.MainButton.hide()

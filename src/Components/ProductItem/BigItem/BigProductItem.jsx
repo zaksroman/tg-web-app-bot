@@ -17,9 +17,9 @@ const BigProductItem = () => {
     const navigate = useNavigate()
     const addedItems = useSelector(state => state.addedItems);
 
-    // const handleClickBack = () => {
-    //     navigate(-1)
-    // }
+    const handleClickBack = () => {
+        navigate(-1)
+    }
 
     const handleClick = () => {
         navigate('/basket');
@@ -32,9 +32,12 @@ const BigProductItem = () => {
         dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(id), count: 1 }})
     }
 
-    // useEffect(() =>{
-    //     tg.BackButton.show().onClick(handleClickBack)
-    // }, [])
+    useEffect(() =>{
+        tg.BackButton.show().onClick(handleClickBack)
+        return () => {
+            tg.BackButton.offClick(handleClickBack)
+        }
+    }, [])
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', handleClick)
