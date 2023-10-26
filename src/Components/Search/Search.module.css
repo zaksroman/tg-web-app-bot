@@ -4,8 +4,12 @@
     padding: 1px;
     height: 50px;
     justify-content: center;
-    font-size: 5%;
+    font-size: 15%;
     /*margin-top: 15px;*/
+}
+
+input:focus {
+    outline: none;
 }
 
 .form {
