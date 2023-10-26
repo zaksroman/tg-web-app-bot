@@ -21,25 +21,25 @@
     margin: 0 auto;
     border-radius: 10px;
     background: var(--tg-theme-button-color);
-    position: absolute;
+    position: relative;
 }
 .title {
     padding-left: 0.5em;
     padding-right: 0.5em;
-    position: absolute;
+    position: relative;
 }
 
 .price {
     padding-left: 0.5em;
     padding-right: 0.5em;
-    position: absolute;
+    position: relative;
 }
 
 .description {
     font-size: 0.8em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    position: absolute;
+    position: relative;
 }
 
 .addbtn {
