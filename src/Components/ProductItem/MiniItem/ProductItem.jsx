@@ -32,19 +32,19 @@ const ProductItem = ({product, className}) => {
             <div className={styles.description} >{product.description}</div>
 
 
-            {!count && (
-                <Button
-                    className={styles.addbtn}
-                    onClick={onAddHandler}>
-                В корзину
-            </Button>)
-            }
+            {/*{!count && (*/}
+            {/*    <Button*/}
+            {/*        className={styles.addbtn}*/}
+            {/*        onClick={onAddHandler}>*/}
+            {/*    В корзину*/}
+            {/*</Button>)*/}
+            {/*}*/}
 
-            {!!count && (
-                <Counter
-                    id={product.id}
-                    count={count}
-            />)}
+            {/*{!!count && (*/}
+            {/*    <Counter*/}
+            {/*        id={product.id}*/}
+            {/*        count={count}*/}
+            {/*/>)}*/}
         </div>
     );
 };
