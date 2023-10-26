@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from'./ProductItem.module.css'
+import './ProductItem.module.css'
 import Button from "../../Button/Button";
 import Counter from "../Counter";
 import {useNavigate} from "react-router-dom";
