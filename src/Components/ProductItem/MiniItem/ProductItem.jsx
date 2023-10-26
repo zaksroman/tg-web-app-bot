@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductItem.css'
+import styles from './ProductItem.module.css'
 import Button from "../../Button/Button";
 import Counter from "../Counter";
 import {useNavigate} from "react-router-dom";
@@ -23,17 +23,17 @@ const ProductItem = ({product, className}) => {
     const count = addedItem?.count || 0
 
     return (
-        <div className={'product' } onClick={handleClick}>
-            <div className={'img'}></div>
-            <div className={'title'} >{product.title}</div>
-            <div className={'description'} >{product.description}</div>
-            <div className={'price'} >
+        <div className={styles.product} onClick={handleClick}>
+            <div className={styles.img}></div>
+            <div className={styles.title} >{product.title}</div>
+            <div className={styles.description} >{product.description}</div>
+            <div className={styles.price} >
                 <span><b>{product.price}</b> р</span>
             </div>
 
             {!count && (
                 <Button
-                    className={'add-btn'}
+                    className={styles.add-btn}
                     onClick={onAddHandler}>
                 В корзину
             </Button>)

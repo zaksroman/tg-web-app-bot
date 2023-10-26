@@ -16,6 +16,13 @@
     margin: 0 auto;
     background: var(--tg-theme-button-color);
 }
+.title {
+
+}
+
+.price {
+
+}
 
 .description {
     font-size: 0.8em;
