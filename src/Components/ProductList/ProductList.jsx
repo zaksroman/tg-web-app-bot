@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './ProductList.css'
+import styles from './ProductList.module.css'
 import ProductItem from "../ProductItem/MiniItem/ProductItem";
 import {useSelector} from "react-redux";
 import Search from "../Search/Search";
@@ -39,13 +39,13 @@ const ProductList = () => {
     return (
         <div>
             <Search/>
-                <div className={'list'}>
+                <div className={styles.list}>
                     {/*<button onClick={handleClick}>Корзина</button>*/}
                     {filteredProducts.map(product => {
                         return (
                             <ProductItem
                                 product={product}
-                                className={'item'}
+                                className={styles.item}
                             />
                         )})}
                 </div>
