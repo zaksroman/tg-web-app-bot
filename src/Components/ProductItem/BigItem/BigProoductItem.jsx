@@ -6,6 +6,8 @@ import {useSelector, useDispatch} from "react-redux";
 import {useTelegram} from "../../hooks/useTelegram";
 import Slider from "./Slider";
 
+import styles from './BigProductItem.module.css'
+
 const BigProoductItem = () => {
     const {tg} = useTelegram()
     const products = useSelector(state => state.products)

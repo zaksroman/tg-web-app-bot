@@ -1,6 +1,6 @@
 import {useSwipeable} from 'react-swipeable';
 import React, {useEffect, useState} from 'react';
-import './Slider.css'
+import styles from './Slider.module.css'
 
 const SWIPE_ANGLE_THRESHOLD = Math.tan(45 * Math.PI/180)
 
@@ -35,24 +35,24 @@ const Slider = () => {
     // }, [])
 
     return (
-        <div className="carousel" {...handlers}>
+        <div className={styles.carousel} {...handlers}>
             {currentSlide > 0 && (
-                <div className="carouse-swipe-area-left" onClick={handleSwipeRight}></div>
+                <div className={styles.carouseswipearealeft} onClick={handleSwipeRight}></div>
             )}
             <img
-                className="current-slide"
+                className={styles.currentslide}
                 src={photos[currentSlide]}
                 alt="current slide"
             />
             {currentSlide < photos.length - 1 && (
-                <div className="carouse-swipe-area-right" onClick={handleSwipeLeft}></div>
+                <div className={styles.carouseswipearearight} onClick={handleSwipeLeft}></div>
             )}
             {photos.length !== 1 &&
-                <div className="indicators">
+                <div className={styles.indicators}>
                 {photos.map((_, index) => (
                     <div
                         key={index}
-                        className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                        className={`${styles.indicator} ${index === currentSlide ? styles.active : ''}`}
                         onClick={() => setCurrentSlide(index)}
                     ></div>
                 ))}
