@@ -33,8 +33,8 @@ const Counter = (props) => {
             <button onClick={onDecrease} className="btn">-</button>
             <h3 className="number">{props.count}</h3>
             <button onClick={onIncrease} className="btn">+</button>
-            <div>
 
+            <div>
                 <Modal show={showModal} onHide={handleLeave} className={'modal'}>
                     <Modal.Body className={'modal-content'}>
                         <p>Вы уверены, что хотите удалить этот товар из корзины?</p>
