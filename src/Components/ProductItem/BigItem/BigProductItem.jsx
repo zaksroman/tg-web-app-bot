@@ -62,7 +62,7 @@ const BigProductItem = () => {
                 <Slider/>
             </div>
             <h1>{prodCaracteristics(id).title}</h1>
-            <h2>{prodCaracteristics(id).price}</h2>
+            <h2>{prodCaracteristics(id).price} р</h2>
             <h3>{prodCaracteristics(id).description}</h3>
 
             {!count && (
