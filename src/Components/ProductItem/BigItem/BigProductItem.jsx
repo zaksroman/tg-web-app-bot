@@ -5,7 +5,6 @@ import Button from "../../Button/Button";
 import {useSelector, useDispatch} from "react-redux";
 import {useTelegram} from "../../hooks/useTelegram";
 import Slider from "./Slider";
-
 import styles from './BigProductItem.module.css'
 
 const BigProductItem = () => {
@@ -63,12 +62,12 @@ const BigProductItem = () => {
                 <Slider/>
             </div>
             <h1>{prodCaracteristics(id).title}</h1>
-            <h2>{prodCaracteristics(id).description}</h2>
-            <h3>{prodCaracteristics(id).price}</h3>
+            <h2>{prodCaracteristics(id).price}</h2>
+            <h3>{prodCaracteristics(id).description}</h3>
 
             {!count && (
                 <Button
-                    className={'add-btn'}
+                    className={styles.addbtn}
                     onClick={onAddHandler}>
                     Добавить в корзину
                 </Button>)
