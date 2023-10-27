@@ -3,6 +3,9 @@
     align-items: center;
     justify-content: space-between;
     width: 30%;
+    position: sticky;
+    bottom: 0;
+    right: 0;
 }
 
 .counter .btn {
