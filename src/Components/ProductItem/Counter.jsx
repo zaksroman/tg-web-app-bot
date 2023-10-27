@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Counter.css'
+import styles from './Counter.module.css'
 import {useDispatch} from "react-redux";
 import {Button, Modal} from "react-bootstrap";
 const Counter = (props) => {
@@ -29,10 +29,10 @@ const Counter = (props) => {
     };
 
     return (
-        <div className="counter">
-            <button onClick={onDecrease} className="btn">-</button>
-            <h3 className="number">{props.count}</h3>
-            <button onClick={onIncrease} className="btn">+</button>
+        <div className={styles.counter}>
+            <button onClick={onDecrease} className={styles.btn}>-</button>
+            <h3 className={styles.number}>{props.count}</h3>
+            <button onClick={onIncrease} className={styles.btn}>+</button>
 
             <div>
                 <Modal show={showModal} onHide={handleLeave} className={'modal'}>

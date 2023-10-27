@@ -10,14 +10,14 @@
     margin-bottom: 1em;
 }
 
-/*.counter .btn {*/
-/*    !*padding: 8px;*!*/
-/*    border-radius: 10px;*/
-/*    background: var(--tg-theme-button-color);*/
-/*    color: var(--tg-theme-button-text-color);*/
-/*    cursor: pointer;*/
-/*    width: 50%;*/
-/*}*/
+.counter .btn {
+    /*padding: 8px;*/
+    border-radius: 10px;
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    cursor: pointer;
+    width: 50%;
+}
 
 .counter .number {
     padding: 10px;
