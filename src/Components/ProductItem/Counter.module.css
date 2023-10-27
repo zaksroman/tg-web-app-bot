@@ -17,6 +17,7 @@
     color: var(--tg-theme-button-text-color);
     cursor: pointer;
     width: 50%;
+    height: 50%;
 }
 
 .counter .number {
