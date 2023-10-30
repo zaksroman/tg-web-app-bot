@@ -4,12 +4,12 @@ import clsx from "clsx";
 const Button = (props) => {
 
     const {type} = props
-    const buttonStyles = clsx({
+    const ButtonStyles = clsx({
         [styles.bigproductitembtn]: type === 'bigproductitem',
     })
 
     return (
-        <button className={buttonStyles}/>
+        <button className={ButtonStyles}/>
     );
 };
 
