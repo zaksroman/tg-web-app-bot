@@ -5,9 +5,7 @@ const Button = (props) => {
 
     const {type} = props
     const buttonStyles = clsx({
-        [styles.buttonStyles]: true,
-        [styles.basketitem]: type === 'basketitem',
-        [styles.carouselitem]: type === 'carouselitem'
+        [styles.bigproductitembtn]: type === 'bigproductitem',
     })
 
     return (
