@@ -12,12 +12,11 @@ const ProductItem = (props) => {
     const navigate = useNavigate()
 
     const {type} = props
+
     const ProductItemStyle = clsx({
-        [styles.productlistitem]: true, // базовый класс, который всегда применяется
+        [styles.productlistitem]: true,
         [styles.basketitem]: type === 'basketitem',
         [styles.carouselitem]: type === 'carouselitem'
-        // 'button--primary': type === 'ProductList', // применяется, если type === 'primary'
-        // 'button--secondary': type === 'secondary' // применяется, если type === 'secondary'
     })
 
     const prodCaracteristics = (id) => {
@@ -58,7 +57,7 @@ const ProductItem = (props) => {
 
             {type === 'carouselitem'
                 ?<Button
-                    className={'add-btn'}
+                    type={}
                     onClick={onAddHandler}>
                     В корзину
                 </Button>

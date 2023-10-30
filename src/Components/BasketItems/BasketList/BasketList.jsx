@@ -1,7 +1,6 @@
 
 import './BasketList.css'
 import {useSelector} from "react-redux";
-import BasketItem from "../BasketItem/BasketItem";
 import ProductItem from "../../../ProductItem/ProductItem";
 
 

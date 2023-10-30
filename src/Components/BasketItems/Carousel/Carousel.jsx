@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {useSelector} from "react-redux";
-import CarouselItem from './CarouselItem';
 import ProductItem from "../../../ProductItem/ProductItem";
 
 const Carousel = () => {

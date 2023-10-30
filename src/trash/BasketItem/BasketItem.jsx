@@ -1,6 +1,6 @@
 import React from 'react';
 import './BasketItem.css'
-import Counter from "../../Counter/Counter";
+import Counter from "../../Components/Counter/Counter";
 
 const BasketItem = (props) => {
 

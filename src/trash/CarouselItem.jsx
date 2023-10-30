@@ -1,6 +1,6 @@
 import React from 'react';
 import './CarouselItem.css'
-import Button from "../../Button/Button";
+import Button from "../Components/Button/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 const CarouselItem = ({item}) => {

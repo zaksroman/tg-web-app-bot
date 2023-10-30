@@ -5,7 +5,6 @@ import Button from "../../Components/Button/Button";
 import {useSelector, useDispatch} from "react-redux";
 import {useTelegram} from "../../hooks/useTelegram";
 import Slider from "../../Components/Slider/Slider";
-import styles from './BigProductItem.module.css'
 
 const BigProductItem = () => {
     const {tg} = useTelegram()
@@ -67,7 +66,7 @@ const BigProductItem = () => {
 
             {!count && (
                 <Button
-                    // className={styles.button}
+                    type={'bigproductitem'}
                     onClick={onAddHandler}>
                     Добавить в корзину
                 </Button>)
@@ -75,6 +74,7 @@ const BigProductItem = () => {
 
             {!!count && (
                 <Counter
+                    type={'bigproductitem'}
                     id={id}
                     count={count}
                 />)}
