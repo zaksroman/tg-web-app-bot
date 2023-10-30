@@ -3,21 +3,35 @@ import styles from './ProductItem.module.css'
 import {useNavigate} from "react-router-dom";
 import clsx from 'clsx'
 import Counter from "../Components/Counter/Counter";
+import Button from "../Components/Button/Button";
+import {useDispatch, useSelector} from "react-redux";
 
 const ProductItem = (props) => {
-
+    const products = useSelector(state => state.products)
+    const dispatch = useDispatch()
     const navigate = useNavigate()
+
+    const prodCaracteristics = (id) => {
+        return products.find((product)=> product.id === id )
+    }
 
     const {type} = props
     const ProductItemStyle = clsx({
         [styles.productlistitem]: true, // базовый класс, который всегда применяется
-        [styles.basketitem]: type === 'basketitem'
+        [styles.basketitem]: type === 'basketitem',
+        [styles.carouselitem]: type === 'carouselitem'
         // 'button--primary': type === 'ProductList', // применяется, если type === 'primary'
         // 'button--secondary': type === 'secondary' // применяется, если type === 'secondary'
     })
 
     const handleClick = (event) => {
-            navigate(`/bigproructitem/${props.product.id}`);
+        if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
+            navigate(`/bigproructitem/${item.id}`);
+        }
+    }
+
+    const onAddHandler = () => {
+        dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(item.id), count: 1 }})
     }
 
     return (
@@ -42,6 +56,14 @@ const ProductItem = (props) => {
                 : null
             }
 
+            {type === 'carouselitem'
+                ?<Button
+                    className={'add-btn'}
+                    onClick={onAddHandler}>
+                    В корзину
+                </Button>
+                : null
+            }
         </div>
     );
 };

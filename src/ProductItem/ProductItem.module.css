@@ -63,7 +63,7 @@
     width: 170px;
 }
 .basketitem .img {
-    display: none
+
 }
 
 .basketitem .price {
@@ -80,6 +80,31 @@
 }
 
 .basketitem .description {
+
+}
+/*/////////////carouselitem/////////////*/
+
+.carouselitem {
+
+}
+
+.carouselitem .img {
     display: none
 }
-/*//////////////////////////*/
+
+.carouselitem .price {
+
+}
+
+.carouselitem .title {
+
+}
+
+.carouselitem .container {
+    overflow: hidden;
+    display: none
+}
+
+.carouselitem .description {
+    display: none
+}

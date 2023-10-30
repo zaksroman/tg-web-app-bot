@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {useSelector} from "react-redux";
 import CarouselItem from './CarouselItem';
+import ProductItem from "../../../ProductItem/ProductItem";
 
 const Carousel = () => {
     const products = useSelector(state => state.products)
@@ -45,8 +46,11 @@ const Carousel = () => {
     return (
         <div>
             {addedItems.length !==0 && <Slider {...settings}>
-                {remainingItems(products, addedItems)?.map(item => {
-                    return <CarouselItem item={item}/>
+                {remainingItems(products, addedItems)?.map(product => {
+                    return <ProductItem
+                        product={product}
+                        type={'carouselitem'}
+                    />
                 })}
             </Slider>}
         </div>
