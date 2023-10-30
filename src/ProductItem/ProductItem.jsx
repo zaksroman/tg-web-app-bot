@@ -9,15 +9,13 @@ const ProductItem = (props) => {
 
     const {type} = props
     const ProductItemStyle = clsx({
-        [styles.productlist]: true, // базовый класс, который всегда применяется
+        [styles.productlistitem]: true, // базовый класс, который всегда применяется
         // 'button--primary': type === 'ProductList', // применяется, если type === 'primary'
         // 'button--secondary': type === 'secondary' // применяется, если type === 'secondary'
     })
 
     const handleClick = (event) => {
-        if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
             navigate(`/bigproructitem/${props.product.id}`);
-        }
     }
 
     return (

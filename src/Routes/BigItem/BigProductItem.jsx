@@ -3,7 +3,7 @@ import {useNavigate, useParams} from "react-router-dom";
 import Counter from "../../Components/Counter/Counter";
 import Button from "../../Components/Button/Button";
 import {useSelector, useDispatch} from "react-redux";
-import {useTelegram} from "../../Components/hooks/useTelegram";
+import {useTelegram} from "../../hooks/useTelegram";
 import Slider from "../../Components/Slider/Slider";
 import styles from './BigProductItem.module.css'
 

@@ -1,4 +1,4 @@
-.productlist {
+.productlistitem {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -9,11 +9,12 @@
     overflow: hidden;
     transition: transform 0.2s ease;
 }
-.productlist .product:active{
+
+.productlistitem:active{
     transform: scale(0.95);
 }
 
-.productlist .img {
+.productlistitem .img {
     width: 100%;
     padding-bottom: 133%;
     background: lightgrey;
@@ -23,23 +24,23 @@
     object-fit: cover;
 }
 
-.productlist .price {
+.productlistitem .price {
     margin-top: 10px;
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
 
-.productlist .title {
+.productlistitem .title {
     padding-left: 0.5em;
     padding-right: 0.5em;
 }
 
-.productlist .container {
+.productlistitem .container {
     overflow: hidden;
 
 }
 
-.productlist .description {
+.productlistitem .description {
     font-size: 0.8em;
     padding-left: 0.5em;
     padding-right: 0.5em;

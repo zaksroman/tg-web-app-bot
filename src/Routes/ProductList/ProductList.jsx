@@ -4,7 +4,7 @@ import ProductItem from "../../ProductItem/ProductItem";
 import {useSelector} from "react-redux";
 import Search from "../../Components/Search/Search";
 import {useNavigate} from "react-router-dom";
-import {useTelegram} from "../../Components/hooks/useTelegram";
+import {useTelegram} from "../../hooks/useTelegram";
 
 const ProductList = () => {
     const {tg} = useTelegram()

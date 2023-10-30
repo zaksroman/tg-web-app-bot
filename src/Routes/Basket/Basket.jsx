@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useNavigate} from "react-router-dom";
 import BasketList from "../../Components/BasketItems/BasketList/BasketList";
-import {useTelegram} from "../../Components/hooks/useTelegram";
+import {useTelegram} from "../../hooks/useTelegram";
 import {useSelector} from "react-redux";
 import Carousel from "../../Components/BasketItems/Carousel/Carousel";
 
