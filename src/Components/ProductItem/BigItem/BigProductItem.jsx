@@ -67,7 +67,7 @@ const BigProductItem = () => {
 
             {!count && (
                 <Button
-                    className={styles.button}
+                    // className={styles.button}
                     onClick={onAddHandler}>
                     Добавить в корзину
                 </Button>)
