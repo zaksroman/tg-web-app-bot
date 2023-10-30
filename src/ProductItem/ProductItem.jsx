@@ -35,8 +35,8 @@ const ProductItem = (props) => {
 
             {type === 'basketitem'
                 ? <Counter
-                id={props.item.id}
-                count={props.item.count}
+                id={props.product.id}
+                count={props.product.count}
                 checkOnDelite={true}
                 />
                 : null
