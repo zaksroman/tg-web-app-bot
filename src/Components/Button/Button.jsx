@@ -9,7 +9,7 @@ const Button = (props) => {
     })
 
     return (
-        <button className={ButtonStyles}/>
+        <button {...props} className={ButtonStyles}/>
     );
 };
 
