@@ -1,0 +1,52 @@
+.productlist {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 170px;
+    margin-right: 0.5em ;
+    margin-left: 0.5em ;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+.productlist .product:active{
+    transform: scale(0.95);
+}
+
+.productlist .img {
+    width: 100%;
+    padding-bottom: 133%;
+    background: lightgrey;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: var(--tg-theme-button-color);
+    object-fit: cover;
+}
+
+.productlist .price {
+    margin-top: 10px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.productlist .title {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.productlist .container {
+    overflow: hidden;
+
+}
+
+.productlist .description {
+    font-size: 0.8em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 100%;
+    padding-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+

@@ -2,10 +2,10 @@ import './App.css';
 import {useEffect} from "react";
 import {useTelegram} from "./Components/hooks/useTelegram";
 import {Routes, Route} from "react-router-dom";
-import ProductList from "./Components/ProductList/ProductList";
-import BigProductItem from "./Components/ProductItem/BigItem/BigProductItem";
-import Basket from "./Components/Basket/Basket";
-import PersonalData from "./Components/PersaanalData/PersonalData";
+import ProductList from "./Routes/ProductList/ProductList";
+import BigProductItem from "./Routes/BigItem/BigProductItem";
+import Basket from "./Routes/Basket/Basket";
+import PersonalData from "./Routes/PersaanalData/PersonalData";
 
 function App() {
   const {tg} = useTelegram()

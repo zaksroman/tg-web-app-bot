@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './PersonalData.css'
-import {useTelegram} from "../hooks/useTelegram";
+import {useTelegram} from "../../Components/hooks/useTelegram";
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 

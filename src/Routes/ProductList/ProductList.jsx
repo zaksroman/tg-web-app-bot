@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import styles from './ProductList.module.css'
-import ProductItem from "../ProductItem/MiniItem/ProductItem";
+import ProductItem from "../../ProductItem/ProductItem";
 import {useSelector} from "react-redux";
-import Search from "../Search/Search";
+import Search from "../../Components/Search/Search";
 import {useNavigate} from "react-router-dom";
-import {useTelegram} from "../hooks/useTelegram";
+import {useTelegram} from "../../Components/hooks/useTelegram";
 
 const ProductList = () => {
     const {tg} = useTelegram()
@@ -45,6 +45,7 @@ const ProductList = () => {
                         return (
                             <ProductItem
                                 product={product}
+                                type={productlist}
                                 // className={styles.item}
                             />
                         )})}

@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
-import Counter from "../Counter";
-import Button from "../../Button/Button";
+import Counter from "../../Components/Counter/Counter";
+import Button from "../../Components/Button/Button";
 import {useSelector, useDispatch} from "react-redux";
-import {useTelegram} from "../../hooks/useTelegram";
-import Slider from "./Slider";
+import {useTelegram} from "../../Components/hooks/useTelegram";
+import Slider from "../../Components/Slider/Slider";
 import styles from './BigProductItem.module.css'
 
 const BigProductItem = () => {
