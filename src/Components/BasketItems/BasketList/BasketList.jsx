@@ -2,6 +2,7 @@
 import './BasketList.css'
 import {useSelector} from "react-redux";
 import BasketItem from "../BasketItem/BasketItem";
+import ProductItem from "../../../ProductItem/ProductItem";
 
 
 const BasketList = () => {
@@ -10,10 +11,11 @@ const BasketList = () => {
     return (
         <div>
             <div>
-                {addedItems.map(item => {
+                {addedItems.map(product => {
                     return (
-                        <BasketItem
-                            item={item}
+                        <ProductItem
+                            product={product}
+                            type={'basketitem'}
                         />
                     )
                 })}

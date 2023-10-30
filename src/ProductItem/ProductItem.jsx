@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ProductItem.module.css'
 import {useNavigate} from "react-router-dom";
 import clsx from 'clsx'
+import Counter from "../Components/Counter/Counter";
 
 const ProductItem = (props) => {
 
@@ -10,6 +11,7 @@ const ProductItem = (props) => {
     const {type} = props
     const ProductItemStyle = clsx({
         [styles.productlistitem]: true, // базовый класс, который всегда применяется
+        [styles.basketitem]: type === 'basketitem'
         // 'button--primary': type === 'ProductList', // применяется, если type === 'primary'
         // 'button--secondary': type === 'secondary' // применяется, если type === 'secondary'
     })
@@ -30,6 +32,15 @@ const ProductItem = (props) => {
                     {props.product.description}
                 </div>
             </div>
+
+            {type === 'basketitem'
+                ? <Counter
+                id={props.item.id}
+                count={props.item.count}
+                checkOnDelite={true}
+                />
+                : null
+            }
 
         </div>
     );

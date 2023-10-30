@@ -1,3 +1,5 @@
+
+/*///////////////productlistitem///////////////*/
 .productlistitem {
     display: flex;
     flex-direction: column;
@@ -50,4 +52,34 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+/*//////////////basketitem///////////////*/
 
+.basketitem {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--tg-theme-button-color);
+    border-radius: 10px;
+    padding: 15px;
+    width: 170px;
+}
+.basketitem .img {
+    display: none
+}
+
+.basketitem .price {
+
+}
+
+.basketitem .title {
+
+}
+
+.basketitem .container {
+    overflow: hidden;
+    display: none
+}
+
+.basketitem .description {
+    display: none
+}
+/*//////////////////////////*/
