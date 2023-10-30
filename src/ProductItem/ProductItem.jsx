@@ -9,7 +9,7 @@ const ProductItem = (props) => {
 
     const {type} = props
     const ProductItemStyle = clsx({
-        'productlist': true, // базовый класс, который всегда применяется
+        [styles.productlist]: true, // базовый класс, который всегда применяется
         // 'button--primary': type === 'ProductList', // применяется, если type === 'primary'
         // 'button--secondary': type === 'secondary' // применяется, если type === 'secondary'
     })
