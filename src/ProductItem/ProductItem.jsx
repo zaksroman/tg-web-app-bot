@@ -11,10 +11,6 @@ const ProductItem = (props) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const prodCaracteristics = (id) => {
-        return products.find((product)=> product.id === id )
-    }
-
     const {type} = props
     const ProductItemStyle = clsx({
         [styles.productlistitem]: true, // базовый класс, который всегда применяется
@@ -24,14 +20,18 @@ const ProductItem = (props) => {
         // 'button--secondary': type === 'secondary' // применяется, если type === 'secondary'
     })
 
+    const prodCaracteristics = (id) => {
+        return products.find((product)=> product.id === id )
+    }
+
     const handleClick = (event) => {
         if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
-            navigate(`/bigproructitem/${item.id}`);
+            navigate(`/bigproructitem/${props.product.id}`);
         }
     }
 
     const onAddHandler = () => {
-        dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(item.id), count: 1 }})
+        dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(props.product.id), count: 1 }})
     }
 
     return (
