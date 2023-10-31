@@ -43,7 +43,7 @@ const Counter = (props) => {
             <button onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}>+</button>
 
             <div>
-                <Modal show={showModal} onHide={handleLeave} className={`${showModal ? 'modal' : ''}`}>
+                <Modal show={showModal} onHide={handleLeave} className={`${showModal ? 'modal' : ''} ${styles.modal}`}>
                     <Modal.Body className={'modal-content'}>
                         <p>Вы уверены, что хотите удалить этот товар из корзины?</p>
                     </Modal.Body>
