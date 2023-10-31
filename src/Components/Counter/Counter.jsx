@@ -12,6 +12,7 @@ const Counter = (props) => {
     const StylesCount = clsx({
         [styles.bigproductitembtn]: type === 'bigproductitem',
         [styles.basketitembtn]: type === 'basketitem',
+        [styles.disabled]: showModal
     })
 
     const onIncrease = () => {
@@ -37,12 +38,12 @@ const Counter = (props) => {
 
     return (
         <div className={StylesCount}>
-            <button onClick={onDecrease} className={styles.btn}>-</button>
+            <button onClick={onDecrease} className={`${styles.btn} ${StylesCount}`}>-</button>
             <h3 className={styles.number}>{props.count}</h3>
-            <button onClick={onIncrease} className={styles.btn}>+</button>
+            <button onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}>+</button>
 
             <div>
-                <Modal show={showModal} onHide={handleLeave} className={'modal'}>
+                <Modal show={showModal} onHide={handleLeave} className={`${showModal ? 'modal' : ''}`}>
                     <Modal.Body className={'modal-content'}>
                         <p>Вы уверены, что хотите удалить этот товар из корзины?</p>
                     </Modal.Body>
