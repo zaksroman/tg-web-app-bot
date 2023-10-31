@@ -18,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    flex-grow: 1;
 }
 
 .bigproductitembtn .btn {
@@ -33,38 +33,19 @@
     flex-basis: 20px;
 }
 
+.bigproductitembtn .btn:first-child {
+    margin-right: 10px; /* Отступ справа для первой кнопки */
+}
+
+.bigproductitembtn .btn:last-child {
+    margin-left: 10px; /* Отступ слева для второй кнопки */
+}
+
 .bigproductitembtn .number {
     /*padding: 10px;*/
     font-size: 16px;
 }
-/*.bigproductitembtn {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: space-between;*/
-/*    width: 100%; !* Займет всю ширину *!*/
-/*    position: fixed;*/
-/*    bottom: 0;*/
-/*    background-color: var(--tg-theme-bg-color);*/
-/*    padding: 10px; !* Добавляем отступы *!*/
-/*}*/
 
-/*.bigproductitembtn .btn {*/
-/*    border-radius: 50%; !* Кнопки станут квадратными *!*/
-/*    background: var(--tg-theme-button-color);*/
-/*    color: var(--tg-theme-button-text-color);*/
-/*    cursor: pointer;*/
-/*    flex-basis: 50px; !* Размер кнопки *!*/
-/*    height: 50px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    margin-right: 10px; !* Расстояние между кнопками *!*/
-/*    border: none;*/
-/*}*/
-
-/*.bigproductitembtn .number {*/
-/*    font-size: 16px;*/
-/*}*/
 /*/////////////////////////*/
 .basketitembtn {
     display: flex;
