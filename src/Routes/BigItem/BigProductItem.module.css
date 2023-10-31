@@ -1,25 +1,43 @@
-.bigproductitem {
+.container {
+    min-height: 100vh; /* Бокс родительского элемента займет всю высоту экрана */
     display: flex;
-    flex-direction: column;
-    align-items: flex-end; /*Располагаем компонент Counter внизу справа*/
-    min-height: 100vh; /*Минимальная высота равная высоте экрана, чтобы контент не скролился*/
-    padding: 20px; /*Отступы вокруг контента*/
+    flex-direction: column; /* Компоненты расположатся вертикально */
+    max-width: 1200px; /* Ограничение максимальной ширины контента для больших экранов */
+    margin: 0 auto; /* Выравнивание контента по центру */
 }
 
-.bigproductitem h1 {
+.slider-container {
+    width: 100%; /* Slider будет растянут на всю ширину экрана */
+}
+
+.slider {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%; /* Slider будет сохранять пропорции для 16:9 соотношения сторон */
+}
+
+.bigproductitem {
+    flex-grow: 1; /* BigProductItem займет все свободное пространство по вертикали */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: flex-start; /* Выравнивание текстовой части слева */
+}
+
+h1, h2, p {
+    margin: 10px 0; /* Отступы сверху и снизу для заголовков и параграфов */
+}
+
+h1 {
     font-size: 36px;
-    margin-bottom: 10px;
 }
 
-.bigproductitem h2 {
+h2 {
     font-size: 24px;
-    margin-bottom: 10px;
 }
 
-.bigproductitem p {
-    margin-bottom: 20px;
+p {
+    font-size: 18px;
 }
 
-.bigproductitem > *:not(:last-child) {
-    margin-bottom: 10px; /*Добавляем отступ между элементами контента*/
-}
+

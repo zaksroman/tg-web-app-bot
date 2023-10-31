@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from "react-redux";
 import {useTelegram} from "../../hooks/useTelegram";
 import Slider from "../../Components/Slider/Slider";
 import styles from './BigProductItem.module.css'
+
 const BigProductItem = () => {
     const {tg} = useTelegram()
     const products = useSelector(state => state.products)
@@ -55,14 +56,16 @@ const BigProductItem = () => {
     }
 
     return (
-        <div className={styles.bigproductitem}>
+        <div className={styles.container}>
             {/*<button onClick={handleClick}>BACK</button>*/}
+            <div className={styles.sliderContainer}>
+                <Slider className={styles.slider}/>
+            </div >
             <div>
-                <Slider/>
+                <h1>{prodCaracteristics(id).title}</h1>
+                <h2>{prodCaracteristics(id).price} р</h2>
+                <p>{prodCaracteristics(id).description}</p>
             </div>
-            <h1>{prodCaracteristics(id).title}</h1>
-            <h2>{prodCaracteristics(id).price} р</h2>
-            <p>{prodCaracteristics(id).description}</p>
 
             {!count && (
                 <Button
