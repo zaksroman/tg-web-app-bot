@@ -35,7 +35,7 @@ const ProductItem = (props) => {
 
     return (
         <div className={ProductItemStyle} onClick={handleClick}>
-            <div className={styles.container}>
+            <div className={styles.annotation}>
                 <div className={styles.img}></div>
                 <div className={styles.price} >
                     <span><b>{props.product.price}</b> р</span>

@@ -52,6 +52,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 /*//////////////basketitem///////////////*/
 
 .basketitem {
@@ -80,7 +81,7 @@
     margin-bottom: 5px
 }
 
-.basketitem .container {
+.basketitem .annotation {
     overflow: hidden;
     /*display: none*/
 }
