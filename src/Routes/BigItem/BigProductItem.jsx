@@ -62,12 +62,13 @@ const BigProductItem = () => {
             </div>
             <h1>{prodCaracteristics(id).title}</h1>
             <h2>{prodCaracteristics(id).price} р</h2>
-            <h3>{prodCaracteristics(id).description}</h3>
+            <p>{prodCaracteristics(id).description}</p>
 
             {!count && (
                 <Button
                     type={'bigproductitem'}
-                    onClick={onAddHandler}>
+                    onClick={onAddHandler}
+                >
                     Добавить в корзину
                 </Button>)
             }

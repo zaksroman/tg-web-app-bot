@@ -4,8 +4,9 @@ import clsx from "clsx";
 const Button = (props) => {
 
     const {type} = props
+
     const ButtonStyles = clsx({
-        [styles.bigproductitembtn]: type === 'bigproductitem',
+        [styles.bigproductitembtn]: true /*type === 'bigproductitem'*/,
         [styles.carouselitembtn]: type === 'carouselitem',
     })
 

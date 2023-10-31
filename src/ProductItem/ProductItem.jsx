@@ -59,7 +59,8 @@ const ProductItem = (props) => {
             {type === 'carouselitem'
                 ?<Button
                     type={'carouselitem'}
-                    onClick={onAddHandler}>
+                    onClick={onAddHandler}
+                >
                     В корзину
                 </Button>
                 : null
