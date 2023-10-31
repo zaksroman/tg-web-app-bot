@@ -14,7 +14,13 @@
 /*/////////////////////////////////////*/
 
 .carouselitembtn {
-
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50%;
 }
 
 

@@ -26,19 +26,29 @@
 }
 
 /*/////////////////////////*/
-
-
-
-
 .basketitembtn {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    background-color: var(--tg-theme-bg-color);
+    margin-bottom: 1em;
 }
 
 .basketitembtn .btn {
-
+    border-radius: 10px;
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    cursor: pointer;
+    width: 50%;
+    height: 50%;
 }
 
 .basketitembtn .number {
-
+    padding: 10px;
+    font-size: 16px;
 }
 
