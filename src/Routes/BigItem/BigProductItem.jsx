@@ -5,7 +5,7 @@ import Button from "../../Components/Button/Button";
 import {useSelector, useDispatch} from "react-redux";
 import {useTelegram} from "../../hooks/useTelegram";
 import Slider from "../../Components/Slider/Slider";
-
+import styles from './BigProductItem.module.css'
 const BigProductItem = () => {
     const {tg} = useTelegram()
     const products = useSelector(state => state.products)
@@ -55,7 +55,7 @@ const BigProductItem = () => {
     }
 
     return (
-        <div>
+        <div className={styles.bigproductitem}>
             {/*<button onClick={handleClick}>BACK</button>*/}
             <div>
                 <Slider/>

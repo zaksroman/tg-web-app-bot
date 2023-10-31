@@ -2,7 +2,10 @@
     position: relative;
     /*overflow: hidden;*/
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
+    height: 50vh; /*Высота слайдера равна половине высоты экрана*/
+    object-fit: contain; /*Сохраняем пропорции изображения*/
+
 }
 
 .carousel img {
