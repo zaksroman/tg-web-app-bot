@@ -48,6 +48,7 @@ const ProductItem = (props) => {
 
             {type === 'basketitem'
                 ? <Counter
+                type={'basketitem'}
                 id={props.product.id}
                 count={props.product.count}
                 checkOnDelite={true}

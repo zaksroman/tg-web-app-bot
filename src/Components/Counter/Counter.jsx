@@ -2,10 +2,17 @@ import React, {useState} from 'react';
 import styles from './Counter.module.css'
 import {useDispatch} from "react-redux";
 import {Button, Modal} from "react-bootstrap";
+import clsx from "clsx";
 const Counter = (props) => {
 
     const dispatch = useDispatch()
     const [showModal, setShowModal] = useState(false)
+
+    const {type} = props
+    const StylesCount = clsx({
+        [styles.bigproductitembtn]: type === 'bigproductitem',
+        [styles.basketitembtn]: type === 'basketitem',
+    })
 
     const onIncrease = () => {
         dispatch({ type: 'INCREASE_ITEM', payload: props.id })
@@ -29,7 +36,7 @@ const Counter = (props) => {
     };
 
     return (
-        <div className={styles.counter}>
+        <div className={StylesCount}>
             <button onClick={onDecrease} className={styles.btn}>-</button>
             <h3 className={styles.number}>{props.count}</h3>
             <button onClick={onIncrease} className={styles.btn}>+</button>

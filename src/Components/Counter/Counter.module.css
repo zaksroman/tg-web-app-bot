@@ -1,4 +1,4 @@
-.counter {
+.bigproductitembtn {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@
     margin-bottom: 1em;
 }
 
-.counter .btn {
+.bigproductitembtn .btn {
     /*padding: 8px;*/
     border-radius: 10px;
     background: var(--tg-theme-button-color);
@@ -20,7 +20,25 @@
     height: 50%;
 }
 
-.counter .number {
+.bigproductitembtn .number {
     padding: 10px;
     font-size: 16px;
 }
+
+/*/////////////////////////*/
+
+
+
+
+.basketitembtn {
+
+}
+
+.basketitembtn .btn {
+
+}
+
+.basketitembtn .number {
+
+}
+
