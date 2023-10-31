@@ -47,7 +47,7 @@ const Basket = () => {
     return (
         <div>
             {/*<button onClick={handleClickBack}>BACK</button>*/}
-            <h1>Basket</h1>
+            <h1>Корзина</h1>
             <div>
                 <BasketList/>
             </div>

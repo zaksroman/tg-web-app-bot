@@ -35,17 +35,18 @@ const ProductItem = (props) => {
 
     return (
         <div className={ProductItemStyle} onClick={handleClick}>
-            <div className={styles.img}></div>
-            <div className={styles.price} >
-                <span><b>{props.product.price}</b> р</span>
-            </div>
-            <div className={styles.title}>{props.product.title}</div>
             <div className={styles.container}>
-                <div className={styles.description}>
-                    {props.product.description}
+                <div className={styles.img}></div>
+                <div className={styles.price} >
+                    <span><b>{props.product.price}</b> р</span>
+                </div>
+                <div className={styles.title}>{props.product.title}</div>
+                <div className={styles.container}>
+                    <div className={styles.description}>
+                        {props.product.description}
+                    </div>
                 </div>
             </div>
-
             {type === 'basketitem'
                 ? <Counter
                 type={'basketitem'}
