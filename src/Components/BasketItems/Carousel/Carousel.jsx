@@ -1,11 +1,11 @@
 import React from 'react';
-import'./Carousel.css'
+import'./Carousel.module.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {useSelector} from "react-redux";
 import ProductItem from "../../../ProductItem/ProductItem";
-
+import styles from './Carousel.module.css'
 const Carousel = () => {
     const products = useSelector(state => state.products)
     const addedItems = useSelector(state => state.addedItems);
@@ -44,7 +44,7 @@ const Carousel = () => {
 
     return (
         <div>
-            {addedItems.length !==0 && <Slider {...settings}>
+            {addedItems.length !==0 && <Slider {...settings} classname={styles.carousel}>
                 {remainingItems(products, addedItems)?.map(product => {
                     return <ProductItem
                         product={product}
