@@ -3,11 +3,12 @@
     align-items: center;
     justify-content: space-between;
     width: 30%;
+    height: 10%;
     position: sticky;
     bottom: 0;
     right: 0;
     background-color: var(--tg-theme-bg-color);
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
 }
 
 .bigproductitembtn .btn {
@@ -21,7 +22,7 @@
 }
 
 .bigproductitembtn .number {
-    padding: 10px;
+    /*padding: 10px;*/
     font-size: 16px;
 }
 
