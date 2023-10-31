@@ -59,36 +59,42 @@
     display: flex;
     flex-direction: row-reverse;
     border: 1px solid var(--tg-theme-button-color);
+    justify-content: space-between;
     border-radius: 10px;
-    padding: 15px;
+    /*padding: 15px;*/
     width: 100%;
     align-items: center;
 }
 .basketitem .img {
-    width: 100px;
-    height: 100px;
-    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
 }
 
 .basketitem .price {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
 }
 
 .basketitem .title {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 .basketitem .annotation {
+    flex-grow: 1;
     overflow: hidden;
-    /*display: none*/
+    padding-right: 10px;
 }
 
 .basketitem .description {
-    font-size: 16px;
-    color: #666;
+    font-size: 14px;
+    /*color: #666;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 /*/////////////carouselitem/////////////*/
 
