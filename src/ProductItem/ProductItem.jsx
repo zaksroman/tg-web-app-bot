@@ -40,13 +40,14 @@ const ProductItem = (props) => {
                 <div className={styles.price} >
                     <span><b>{props.product.price}</b> р</span>
                 </div>
+            </div>
                 <div className={styles.title}>{props.product.title}</div>
                 <div className={styles.container}>
                     <div className={styles.description}>
                         {props.product.description}
                     </div>
                 </div>
-            </div>
+
             {type === 'basketitem'
                 ? <Counter
                 type={'basketitem'}
