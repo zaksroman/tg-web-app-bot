@@ -1,7 +1,7 @@
 .bigproductitembtn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 50%;
     height: 30%;
     position: sticky;
@@ -9,9 +9,16 @@
     right: 0;
     background-color: var(--tg-theme-bg-color);
     /*margin-bottom: 1em;*/
-    /*padding: 10px;*/
+    padding: 10px;
     margin-top: auto; /* Прижатие к низу экрана */
     margin-left: auto;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .bigproductitembtn .btn {

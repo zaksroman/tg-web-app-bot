@@ -38,9 +38,11 @@ const Counter = (props) => {
 
     return (
         <div className={StylesCount}>
-            <button onClick={onDecrease} className={`${styles.btn} ${StylesCount}`}>-</button>
-            <h3 className={styles.number}>{props.count}</h3>
-            <button onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}>+</button>
+            <div className={styles.buttoncontainer}>
+                <button onClick={onDecrease} className={`${styles.btn} ${StylesCount}`}>-</button>
+                <h3 className={styles.number}>{props.count}</h3>
+                <button onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}>+</button>
+            </div>
 
             <div>
                 <Modal show={showModal} onHide={handleLeave} className={`${showModal ? 'modal' : ''} ${styles.modal}`}>
