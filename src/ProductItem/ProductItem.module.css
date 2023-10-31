@@ -82,7 +82,7 @@
 
 .basketitem .container {
     overflow: hidden;
-    display: none
+    /*display: none*/
 }
 
 .basketitem .description {
