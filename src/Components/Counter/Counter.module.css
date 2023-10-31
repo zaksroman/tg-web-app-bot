@@ -47,32 +47,81 @@
 }
 
 /*/////////////////////////*/
+/*.basketitembtn {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*    width: 30%;*/
+/*    position: sticky;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    background-color: var(--tg-theme-bg-color);*/
+/*    margin-bottom: 1em;*/
+/*}*/
+
+/*.basketitembtn .btn {*/
+/*    border-radius: 10px;*/
+/*    border-color: var(--tg-theme-button-color);*/
+/*    background: var(--tg-theme-button-color);*/
+/*    color: var(--tg-theme-button-text-color);*/
+/*    cursor: pointer;*/
+/*    width: 50%;*/
+/*    height: 50%;*/
+/*}*/
+
+/*.basketitembtn .number {*/
+/*    padding: 10px;*/
+/*    font-size: 16px;*/
+/*}*/
+
 .basketitembtn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 30%;
+    justify-content: center;
+    width: 50%;
+    height: 30%;
     position: sticky;
     bottom: 0;
     right: 0;
     background-color: var(--tg-theme-bg-color);
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
+    padding: 10px;
+    margin-top: auto; /* Прижатие к низу экрана */
+    margin-left: auto;
+}
+
+.basketitembtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .basketitembtn .btn {
-    border-radius: 10px;
+    /*padding: 8px;*/
     border-color: var(--tg-theme-button-color);
+    border-radius: 10px;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     cursor: pointer;
     width: 50%;
     height: 50%;
+    flex-basis: 20px;
+}
+
+.basketitembtn .btn:first-child {
+    margin-right: 10px; /* Отступ справа для первой кнопки */
+}
+
+.basketitembtn .btn:last-child {
+    margin-left: 10px; /* Отступ слева для второй кнопки */
 }
 
 .basketitembtn .number {
-    padding: 10px;
+    /*padding: 10px;*/
     font-size: 16px;
 }
+
 /*///////////////////*/
 .disabled {
     pointer-events: none;
