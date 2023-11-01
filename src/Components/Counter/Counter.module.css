@@ -7,7 +7,7 @@
     position: sticky;
     bottom: 0;
     right: 0;
-    background-color: var(--tg-theme-bg-color);
+    background-color: rgba(0, 0, 0, 0)  /*var(--tg-theme-bg-color)*/;
     /*margin-bottom: 1em;*/
     padding: 10px;
     /*margin-top: auto; !* Прижатие к низу экрана *!*/
