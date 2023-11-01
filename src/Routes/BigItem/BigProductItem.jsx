@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import Counter from "../../Components/Counter/Counter";
 import Button from "../../Components/Button/Button";
@@ -16,6 +16,8 @@ const BigProductItem = () => {
     const navigate = useNavigate()
     const addedItems = useSelector(state => state.addedItems);
 
+    const [isCollapsed, setIsCollapsed] = useState(true);
+
     const handleClickBack = () => {
         navigate(-1)
     }
@@ -23,6 +25,7 @@ const BigProductItem = () => {
     const handleClick = () => {
         navigate('/basket');
     }
+
     const prodCaracteristics = (id) => {
         return products.find((product)=> product.id === id )
     }
@@ -64,7 +67,14 @@ const BigProductItem = () => {
             <div>
                 <h1>{prodCaracteristics(id).title}</h1>
                 <h2>{prodCaracteristics(id).price} р</h2>
-                <p>{prodCaracteristics(id).description}</p>
+                {isCollapsed ? (
+                    <p>{prodCaracteristics(id).description.substring(0, 100) + '...'}</p>
+                ) : (
+                    <p>{prodCaracteristics(id).description}</p>
+                )}
+                <button onClick={() => setIsCollapsed(!isCollapsed)}>
+                    {isCollapsed ? 'Показать полностью' : 'Свернуть'}
+                </button>
             </div>
 
             {!count && (
