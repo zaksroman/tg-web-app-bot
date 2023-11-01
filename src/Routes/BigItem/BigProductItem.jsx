@@ -65,8 +65,8 @@ const BigProductItem = () => {
                 <Slider className={styles.slider}/>
             </div >
             <div>
-                <h1>{prodCaracteristics(id).title}</h1>
-                <h2>{prodCaracteristics(id).price} р</h2>
+                <h2>{prodCaracteristics(id).title}</h2>
+                <h3>{prodCaracteristics(id).price} р</h3>
                 {isCollapsed ? (
                     <p>{prodCaracteristics(id).description.substring(0, 100) + '...'}</p>
                 ) : (
