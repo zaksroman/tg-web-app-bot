@@ -41,4 +41,35 @@ p {
     font-size: 18px;
 }
 
+.showHideButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--tg-theme-text-color);
+    background-color: var(--tg-theme-bg-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    outline: none; /* удаление контура при фокусе кнопки */
+    border-bottom: 1px dotted var(--tg-theme-text-color)
+}
+
+/*.showHideButton:hover {*/
+/*    background-color: #e0e0e0;*/
+/*}*/
+
+/*.showHideButton.hidden {*/
+/*    color: #777777;*/
+/*}*/
+
+/*.showHideButton.hidden:hover {*/
+/*    background-color: transparent;*/
+/*}*/
+
+/*.showHideButton.hidden:hover {*/
+/*    background-color: #d32f2f;*/
+/*}*/
 

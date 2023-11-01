@@ -9,6 +9,8 @@
     /*font-size: 1em;*/
     /*position: sticky;*/
     /*bottom: 0;*/
+    position: sticky;
+    bottom: 0;
     width: 100%; /*Занимает всю ширину экрана*/
     padding: 10px;
     font-size: 18px;

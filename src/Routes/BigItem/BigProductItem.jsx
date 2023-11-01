@@ -72,7 +72,7 @@ const BigProductItem = () => {
                 ) : (
                     <p>{prodCaracteristics(id).description}</p>
                 )}
-                <button onClick={() => setIsCollapsed(!isCollapsed)}>
+                <button className={`${styles.showHideButton} ${isCollapsed ? 'hidden' : ''}`} onClick={() => setIsCollapsed(!isCollapsed)}>
                     {isCollapsed ? 'Показать полностью' : 'Свернуть'}
                 </button>
             </div>
