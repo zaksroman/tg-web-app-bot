@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styles from './ProductList.module.css'
-import ProductItem from "../../ProductItem/ProductItem";
+import ProductItem from "../../Components/ProductItem/ProductItem";
 import {useSelector} from "react-redux";
 import Search from "../../Components/Search/Search";
 import {useNavigate} from "react-router-dom";
@@ -40,11 +40,12 @@ const ProductList = () => {
         <div>
             <Search/>
                 <div className={styles.list}>
-                    {/*<button onClick={handleClick}>Корзина</button>*/}
+                    <button onClick={handleClick}>Корзина</button>
                     {filteredProducts.map(product => {
                         return (
                             <ProductItem
                                 product={product}
+                                type={'productlistitem'}
                                 // className={styles.item}
                             />
                         )})}

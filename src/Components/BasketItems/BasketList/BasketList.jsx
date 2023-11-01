@@ -1,7 +1,8 @@
 
 import styles from './BasketList.module.css'
 import {useSelector} from "react-redux";
-import ProductItem from "../../../ProductItem/ProductItem";
+import ProductItem from "../../ProductItem/ProductItem";
+import BasketItem from "../BasketItem/BasketItem";
 
 
 const BasketList = () => {
@@ -12,7 +13,7 @@ const BasketList = () => {
             <div className={styles.basketlist}>
                 {addedItems.map(product => {
                     return (
-                        <ProductItem
+                        <BasketItem
                             product={product}
                             type={'basketitem'}
                         />

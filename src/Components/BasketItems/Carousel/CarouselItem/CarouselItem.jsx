@@ -1,6 +1,6 @@
 import React from 'react';
 import './CarouselItem.css'
-import Button from "../Components/Button/Button";
+import Button from "../../../Button/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 const CarouselItem = ({item}) => {
@@ -29,7 +29,7 @@ const CarouselItem = ({item}) => {
             <h2>{item.title}</h2>
             <h3>{item.price}</h3>
             <Button
-                className={'add-btn'}
+                type={'carouselitem'}
                 onClick={onAddHandler}>
                 В корзину
             </Button>
