@@ -15,7 +15,9 @@ const ProductItem = (props) => {
         <div className={styles.productlistitem}
              onClick={handleClick}>
             <div className={styles.annotation}>
-                <div className={styles.img}></div>
+                <div className={styles.img}>
+                    <img src={props.product.img[0]} alt="test"/>
+                </div>
                 <div className={styles.price}>
                     <span><b>{props.product.price}</b> р</span>
                 </div>
