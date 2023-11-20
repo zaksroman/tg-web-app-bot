@@ -9,7 +9,7 @@
     overflow: hidden;
     transition: transform 0.2s ease;
     border-radius: 10px;
-    background: #e8e8e8;
+    background: #eeeeee;
     box-shadow: 15px 15px 30px #bebebe /*,*/
     /*-15px -15px 30px #ffffff;*/
 }
