@@ -2,7 +2,6 @@
 .productlistitem {
     display: flex;
     flex-direction: column;
-    /*border-radius: 10px;*/
     width: 170px;
     margin-right: 0.5em ;
     margin-left: 0.5em ;
@@ -11,8 +10,8 @@
     transition: transform 0.2s ease;
     border-radius: 10px;
     background: #e0e0e0;
-    box-shadow: 15px 15px 30px #bebebe,
-    -15px -15px 30px #ffffff;
+    box-shadow: 15px 15px 30px #bebebe /*,*/
+    /*-15px -15px 30px #ffffff;*/
 }
 
 .productlistitem:active{
