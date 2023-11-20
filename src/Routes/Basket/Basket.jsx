@@ -4,6 +4,7 @@ import BasketList from "../../Components/BasketItems/BasketList/BasketList";
 import {useTelegram} from "../../hooks/useTelegram";
 import {useSelector} from "react-redux";
 import Carousel from "../../Components/BasketItems/Carousel/Carousel";
+import {findAllByDisplayValue} from "@testing-library/react";
 
 
 const Basket = () => {
@@ -24,12 +25,19 @@ const Basket = () => {
         }
     })
 
+    const totalPrice = addedItems.reduce((acc, item) => {
+        return acc += item.price * item.count
+    }, 0)
+
     if (addedItems.length === 0) {
         tg.MainButton.hide()
     } else {
         tg.MainButton.show()
         tg.MainButton.setParams({
-            text: 'Оформить заказ'
+            text: <div>
+                <p>К оформлению</p>
+                <p>{totalPrice} ₽</p>
+            </div>
         })
     }
 
@@ -40,13 +48,8 @@ const Basket = () => {
         }
     }, [handleClick])
 
-    const totalPrice = addedItems.reduce((acc, item) => {
-        return acc += item.price * item.count
-    }, 0)
-
     return (
         <div>
-            {/*<button onClick={handleClickBack}>BACK</button>*/}
             <h1>Корзина</h1>
             <div>
                 <BasketList/>
@@ -55,7 +58,7 @@ const Basket = () => {
                 <Carousel/>
             </div>
             <div>
-                <h2>{!totalPrice ? 'В корзине пусто' : `Стоимость заказа ${totalPrice}` }</h2>
+                <p>{!totalPrice ? 'В корзине пусто' : `Стоимость заказа ${totalPrice} ₽` }</p>
             </div>
         </div>
     );
