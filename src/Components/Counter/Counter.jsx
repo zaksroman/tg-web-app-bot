@@ -44,9 +44,9 @@ const Counter = (props) => {
     return (
         <div className={StylesCount}>
             <div className={styles.buttoncontainer}>
-                <button onClick={onDecrease} className={`${styles.btn} ${StylesCount}`}>-</button>
+                <button onClick={onDecrease} className={`${styles.btn} ${StylesCount}`}><b>-</b></button>
                 <h3 className={styles.number}>{props.count}</h3>
-                <button onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}>+</button>
+                <button onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}><b>+</b></button>
             </div>
 
             <div>

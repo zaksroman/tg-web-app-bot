@@ -36,7 +36,7 @@ const Basket = () => {
         tg.MainButton.setParams({
             text:
                 `К оформлению
-                ${totalPrice} ₽`
+                `${totalPrice}` ₽`
 
         })
     }
