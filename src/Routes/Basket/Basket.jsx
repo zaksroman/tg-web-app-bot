@@ -33,11 +33,10 @@ const Basket = () => {
         tg.MainButton.hide()
     } else {
         tg.MainButton.show()
-        tg.MainButton.setText(`К оформлению, ${totalPrice} ₽`)
-        /*setParams({
+        tg.MainButton.setParams({
             text:
                 `К оформлению, ${totalPrice} ₽`
-        })*/
+        })
     }
 
     useEffect(()=> {
