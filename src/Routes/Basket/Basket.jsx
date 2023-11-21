@@ -34,10 +34,10 @@ const Basket = () => {
     } else {
         tg.MainButton.show()
         tg.MainButton.setParams({
-            text: <div>
-                <p>К оформлению</p>
-                <p>{totalPrice} ₽</p>
-            </div>
+            text:
+                `К оформлению
+                ${totalPrice} ₽`
+
         })
     }
 

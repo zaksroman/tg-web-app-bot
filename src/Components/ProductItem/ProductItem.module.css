@@ -10,9 +10,27 @@
     transition: transform 0.2s ease;
     border-radius: 10px;
     background: #efefef;
-    box-shadow: 15px 15px 30px #bebebe /*,*/
-    /*-15px -15px 30px #ffffff;*/
+    box-shadow: 7px 7px 20px #bebebe /*,
+    -5px -5px 15px #ffffff;*/
 }
+
+@media (prefers-color-scheme: dark) {
+    .productlistitem {
+        display: flex;
+        flex-direction: column;
+        width: 170px;
+        margin-right: 0.5em;
+        margin-left: 0.5em;
+        margin-bottom: 15px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+        border-radius: 10px;
+        background: #212121;
+        box-shadow: 7px 7px 20px rgb(25, 25, 25),
+        -7px -7px 20px rgb(60, 60, 60);
+    }
+}
+
 
 .productlistitem:active{
     transform: scale(0.95);
