@@ -29,13 +29,18 @@ const Basket = () => {
         return acc += item.price * item.count
     }, 0)
 
+    const totalCount = addedItems.reduce((acc, item) => {
+        return acc += item.count
+    }, 0)
+
     if (addedItems.length === 0) {
         tg.MainButton.hide()
     } else {
         tg.MainButton.show()
         tg.MainButton.setParams({
             text:
-                `К оформлению, ${totalPrice} ₽`
+                `К оформлению
+                 ${totalCount} шт, ${totalPrice} ₽`
         })
     }
 
@@ -49,15 +54,13 @@ const Basket = () => {
     return (
         <div>
             <h1>Корзина</h1>
+            {totalPrice.length === 0 && <div>В корзине пусто</div>}
             <div>
                 <BasketList/>
             </div>
-            <div>
-                <Carousel/>
-            </div>
-            <div>
-                <p>{!totalPrice ? 'В корзине пусто' : `Стоимость заказа ${totalPrice} ₽` }</p>
-            </div>
+            {/*<div>*/}
+            {/*    <Carousel/>*/}
+            {/*</div>*/}
         </div>
     );
 };
