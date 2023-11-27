@@ -39,8 +39,7 @@ const Basket = () => {
         tg.MainButton.show()
         tg.MainButton.setParams({
             text:
-                `К оформлению
-                 ${totalCount} шт, ${totalPrice} ₽`
+                `К оформлению ${totalCount} шт, ${totalPrice} ₽`
         })
     }
 
@@ -54,7 +53,7 @@ const Basket = () => {
     return (
         <div>
             <h1>Корзина</h1>
-            {totalPrice.length === 0 && <div>В корзине пусто</div>}
+            {addedItems.length === 0 && <div>В корзине пусто</div>}
             <div>
                 <BasketList/>
             </div>
