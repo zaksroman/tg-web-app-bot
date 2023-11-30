@@ -30,6 +30,11 @@ function rootReducer(state = initialState, action) {
             };
         case 'SET_FILTERED_PRODUCTS':
             return { ...state, filteredProducts: action.payload }
+        case 'DELETE_ITEM':
+            return {
+                ...state,
+                addedItems: state.addedItems.filter(item => item.id !== action.payload)
+            };
         default:
             return state;
     }

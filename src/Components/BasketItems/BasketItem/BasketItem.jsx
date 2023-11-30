@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './BasketItem.module.css'
 import Counter from "../../Counter/Counter";
 import {useNavigate} from "react-router-dom";
+import DeleteButton from "./DeleteButton/DeleteButton";
 
 const BasketItem = (props) => {
     
@@ -26,6 +27,11 @@ const BasketItem = (props) => {
                         checkOnDelite={true}
                         type={'basketitem'}
                     />
+                <div>
+                    <DeleteButton
+                        id={props.product.id}
+                    />
+                </div>
             </div>
         </div>
     );
