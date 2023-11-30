@@ -1,7 +1,6 @@
 import React from 'react';
-import './BasketItem.css'
+import styles from './BasketItem.module.css'
 import Counter from "../../Counter/Counter";
-import styles from "../../ProductItem/ProductItem.module.css";
 import {useNavigate} from "react-router-dom";
 
 const BasketItem = (props) => {
@@ -12,7 +11,7 @@ const BasketItem = (props) => {
             navigate(`/bigproructitem/${props.product.id}`);
         }
     }
-
+    const totalItemPrice = props.product.price * props.product.count
     return (
         <div className={styles.basketitem} onClick={handleClick}>
             <div className={styles.img}>
@@ -20,13 +19,13 @@ const BasketItem = (props) => {
             </div>
             <div>
                 <p><b>{props.product.title}</b></p>
-                <h3>{props.product.price}</h3>
-                <Counter
-                    id={props.product.id}
-                    count={props.product.count}
-                    checkOnDelite={true}
-                    type={'basketitem'}
-                />
+                    <h3>{totalItemPrice} ₽</h3>
+                    <Counter
+                        id={props.product.id}
+                        count={props.product.count}
+                        checkOnDelite={true}
+                        type={'basketitem'}
+                    />
             </div>
         </div>
     );

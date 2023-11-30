@@ -16,11 +16,13 @@ const Counter = (props) => {
         [styles.disabled]: showModal
     })
 
-    const onIncrease = () => {
+    const onIncrease = (e) => {
+        e.stopPropagation()
         dispatch({ type: 'INCREASE_ITEM', payload: props.id })
     }
 
-    const onDecrease = () => {
+    const onDecrease = (e) => {
+        e.stopPropagation()
         if (props.checkOnDelite === true && props.count === 1) {
             setShowModal(true)
         } else {
