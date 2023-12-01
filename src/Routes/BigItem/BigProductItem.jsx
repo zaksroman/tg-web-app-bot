@@ -60,7 +60,6 @@ const BigProductItem = () => {
 
     return (
         <div className={styles.container}>
-            {/*<button onClick={handleClick}>BACK</button>*/}
             <div className={styles.sliderContainer}>
                 <Slider className={styles.slider}/>
             </div >

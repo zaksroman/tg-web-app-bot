@@ -52,6 +52,7 @@ const Basket = () => {
 
     return (
         <div>
+            <button onClick={handleClick}>FORM</button>
             <h1>Корзина</h1>
             {addedItems.length === 0 && <div>В корзине пусто</div>}
             <div>

@@ -6,6 +6,11 @@
     touch-action: pan-x pan-y;
 }
 
+.input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
 .input {
     appearance: textfield;
     width: 100%;
