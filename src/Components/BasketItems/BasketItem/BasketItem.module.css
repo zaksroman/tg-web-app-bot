@@ -1,17 +1,9 @@
-/*.basketitem {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    border: 1px solid var(--tg-theme-button-color);*/
-/*    border-radius: 10px;*/
-/*    padding: 15px;*/
-/*    width: 100%;*/
-/*}*/
 
 .basketitem {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
     padding: 10px;
     margin: 10px;
     font-size: 16px;
@@ -27,7 +19,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 20px;
         padding: 10px;
         margin: 10px;
         font-size: 16px;
@@ -39,21 +30,19 @@
     }
 }
 
-
 .basketitem .img {
-    width: 60px;
-    height: 60px;
     background-color: #cccccc;
     border-radius: 5px;
+    width: 150px; /* Или используйте фиксированный размер, например width: 300px; */
+    height: auto;
+    object-fit: contain; /* Это гарантирует, что изображение не будет искажено */
 }
 
 .basketitem p {
     margin: 0;
     font-size: 18px;
-    /*font-weight: bold;*/
     box-sizing: content-box;
     display: inline-block;
-    /*margin: 0;*/
 }
 
 .basketitem h3 {

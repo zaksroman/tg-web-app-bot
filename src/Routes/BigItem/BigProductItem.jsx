@@ -66,7 +66,7 @@ const BigProductItem = () => {
             </div >
             <div>
                 <h2>{prodCaracteristics(id).title}</h2>
-                <h3>{prodCaracteristics(id).price} р</h3>
+                <h3>{prodCaracteristics(id).price} ₽</h3>
                 {isCollapsed ? (
                     <p>{prodCaracteristics(id).description.substring(0, 100) + '...'}</p>
                 ) : (

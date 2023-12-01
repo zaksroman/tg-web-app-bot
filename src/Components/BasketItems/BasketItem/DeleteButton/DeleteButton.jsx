@@ -13,7 +13,7 @@ const DeleteButton = (props) => {
 
     return (
         <div className={styles.delButton}>
-            <button onClick={deleteHandler}>del</button>
+            <button onClick={deleteHandler}></button>
         </div>
     );
 };

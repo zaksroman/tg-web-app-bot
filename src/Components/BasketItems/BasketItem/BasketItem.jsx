@@ -27,11 +27,12 @@ const BasketItem = (props) => {
                         checkOnDelite={true}
                         type={'basketitem'}
                     />
-                <div>
-                    <DeleteButton
-                        id={props.product.id}
-                    />
-                </div>
+
+            </div>
+            <div>
+                <DeleteButton
+                    id={props.product.id}
+                />
             </div>
         </div>
     );

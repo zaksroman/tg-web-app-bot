@@ -19,7 +19,7 @@ const ProductItem = (props) => {
                     <img src={props.product.img[0]} alt="test"/>
                 </div>
                 <div className={styles.price}>
-                    <span><b>{props.product.price}</b> р</span>
+                    <span><b>{props.product.price}</b> ₽</span>
                 </div>
             </div>
                 <div className={styles.title}>{props.product.title}</div>
