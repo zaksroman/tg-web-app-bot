@@ -21,8 +21,6 @@ const Counter = (props) => {
     const onDecrease = (e) => {
         e.stopPropagation()
         dispatch({ type: 'DECREASE_ITEM', payload: props.id })
-        if (props.count === 1) {
-        }
     }
 
     return (
