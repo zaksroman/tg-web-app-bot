@@ -26,9 +26,16 @@ const Counter = (props) => {
     return (
         <div className={StylesCount}>
             <div className={styles.buttoncontainer}>
-                <button onClick={onDecrease} disabled={props.count === 1} className={`${styles.btn} ${StylesCount}`}><b>-</b></button>
-                <h3 className={styles.number}>{props.count}</h3>
-                <button onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}><b>+</b></button>
+                <button
+                    onClick={onDecrease}
+                    disabled={type === 'basketitem' ? props.count === 1 : false}
+                    className={`${styles.btn} ${StylesCount}`}>
+                    <b>-</b>
+                </button>
+                <h3 className={styles.number}>{props.count}
+                </h3>
+                <button
+                    onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}><b>+</b></button>
             </div>
         </div>
     );
