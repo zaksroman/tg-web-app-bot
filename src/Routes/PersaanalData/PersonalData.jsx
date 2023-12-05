@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState, useRef} from 'react';
-import './PersonalData.module.css'
+import style from './PersonalData.module.css'
 import {useTelegram} from "../../hooks/useTelegram";
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
@@ -100,7 +100,7 @@ const PersanalData = () => {
         <div className={'box'}>
             <h3>Введите ваши данные</h3>
             <input
-                className={'input'}
+                className={style.input}
                 type="text"
                 placeholder={'Город'}
                 value={city}
@@ -108,7 +108,7 @@ const PersanalData = () => {
                 ref={inputRef}
             />
             <input
-                className={'input'}
+                className={style.input}
                 type="text"
                 placeholder={'Улица'}
                 value={street}
@@ -116,7 +116,7 @@ const PersanalData = () => {
                 ref={inputRef}
             />
             <input
-                className={'input'}
+                className={style.input}
                 type="text"
                 placeholder={'Имя Фамилия'}
                 value={fio}
@@ -124,7 +124,7 @@ const PersanalData = () => {
                 ref={inputRef}
             />
             <input
-                className={'input'}
+                className={style.input}
                 type="text"
                 placeholder={'Комментарий к заказу'}
                 value={comment}
@@ -132,7 +132,7 @@ const PersanalData = () => {
                 ref={inputRef}
             />
             <input
-                className={'input'}
+                className={style.input}
                 type="number"
                 placeholder={'Номер телефона'}
                 value={number}

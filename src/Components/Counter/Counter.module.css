@@ -129,7 +129,7 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-.basketitembtn .btn:active .btn:focus{
+.basketitembtn .btn:active {
     transform: scale(0.9);
     outline: none;
     box-shadow: none;
