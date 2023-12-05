@@ -14,17 +14,15 @@ const Counter = (props) => {
     })
 
     const onIncrease = (e) => {
-        e.stopPropagation()
         dispatch({ type: 'INCREASE_ITEM', payload: props.id })
     }
 
     const onDecrease = (e) => {
-        e.stopPropagation()
         dispatch({ type: 'DECREASE_ITEM', payload: props.id })
     }
 
     return (
-        <div className={StylesCount}>
+        <div className={StylesCount} onClick={(e)=> {e.stopPropagation()}}>
             <div className={styles.buttoncontainer}>
                 <button
                     onClick={onDecrease}

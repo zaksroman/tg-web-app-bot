@@ -27,7 +27,6 @@ const BasketItem = (props) => {
                         checkOnDelite={true}
                         type={'basketitem'}
                     />
-
             </div>
             <div>
                 <DeleteButton
