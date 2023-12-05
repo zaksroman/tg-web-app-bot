@@ -25,6 +25,7 @@
     padding: unset;
     /*border-color: var(--tg-theme-button-color);*/
     border-radius: 10px;
+    border: none;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     cursor: pointer;
@@ -55,6 +56,14 @@
     font-size: 16px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .bigproductitembtn .number {
+        padding-inline: 10px;
+        font-size: 16px;
+        color: #ffffff;
+    }
+}
+
 /*/////////////////////////*/
 
 .basketitembtn {
@@ -66,7 +75,7 @@
     position: sticky;
     bottom: 0;
     right: 0;
-    background-color: #efefef;;
+    background-color: #ffffff;;
     /*margin-bottom: 1em;*/
     padding: 10px;
     margin-top: auto; /* Прижатие к низу экрана */
@@ -104,7 +113,9 @@
 .basketitembtn .btn {
     padding: unset ;
     /*border-color: var(--tg-theme-button-color);*/
+    border: none;
     border-radius: 10px;
+    box-shadow: none;
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     cursor: pointer;
@@ -122,7 +133,6 @@
     box-shadow: none;
 
 }
-
 
 .basketitembtn .btn:first-child {
     margin-right: 10px; /* Отступ справа для первой кнопки */
