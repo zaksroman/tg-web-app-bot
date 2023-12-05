@@ -54,6 +54,7 @@
 .bigproductitembtn .number {
     padding: 10px;
     font-size: 16px;
+    align-items: center;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,6 +62,7 @@
         padding-inline: 10px;
         font-size: 16px;
         color: #ffffff;
+        align-items: center;
     }
 }
 
