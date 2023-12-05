@@ -18,28 +18,33 @@ body {
   }
 }
 
+/* Скрыть скроллбар когда он не активен и сделать его видимым при скроллинге */
 html {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(63, 63, 63, 0.5) transparent; /* Ползунок и трек */
+  scrollbar-width: thin; /* Для Firefox */
+  scrollbar-color: rgba(68, 68, 68, 0.7) transparent; /* Ползунок и трек для Firefox */
 }
 
+/* Стили для Webkit-браузеров */
 body::-webkit-scrollbar {
-  width: 8px; /* Ширина скроллбара */
+  width: 8px;
+  height: 8px; /* Если нужно изменить высоту горизонтального скроллбара */
 }
 
 body::-webkit-scrollbar-track {
-  background: transparent; /* Фон трека скроллбара */
+  background: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(63, 63, 63, 0.5); /* Цвет ползунка */
-  border-radius: 4px; /* Скругление углов ползунка */
+  background-color: rgba(68, 68, 68, 0.7);
+  border-radius: 4px;
+  border: none; /* Если вы хотите убрать границы у ползунка */
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: rgba(63, 63, 63, 0.5); /* Цвет ползунка при наведении */
+  background: rgba(68, 68, 68, 0.7);
 }
 
 body::-webkit-scrollbar-button {
-  display: none;
+  display: none; /* Скрыть стрелки управления для Webkit-браузеров */
 }
+
