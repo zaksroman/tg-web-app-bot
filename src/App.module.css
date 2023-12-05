@@ -17,3 +17,29 @@ body {
     font-family: Roboto,sans-serif;
   }
 }
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(63, 63, 63, 0.5) transparent; /* Ползунок и трек */
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* Ширина скроллбара */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* Фон трека скроллбара */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(63, 63, 63, 0.5); /* Цвет ползунка */
+  border-radius: 4px; /* Скругление углов ползунка */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(63, 63, 63, 0.5); /* Цвет ползунка при наведении */
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
