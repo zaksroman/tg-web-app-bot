@@ -1,11 +1,13 @@
 import {useDispatch, useSelector} from 'react-redux';
-import {useEffect, useState} from "react";
+import {useEffect, useState, useRef} from "react";
 import styles from './Search.module.css'
 
 const Search = () => {
     const products = useSelector(state => state.products)
     const dispatch = useDispatch()
     const [search, setSearch] = useState('')
+
+    const inputRef = useRef(null);
 
     useEffect(() => {
         filteredProducts()
@@ -23,14 +25,13 @@ const Search = () => {
         dispatch({type: 'SET_FILTERED_PRODUCTS', payload: filterProducts})
     }
 
-    useEffect(() => {
-        const inputElement = document.getElementById("input");
+    const handleOutsideClick = (event) => {
+        if (inputRef.current && event.target !== inputRef.current) {
+            inputRef.current.blur();
+        }
+    };
 
-        const handleOutsideClick = (event) => {
-            if (event.target !== inputElement) {
-                inputElement.blur();
-            }
-        };
+    useEffect(() => {
         document.addEventListener("click", handleOutsideClick);
         return () => {
             document.removeEventListener("click", handleOutsideClick);
@@ -39,7 +40,14 @@ const Search = () => {
 
     return (
             <div className={styles.form}>
-                <input type="text" placeholder="Поиск" value={search} onChange={searchHandler} id={"input"} className={styles.input}/>
+                <input
+                    type="text"
+                    placeholder="Поиск"
+                    value={search}
+                    onChange={searchHandler}
+                    className={styles.input}
+                    ref={inputRef}
+                />
             </div>
         )
     }

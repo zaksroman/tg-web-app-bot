@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefef; /*var(--tg-theme-secondary-bg-color, #ebedf0)*/
+  color: #000000;
+  font-family: Roboto,sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000000 ; /*var(--tg-theme-secondary-bg-color, #ebedf0)*/ /*var(--tg-theme-bg-color)*/
+    color: #ffffff; /*var(--tg-theme-text-color)*/
+    font-family: Roboto,sans-serif;
+  }
+}

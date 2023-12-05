@@ -1,4 +1,4 @@
-import './App.css';
+import './App.module.css';
 import {useEffect} from "react";
 import {useTelegram} from "./hooks/useTelegram";
 import {Routes, Route} from "react-router-dom";

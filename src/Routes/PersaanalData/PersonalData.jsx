@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
 import './PersonalData.module.css'
 import {useTelegram} from "../../hooks/useTelegram";
 import {useNavigate} from "react-router-dom";
@@ -13,6 +13,8 @@ const PersanalData = () => {
     const [number, setNumber] = useState('')
     const addedItems = useSelector(state => state.addedItems);
     const {tg, user} = useTelegram()
+
+    const inputRef = useRef(null);
 
     const navigate = useNavigate()
     const handleClickBack = () => {
@@ -81,18 +83,21 @@ const PersanalData = () => {
     }
 
 
-    const inputElement = document.getElementById("input");
     const handleOutsideClick = (event) => {
-        if (event.target !== inputElement) {
-            inputElement.blur();
+        if (inputRef.current && event.target !== inputRef.current) {
+            inputRef.current.blur();
         }
     };
-    document.addEventListener("click", handleOutsideClick);
 
+    useEffect(() => {
+        document.addEventListener("click", handleOutsideClick);
+        return () => {
+            document.removeEventListener("click", handleOutsideClick);
+        };
+    }, []);
 
     return (
         <div className={'box'}>
-            {/*<button onClick={handleClick}>BACK</button>*/}
             <h3>Введите ваши данные</h3>
             <input
                 className={'input'}
@@ -100,7 +105,7 @@ const PersanalData = () => {
                 placeholder={'Город'}
                 value={city}
                 onChange={onChangeCity}
-                id={"input"}
+                ref={inputRef}
             />
             <input
                 className={'input'}
@@ -108,7 +113,7 @@ const PersanalData = () => {
                 placeholder={'Улица'}
                 value={street}
                 onChange={onChangeStreet}
-                id={"input"}
+                ref={inputRef}
             />
             <input
                 className={'input'}
@@ -116,7 +121,7 @@ const PersanalData = () => {
                 placeholder={'Имя Фамилия'}
                 value={fio}
                 onChange={onChangeFio}
-                id={"input"}
+                ref={inputRef}
             />
             <input
                 className={'input'}
@@ -124,7 +129,7 @@ const PersanalData = () => {
                 placeholder={'Комментарий к заказу'}
                 value={comment}
                 onChange={onChangeComment}
-                id={"input"}
+                ref={inputRef}
             />
             <input
                 className={'input'}
@@ -132,7 +137,7 @@ const PersanalData = () => {
                 placeholder={'Номер телефона'}
                 value={number}
                 onChange={onChangeNumber}
-                id={"input"}
+                ref={inputRef}
             />
         </div>
     );
