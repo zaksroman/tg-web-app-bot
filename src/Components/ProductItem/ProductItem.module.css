@@ -42,7 +42,7 @@
     background: lightgrey;
     margin: 0 auto;
     border-radius: 10px;
-    background: var(--tg-theme-button-color);
+    /*background: var(--tg-theme-button-color);*/
     /*object-fit: cover;*/
     /*width: 50%; !* Или используйте фиксированный размер, например width: 300px; *!*/
     height: auto;
