@@ -48,3 +48,8 @@ body::-webkit-scrollbar-button {
   display: none; /* Скрыть стрелки управления для Webkit-браузеров */
 }
 
+.body-scrollbar-hidden::-webkit-scrollbar-thumb {
+  opacity: 0; /* Сделаем ползунок полностью прозрачным */
+  transition: opacity 0.1s ease; /* Плавная анимация изменения прозрачности за 1 секунду */
+}
+

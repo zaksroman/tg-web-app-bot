@@ -16,6 +16,32 @@ function App() {
     tg.isClosingConfirmationEnabled = true
   }, [])
 
+    function setupScrollbarFade() {
+        let timer;
+        const body = document.querySelector('body');
+
+        function resetTimer() {
+            clearTimeout(timer); // Очищаем существующий таймер
+            body.classList.remove('body-scrollbar-hidden'); // Показываем скроллбар
+
+            // Устанавливаем новый таймер
+            timer = setTimeout(() => {
+                body.classList.add('body-scrollbar-hidden'); // Скрываем скроллбар
+            }, 100); // Время ожидания перед исчезновением скроллбара, 2000 миллисекунд (2 секунды)
+        }
+
+        // Устанавливаем события, которые будут сбрасывать таймер исчезновения скроллбара
+        window.addEventListener('scroll', resetTimer, false);
+        // window.addEventListener('mousemove', resetTimer, false);
+        // window.addEventListener('keydown', resetTimer, false);
+        window.addEventListener('touchmove', resetTimer, false);
+
+        // Запускаем таймер в первый раз
+        resetTimer();
+    }
+
+// Инициализация функции после загрузки DOM
+    document.addEventListener('DOMContentLoaded', setupScrollbarFade);
 
   return (
     <div className="App">
