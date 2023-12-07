@@ -15,6 +15,7 @@ const Basket = () => {
         navigate('/');
     }
     const handleClick = () => {
+        tg.MainButton.hide()
         navigate('/personaldata')
     }
 

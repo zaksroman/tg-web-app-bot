@@ -82,7 +82,6 @@ const PersanalData = () => {
         setComment(e.target.value)
     }
 
-
     const handleOutsideClick = (event) => {
         if (inputRef.current && event.target !== inputRef.current) {
             inputRef.current.blur();
@@ -125,18 +124,18 @@ const PersanalData = () => {
             />
             <input
                 className={style.input}
-                type="text"
-                placeholder={'Комментарий к заказу'}
-                value={comment}
-                onChange={onChangeComment}
-                ref={inputRef}
-            />
-            <input
-                className={style.input}
                 type="number"
                 placeholder={'Номер телефона'}
                 value={number}
                 onChange={onChangeNumber}
+                ref={inputRef}
+            />
+            <input
+                className={style.input}
+                type="text"
+                placeholder={'Комментарий к заказу'}
+                value={comment}
+                onChange={onChangeComment}
                 ref={inputRef}
             />
         </div>

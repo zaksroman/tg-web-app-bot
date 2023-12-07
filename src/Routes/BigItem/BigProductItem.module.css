@@ -4,6 +4,7 @@
     flex-direction: column; /* Компоненты расположатся вертикально */
     max-width: 1200px; /* Ограничение максимальной ширины контента для больших экранов */
     margin: 0 auto; /* Выравнивание контента по центру */
+    background-color: #ffffff;
 }
 
 .sliderContainer {

@@ -6,9 +6,9 @@
     position: fixed;
     bottom: 30px;
     right: 20px;
-    padding: 5px;
+    padding: 8px;
     white-space: nowrap;
     min-width: 60px;
-    height: 50px;
+    height: 45px;
     font-size: 18px;
 }
