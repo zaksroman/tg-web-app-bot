@@ -2,13 +2,13 @@
     background: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 20%;
-    /*margin: 20px;*/
-    margin-left: auto;
-    margin-bottom: 20px;
+    bottom: 30px;
+    right: 20px;
+    padding: 5px;
+    white-space: nowrap;
+    min-width: 60px;
+    height: 50px;
     font-size: 18px;
 }

@@ -16,9 +16,8 @@ const BasketButton = () => {
     }, 0)
 
     return (
-        <div className={styles.basketButton}>
-            <button onClick={handleClick}>{totalPrice} ₽</button>
-        </div>
+        <button onClick={handleClick} className={styles.basketButton}>{totalPrice} ₽</button>
+
     );
 };
 
