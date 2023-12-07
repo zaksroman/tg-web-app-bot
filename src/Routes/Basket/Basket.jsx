@@ -12,7 +12,7 @@ const Basket = () => {
 
     const handleClickBack = () => {
         tg.MainButton.hide()
-        navigate('/');
+        navigate(-1);
     }
 
     const handleClick = () => {
