@@ -157,7 +157,10 @@
     transform: scale(0.9);
     outline: none;
     box-shadow: none;
+}
 
+.basketitembtn .btn:disabled {
+    background-color: #aaaaaa;
 }
 
 .basketitembtn .btn:first-child {
