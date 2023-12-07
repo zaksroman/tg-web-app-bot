@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 200px;
-    height: 50px;
+    height: 110px;
     position: sticky;
     bottom: 15px;
     right: 0;
@@ -77,6 +78,16 @@
         align-items: center;
         background-color: #000000;
     }
+}
+
+.basketButton {
+    width: 130px;
+    height: 100%;
+    border: 20px #212121;
+    border-radius: 10px;
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    margin: 10px;
 }
 
 /*/////////////////////////*/

@@ -2,10 +2,16 @@ import React from 'react';
 import styles from './Counter.module.css'
 import {useDispatch} from "react-redux";
 import clsx from "clsx";
+import {useNavigate} from "react-router-dom";
 
 const Counter = (props) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/basket');
+    }
 
     const {type} = props
     const StylesCount = clsx({
@@ -35,6 +41,12 @@ const Counter = (props) => {
                 <button
                     onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}><b>+</b></button>
             </div>
+            {type==='bigproductitem'
+                && props.count !== 0
+                && <button
+                    className={styles.basketButton}
+                    onClick={handleClick}
+                >Корзина</button>}
         </div>
     );
 };
