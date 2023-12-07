@@ -75,7 +75,7 @@ const BigProductItem = () => {
                     id={id}
                     count={count}
                 />)}
-            <button onClick={onAddHandler}> корзина</button>
+            {/*<button onClick={onAddHandler}> корзинаtest</button>*/}
         </div>
     );
 };
