@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import Counter from "../../Components/Counter/Counter";
-import Button from "../../Components/Button/Button";
 import {useSelector, useDispatch} from "react-redux";
 import {useTelegram} from "../../hooks/useTelegram";
 import Slider from "../../Components/Slider/Slider";
@@ -14,8 +13,6 @@ const BigProductItem = () => {
     const dispatch = useDispatch()
     const count = useSelector(state => state.addedItems.find(el => el.id === id))?.count || 0
     const navigate = useNavigate()
-    const addedItems = useSelector(state => state.addedItems);
-
     const [isCollapsed, setIsCollapsed] = useState(true);
 
     const handleClickBack = () => {
@@ -44,7 +41,6 @@ const BigProductItem = () => {
             tg.offEvent('mainButtonClicked', onAddHandler)
         }
     }, [onAddHandler])
-
 
     if (count !== 0) {
         tg.MainButton.hide()
@@ -79,9 +75,7 @@ const BigProductItem = () => {
                     id={id}
                     count={count}
                 />)}
-
             <button onClick={onAddHandler}> корзина</button>
-
         </div>
     );
 };

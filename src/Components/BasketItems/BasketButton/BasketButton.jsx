@@ -1,6 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
-import {useNavigate, useParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import styles from './BasketButton.module.css'
 
 const BasketButton = () => {
     const navigate = useNavigate()
@@ -15,7 +16,7 @@ const BasketButton = () => {
     }, 0)
 
     return (
-        <div>
+        <div className={styles.basketButton}>
             <button onClick={handleClick}>{totalPrice} ₽</button>
         </div>
     );
