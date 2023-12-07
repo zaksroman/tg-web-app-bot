@@ -13,14 +13,46 @@
     appearance: none;
 }
 
+/*.input {*/
+/*    appearance: textfield;*/
+/*    width: 95%;*/
+/*    padding: 10px;*/
+/*    margin-top: 15px;*/
+/*    white-space: pre-wrap;*/
+/*    font-size: 98%;*/
+/*    height: 20%;*/
+/*}*/
+
 .input {
-    appearance: textfield;
-    width: 95%;
-    padding: 10px;
-    margin-top: 15px;
-    white-space: pre-wrap;
-    font-size: 98%;
-    height: 20%;
+    appearance: none;       /* отключаем стандартное оформление */
+    background: none;       /* фон делаем прозрачным */
+    border: 1px solid;      /* тонкая граница */
+    width: 95%;             /* ширина 95% от родительского контейнера */
+    padding: 10px;          /* внутренний отступ */
+    margin-top: 15px;       /* отступ сверху */
+    font-size: 98%;         /* размер шрифта, пиксели дают больше контроля */
+    height: 24%;
+    line-height: 1.5;       /* межстрочный интервал */
+    color: inherit;         /* цвет текста наследуется от родителя */
+    border-radius: 4px;     /* скругление углов */
+    box-sizing: border-box; /* границы и padding входят в ширину и высоту */
+
+    /* Цвет границы и placeholder по умолчанию (для светлой темы) */
+    border-color: #ccc;          /* цвет границы */
+    --placeholder-color: #aaa;   /* переменная цвета placeholder */
+
+    /* Цвет placeholder */
+    &::placeholder {
+        color: var(--placeholder-color);
+    }
+
+    /* Адаптация под темную тему (если в ОС установлена темная тема) */
+    @media (prefers-color-scheme: dark) {
+        background: #333;               /* темный фон */
+        border-color: #555;             /* темный цвет границы */
+        color: #ddd;                    /* светлый цвет текста */
+        --placeholder-color: #777;      /* светлый цвет placeholder */
+    }
 }
 
 .select {
