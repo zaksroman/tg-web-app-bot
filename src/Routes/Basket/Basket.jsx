@@ -4,18 +4,18 @@ import BasketList from "../../Components/BasketItems/BasketList/BasketList";
 import {useTelegram} from "../../hooks/useTelegram";
 import {useSelector} from "react-redux";
 import Carousel from "../../Components/BasketItems/Carousel/Carousel";
-import {findAllByDisplayValue} from "@testing-library/react";
-
 
 const Basket = () => {
     const {tg} = useTelegram()
     const addedItems = useSelector(state => state.addedItems);
     const navigate = useNavigate()
+
     const handleClickBack = () => {
+        tg.MainButton.hide()
         navigate('/');
     }
+
     const handleClick = () => {
-        tg.MainButton.hide()
         navigate('/personaldata')
     }
 
