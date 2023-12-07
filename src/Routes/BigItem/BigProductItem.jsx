@@ -13,7 +13,7 @@ const BigProductItem = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const count = useSelector(state => state.addedItems.find(el => el.id === id))?.count || 0
-
+    const navigate = useNavigate()
     const addedItems = useSelector(state => state.addedItems);
 
     const [isCollapsed, setIsCollapsed] = useState(true);
@@ -73,15 +73,6 @@ const BigProductItem = () => {
                 </button>
             </div>
 
-            {/*{!count && (*/}
-            {/*    <Button*/}
-            {/*        type={'bigproductitem'}*/}
-            {/*        onClick={onAddHandler}*/}
-            {/*    >*/}
-            {/*        Добавить в корзину*/}
-            {/*    </Button>)*/}
-            {/*}*/}
-
             {!!count && (
                 <Counter
                     type={'bigproductitem'}
@@ -90,6 +81,7 @@ const BigProductItem = () => {
                 />)}
 
             <button onClick={onAddHandler}> корзина</button>
+
         </div>
     );
 };
