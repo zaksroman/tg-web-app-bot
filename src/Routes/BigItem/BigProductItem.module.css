@@ -7,6 +7,17 @@
     background-color: #ffffff;
 }
 
+@media (prefers-color-scheme: dark) {
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #000000 ;
+    }
+}
+
 .sliderContainer {
     width: 100%; /* Slider будет растянут на всю ширину экрана */
 }
