@@ -30,7 +30,7 @@ const ProductList = () => {
 
     return (
         <div>
-            {<button onClick={handleClick}>Корзинаtest</button>}
+            {/*{<button onClick={handleClick}>Корзинаtest</button>}*/}
             <Search/>
                 <div className={styles.list}>
                     {filteredProducts.map(product => {

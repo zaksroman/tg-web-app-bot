@@ -53,7 +53,7 @@ const BigProductItem = () => {
 
     return (
         <div className={styles.container}>
-            {<button onClick={onAddHandler}> корзинаtest</button>}
+            {/*{<button onClick={onAddHandler}> корзинаtest</button>}*/}
             <div className={styles.sliderContainer}>
                 <Slider className={styles.slider}/>
             </div >
