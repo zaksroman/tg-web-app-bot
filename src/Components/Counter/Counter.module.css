@@ -21,6 +21,17 @@
     border-radius: 10px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .bigproductitembtn .buttoncontainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: initial;
+        background: #000000;
+        border-radius: 10px;
+    }
+}
+
 .bigproductitembtn .btn {
     padding: unset;
     /*border-color: var(--tg-theme-button-color);*/
