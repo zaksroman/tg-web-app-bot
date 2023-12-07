@@ -53,6 +53,7 @@ const BigProductItem = () => {
 
     return (
         <div className={styles.container}>
+            {<button onClick={onAddHandler}> корзинаtest</button>}
             <div className={styles.sliderContainer}>
                 <Slider className={styles.slider}/>
             </div >
@@ -75,7 +76,6 @@ const BigProductItem = () => {
                     id={id}
                     count={count}
                 />)}
-            {/*<button onClick={onAddHandler}> корзинаtest</button>*/}
         </div>
     );
 };

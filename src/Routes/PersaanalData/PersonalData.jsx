@@ -3,7 +3,7 @@ import style from './PersonalData.module.css'
 import {useTelegram} from "../../hooks/useTelegram";
 import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
-
+import InputMask from 'react-input-mask';
 
 const PersanalData = () => {
     const [city, setCity] = useState('')
@@ -96,7 +96,7 @@ const PersanalData = () => {
     }, []);
 
     return (
-        <div className={'box'}>
+        <div className={style.box}>
             <h3>Введите ваши данные</h3>
             <input
                 className={style.input}
@@ -122,14 +122,14 @@ const PersanalData = () => {
                 onChange={onChangeFio}
                 ref={inputRef}
             />
-            <input
-                className={style.input}
-                type="number"
-                placeholder={'Номер телефона'}
+            <InputMask
+                mask="+7 (999) 999-9999"
                 value={number}
                 onChange={onChangeNumber}
-                ref={inputRef}
+                className={style.input}
+                placeholder={'Номер телефона'}
             />
+
             <input
                 className={style.input}
                 type="text"
@@ -138,6 +138,8 @@ const PersanalData = () => {
                 onChange={onChangeComment}
                 ref={inputRef}
             />
+
+
         </div>
     );
 };
