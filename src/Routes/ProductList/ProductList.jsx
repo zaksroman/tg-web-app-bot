@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 import Search from "../../Components/Search/Search";
 import {useNavigate} from "react-router-dom";
 import {useTelegram} from "../../hooks/useTelegram";
+import BasketButton from "../../Components/BasketItems/BasketButton/BasketButton";
 
 const ProductList = () => {
     const {tg} = useTelegram()
@@ -27,15 +28,6 @@ const ProductList = () => {
         }
     }, [handleClick])
 
-    if (addedItems.length === 0) {
-        tg.MainButton.hide()
-    } else {
-        tg.MainButton.show()
-        tg.MainButton.setParams({
-            text: `Перейти в корзину`
-        })
-    }
-
     return (
         <div>
             <Search/>
@@ -46,10 +38,10 @@ const ProductList = () => {
                             <ProductItem
                                 product={product}
                                 type={'productlistitem'}
-                                // className={styles.item}
                             />
                         )})}
                 </div>
+            {addedItems.length !==0 && <div> <BasketButton/> </div>}
         </div>
     );
 };

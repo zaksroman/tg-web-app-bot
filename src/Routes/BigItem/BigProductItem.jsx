@@ -13,17 +13,14 @@ const BigProductItem = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     const count = useSelector(state => state.addedItems.find(el => el.id === id))?.count || 0
-    const navigate = useNavigate()
+
     const addedItems = useSelector(state => state.addedItems);
 
     const [isCollapsed, setIsCollapsed] = useState(true);
 
     const handleClickBack = () => {
+        tg.MainButton.hide()
         navigate(-1)
-    }
-
-    const handleClick = () => {
-        navigate('/basket');
     }
 
     const prodCaracteristics = (id) => {
@@ -42,19 +39,19 @@ const BigProductItem = () => {
     }, [])
 
     useEffect(()=> {
-        tg.onEvent('mainButtonClicked', handleClick)
+        tg.onEvent('mainButtonClicked', onAddHandler)
         return () => {
-            tg.offEvent('mainButtonClicked', handleClick)
+            tg.offEvent('mainButtonClicked', onAddHandler)
         }
-    }, [handleClick])
+    }, [onAddHandler])
 
 
-    if (addedItems.length === 0) {
+    if (count !== 0) {
         tg.MainButton.hide()
     } else {
         tg.MainButton.show()
         tg.MainButton.setParams({
-            text: `Перейти в корзину`
+            text: `Добавить в корзину`
         })
     }
 
@@ -76,14 +73,14 @@ const BigProductItem = () => {
                 </button>
             </div>
 
-            {!count && (
-                <Button
-                    type={'bigproductitem'}
-                    onClick={onAddHandler}
-                >
-                    Добавить в корзину
-                </Button>)
-            }
+            {/*{!count && (*/}
+            {/*    <Button*/}
+            {/*        type={'bigproductitem'}*/}
+            {/*        onClick={onAddHandler}*/}
+            {/*    >*/}
+            {/*        Добавить в корзину*/}
+            {/*    </Button>)*/}
+            {/*}*/}
 
             {!!count && (
                 <Counter
@@ -91,6 +88,8 @@ const BigProductItem = () => {
                     id={id}
                     count={count}
                 />)}
+
+            <button onClick={onAddHandler}> корзина</button>
         </div>
     );
 };

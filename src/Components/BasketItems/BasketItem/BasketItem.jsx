@@ -24,7 +24,6 @@ const BasketItem = (props) => {
                     <Counter
                         id={props.product.id}
                         count={props.product.count}
-                        checkOnDelite={true}
                         type={'basketitem'}
                     />
             </div>
