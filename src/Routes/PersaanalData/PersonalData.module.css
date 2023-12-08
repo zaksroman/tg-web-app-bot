@@ -6,7 +6,7 @@
     touch-action: pan-x pan-y;
     align-items: center;
     background-color: #ffffff;
-    height: 100%;
+    height: 100vh;
 }
 
 .input[type="number"] {
@@ -22,8 +22,8 @@
     width: 95%;             /* ширина 95% от родительского контейнера */
     padding: 10px;          /* внутренний отступ */
     margin-top: 15px;       /* отступ сверху */
-    font-size: 98%;         /* размер шрифта, пиксели дают больше контроля */
-    height: 24%;
+    font-size: 110%;         /* размер шрифта, пиксели дают больше контроля */
+    height: 8%;
     line-height: 1.5;       /* межстрочный интервал */
     color: inherit;         /* цвет текста наследуется от родителя */
     border-radius: 4px;     /* скругление углов */
