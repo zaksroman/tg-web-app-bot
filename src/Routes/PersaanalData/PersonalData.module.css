@@ -5,6 +5,7 @@
     padding: 20px;
     touch-action: pan-x pan-y;
     align-items: center;
+    background-color: #ffffff;
 }
 
 .input[type="number"] {
@@ -12,16 +13,6 @@
     -moz-appearance: textfield;
     appearance: none;
 }
-
-/*.input {*/
-/*    appearance: textfield;*/
-/*    width: 95%;*/
-/*    padding: 10px;*/
-/*    margin-top: 15px;*/
-/*    white-space: pre-wrap;*/
-/*    font-size: 98%;*/
-/*    height: 20%;*/
-/*}*/
 
 .input {
     appearance: none;       /* отключаем стандартное оформление */

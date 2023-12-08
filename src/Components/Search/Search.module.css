@@ -1,29 +1,49 @@
-.input {
-    appearance: textfield;
-    width: 100%;
-    padding: 5px;
-    height: 2.5em;
-    justify-content: center;
-    font-size: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    /*margin-top: 15px;*/
-}
 
-input:focus {
-    outline: none;
-}
-
+/* corrected .form styles */
 .form {
-    /*display: flex;*/
     position: sticky;
     top: 0;
-    flex-direction: column;
     width: 95%;
     padding-bottom: 8px;
-    /*height: 50px;*/
     margin-left: auto;
     margin-right: auto;
     touch-action: pan-x pan-y;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+/* corrected .input styles */
+.input {
+    appearance: none;
+    border: 1px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    font-size: 16px; /* standard base font size for better control */
+    color: inherit;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    /* Default (light theme) placeholder color */
+    --placeholder-color: #aaa;
+}
+
+/* Placeholder style */
+.input::placeholder {
+    color: var(--placeholder-color);
+}
+
+/* Dark theme adaptation */
+@media (prefers-color-scheme: dark) {
+    .input {
+        background-color: #333;
+        border-color: #555;
+        color: #ddd;
+        --placeholder-color: #777;
+    }
+}
+
+/* Focus state for .input */
+.input:focus {
+    outline: none;
 }

@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 import InputMask from 'react-input-mask';
 
-const PersanalData = () => {
+const PersonalData = () => {
     const [city, setCity] = useState('')
     const [street, setStreet] = useState('')
     const [fio, setFio] = useState('')
@@ -18,7 +18,7 @@ const PersanalData = () => {
 
     const navigate = useNavigate()
     const handleClickBack = () => {
-        navigate('/basket');
+        navigate(-1);
     }
 
     useEffect(() =>{
@@ -144,4 +144,4 @@ const PersanalData = () => {
     );
 };
 
-export default PersanalData;
+export default PersonalData;
