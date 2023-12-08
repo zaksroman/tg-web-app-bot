@@ -24,7 +24,7 @@ const Basket = () => {
         return () => {
             tg.BackButton.offClick(handleClickBack)
         }
-    })
+    },[handleClickBack])
 
     const totalPrice = addedItems.reduce((acc, item) => {
         return acc += item.price * item.count

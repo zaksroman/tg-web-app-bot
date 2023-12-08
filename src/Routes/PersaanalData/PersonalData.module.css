@@ -6,6 +6,7 @@
     touch-action: pan-x pan-y;
     align-items: center;
     background-color: #ffffff;
+    height: 100%;
 }
 
 .input[type="number"] {

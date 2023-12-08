@@ -33,7 +33,7 @@ const BigProductItem = () => {
         return () => {
             tg.BackButton.offClick(handleClickBack)
         }
-    }, [])
+    }, [handleClickBack])
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', onAddHandler)

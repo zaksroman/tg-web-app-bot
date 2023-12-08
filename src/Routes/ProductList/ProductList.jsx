@@ -19,7 +19,7 @@ const ProductList = () => {
 
     useEffect(() =>{
         tg.BackButton.hide()
-    })
+    },[])
 
     useEffect(()=> {
         tg.onEvent('mainButtonClicked', handleClick)

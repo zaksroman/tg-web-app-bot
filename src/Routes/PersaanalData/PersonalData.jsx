@@ -15,8 +15,8 @@ const PersonalData = () => {
     const {tg, user} = useTelegram()
 
     const inputRef = useRef(null);
-
     const navigate = useNavigate()
+
     const handleClickBack = () => {
         navigate(-1);
     }
@@ -26,7 +26,7 @@ const PersonalData = () => {
         return () => {
             tg.BackButton.offClick(handleClickBack)
         }
-    })
+    }, [handleClickBack])
 
     const tgName = user?.username
 
@@ -54,7 +54,7 @@ const PersonalData = () => {
         tg.MainButton.setParams({
             text: 'Заказать/Оплатить'
         })
-    }, [])
+    }, [onSendData])
 
     useEffect( ()=> {
         if (!street || !city || !fio || !number){
@@ -93,7 +93,7 @@ const PersonalData = () => {
         return () => {
             document.removeEventListener("click", handleOutsideClick);
         };
-    }, []);
+    }, [handleOutsideClick]);
 
     return (
         <div className={style.box}>

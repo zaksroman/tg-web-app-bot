@@ -36,7 +36,7 @@ const Search = () => {
         return () => {
             document.removeEventListener("click", handleOutsideClick);
         };
-    }, []);
+    }, [handleOutsideClick]);
 
     return (
             <div className={styles.form}>
