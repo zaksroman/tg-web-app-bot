@@ -8,6 +8,18 @@
     background-color: #ffffff;
     height: 100vh;
 }
+@media (prefers-color-scheme: dark) {
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        touch-action: pan-x pan-y;
+        align-items: center;
+        background-color: #000000;
+        height: 100vh;
+    }
+}
 
 .input[type="number"] {
     -webkit-appearance: none;
@@ -28,7 +40,7 @@
     color: inherit;         /* цвет текста наследуется от родителя */
     border-radius: 4px;     /* скругление углов */
     box-sizing: border-box; /* границы и padding входят в ширину и высоту */
-
+    outline: none;
     /* Цвет границы и placeholder по умолчанию (для светлой темы) */
     border-color: #ccc;          /* цвет границы */
     --placeholder-color: #aaa;   /* переменная цвета placeholder */
