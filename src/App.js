@@ -11,17 +11,17 @@ import {useDispatch} from "react-redux";
 function App() {
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const response = await fetch('http://localhost:8000/api/getProducts');
-                const data = await response.json();
-                dispatch({ type: 'SET_PRODUCTS', payload: data});
-            } catch (error) {
-                console.log(error);
-            }
-        })();
-    }, []);
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const response = await fetch('http://localhost:8000/api/getProducts');
+    //             const data = await response.json();
+    //             dispatch({ type: 'SET_PRODUCTS', payload: data});
+    //         } catch (error) {
+    //             console.log(error);
+    //         }
+    //     })();
+    // }, []);
 
 
   const {tg} = useTelegram()
