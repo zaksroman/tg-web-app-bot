@@ -36,6 +36,7 @@
     border: 0;
     box-shadow: none;
     color: rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0)
 }
 
 .bigproductitembtn .btn:first-child {
@@ -238,6 +239,7 @@
     margin: 0;
     height: 100%;
     font-size: 90%;
+    font-weight: 150;
     box-shadow: none;
 }
 

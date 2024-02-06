@@ -7,6 +7,7 @@
     background-color: #ffffff;
     border-radius: 0rem 0rem 0.5rem 0.5rem;
     overflow: hidden;
+    padding-bottom: 40%;
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -101,6 +102,7 @@ p {
     align-items: center;
     padding: 10px;
     background-color: #ffffff;
+    z-index: 1000;
 }
 
 

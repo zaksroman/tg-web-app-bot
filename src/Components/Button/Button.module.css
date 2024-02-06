@@ -13,8 +13,6 @@
 /*/////////////////////////////////////*/
 
 .carouselitembtn {
-    background: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
     border: none;
     outline: none;
     cursor: pointer;
@@ -36,19 +34,16 @@
     border: 0;
     font-size: 150%;
     font-weight: 100;
-
     /* Inside Auto Layout */
     flex: none;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
     margin: auto auto 8px;
-
-
     border-radius: 8px;
-
     box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
     background: rgb(255, 255, 255);
+    color: black;
 }
 
 
