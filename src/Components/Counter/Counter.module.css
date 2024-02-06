@@ -1,156 +1,147 @@
-.bigproductitembtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 200px;
-    height: 110px;
-    position: sticky;
-    bottom: 15px;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0) /*var(--tg-theme-bg-color)*/;
-    padding: 5px;
-    margin-left: auto;
-}
 
-.bigproductitembtn .buttoncontainer {
+.bigproductitembtn {
+    /* Button */
+    /*bottom: 0;*/
+    /*right: 0;*/
+    /* Button */
+    /* Автолейаут */
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex-grow: initial;
-    background: #ffffff;
-    border-radius: 10px;
+    padding: 0.38rem 0.5rem 0.38rem 0.5rem;
+    /* Inside Auto Layout */
+    /*flex: none;*/
+    order: 1;
+    font-size: 120%;
+    font-weight: 100;
 }
 
-@media (prefers-color-scheme: dark) {
-    .bigproductitembtn .buttoncontainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-grow: initial;
-        background: #000000;
-        border-radius: 10px;
-    }
+.bigproductitembtn .containerBtn {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+    flex: 1 ;
+    background: rgb(238, 238, 238);
+    border-radius: 8px;
 }
 
 .bigproductitembtn .btn {
-    padding: unset;
-    /*border-color: var(--tg-theme-button-color);*/
-    border-radius: 10px;
-    border: none;
-    background: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
-    cursor: pointer;
-    width: 50px;
-    height: 40px;
-    flex-basis: auto;
-    font-size: 30px;
-    transition: transform 0.3s ease;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.bigproductitembtn .btn:active {
-    transform: scale(0.9);
-    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
     box-shadow: none;
+    color: rgb(0, 0, 0);
 }
 
 .bigproductitembtn .btn:first-child {
-    margin-right: 5px; /* Отступ справа для первой кнопки */
+    position: static;
+    width: 1.25rem;
+    height: 1.25rem;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*margin: 0rem 10rem;*/
 }
 
 .bigproductitembtn .btn:last-child {
-    margin-left: 5px; /* Отступ слева для второй кнопки */
+    /* Edit / Add_Plus */
+    position: static;
+    width: 1.25rem;
+    height: 1.25rem;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    /*margin: 0rem 10rem;*/
 }
 
 .bigproductitembtn .number {
-    padding-inline: 5px;
-    font-size: 16px;
+    /* 1 */
+    position: static;
+    width: 0.5rem;
+    height: 1.5rem;
+    /* Автолейаут */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    background-color: #ffffff;
-}
+    /*padding: 0.38rem 0.5rem 0.38rem 0.5rem;*/
 
-@media (prefers-color-scheme: dark) {
-    .bigproductitembtn .number {
-        padding-inline: 5px;
-        font-size: 16px;
-        color: #ffffff;
-        align-items: center;
-        background-color: #000000;
-    }
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    /*margin: 0rem 10rem;*/
+
+    color: rgb(0, 0, 0);
+    /*font-family: Inter;*/
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    /*text-align: left;*/
 }
 
 .basketButton {
-    width: 130px;
-    height: 100%;
-    border: 20px #212121;
-    border-radius: 10px;
-    background: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
-    margin: 10px;
-    font-size: 20px;
+
+    height: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    order: 2;
+
+    flex: none;
+    flex-grow: 1;
+
+    border-radius: 0.5rem;
+    border: 0;
+    background: rgb(58, 131, 241);
+
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.19rem;
+    letter-spacing: 0rem;
+    text-align: center;
 }
 
 /*/////////////////////////*/
 
 .basketitembtn {
-    display: flex;
-    align-items: center;
+    display: flex; /* элементы горизонтально в ряд */
+    flex-direction: row;
+    border-radius: 8px;
     justify-content: center;
-    width: 50%;
-    height: 30%;
-    position: sticky;
-    bottom: 0;
-    right: 0;
-    background-color: #ffffff;;
-    /*margin-bottom: 1em;*/
-    padding: 10px;
-    margin-top: auto; /* Прижатие к низу экрана */
-    margin-left: 0;
-    float: right;
+    background-color: #f2f2f2;/* серый фон для всего компонента */
+    /*padding: 10px;            !* отступы внутри компонента *!*/
+    box-sizing: border-box;   /* учитываем padding и border в ширине и высоте элементов */
+    width: fit-content;       /* ширина в соответствии с содержимым */
+    gap: 10px;                /* промежуток между элементами */
 }
 
-@media (prefers-color-scheme: dark) {
-    .basketitembtn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-        height: 30%;
-        position: sticky;
-        bottom: 0;
-        right: 0;
-        background: #212121;
-        /*margin-bottom: 1em;*/
-        padding: 10px;
-        margin-top: auto; /* Прижатие к низу экрана */
-        margin-left: 0;
-        float: right;
-    }
-}
-
-.basketitembtn .buttoncontainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
+.basketitembtn .containerBtn{
+    display: flex;           /* элементы горизонтально в ряд */
+    gap: 10px;               /* промежуток между кнопками */
+    flex-shrink: 0;          /* предотвращаем сжатие контейнера с кнопками */
 }
 
 .basketitembtn .btn {
-    padding: unset ;
-    /*border-color: var(--tg-theme-button-color);*/
-    border: none;
-    border-radius: 10px;
-    box-shadow: none;
-    background: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
-    cursor: pointer;
-    width: 50%;
-    height: 50%;
-    flex-basis: auto;
-    font-size: 30px;
-    transition: transform 0.3s ease;
-    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    /*padding: 5px 15px;       !* внутренние отступы *!*/
+    border: 0;
+    background-color: rgba(0,0,0,0);  /* цвет кнопок */
+    cursor: pointer;         /* указатель курсора */
+    flex-shrink: 0;          /* предотвращаем сжатие */
+    min-width: 20px;         /* минимальная ширина */
+    font-size: 1rem;
+    justify-content: center;
 }
 
 .basketitembtn .btn:active {
@@ -160,28 +151,94 @@
 }
 
 .basketitembtn .btn:disabled {
-    background-color: #aaaaaa;
+    background-color: #bbb8b8;
+    border-radius: 8px 0 0 8px;
 }
 
 .basketitembtn .btn:first-child {
-    margin-right: 10px; /* Отступ справа для первой кнопки */
 }
-
 .basketitembtn .btn:last-child {
-    margin-left: 10px; /* Отступ слева для второй кнопки */
 }
 
 .basketitembtn .number {
-    padding-inline: 10px;
-    font-size: 16px;
+    padding: 0;      /* внутренние отступы для числа */
+    border: 0;
+    background: none;
+    min-width: 10px;        /* минимальная ширина */
+    text-align: center;     /* текст по центру */
+    flex-shrink: 0;         /* предотвращаем сжатие текста */
 }
 
-@media (prefers-color-scheme: dark) {
-    .basketitembtn .number {
-        padding-inline: 10px;
-        font-size: 16px;
-        color: #ffffff;
-    }
+/**!///////////////////////////*/
+.productlistitembtn {
+    /* Button */
+    width: 85%;
+    height: 32px;
+     /*Автолейаут */
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 8px 6px 8px;
+    border: 0;
+    font-size: 120%;
+    font-weight: 100;
+    margin: auto auto 8px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+}
+
+.productlistitembtn .containerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+}
+
+.productlistitembtn .btn {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    box-shadow: none;
+    color: rgb(0, 0, 0);
+    margin: auto;
+}
+
+.productlistitembtn .btn:first-child {
+    position: static;
+    width: 20px;
+    height: 20px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.productlistitembtn .btn:last-child {
+    position: static;
+    width: 20px;
+    height: 20px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.productlistitembtn .number {
+    /* Удали свойства и добавь: */
+
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    order: 2;
+    margin: 0;
+    height: 100%;
+    font-size: 90%;
+    box-shadow: none;
 }
 
 /*///////////////////*/

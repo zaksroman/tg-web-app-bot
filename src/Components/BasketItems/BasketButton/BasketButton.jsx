@@ -5,13 +5,13 @@ import styles from './BasketButton.module.css'
 
 const BasketButton = () => {
     const navigate = useNavigate()
-    const addedItems = useSelector(state => state.addedItems);
+    const products = useSelector(state => state.products);
 
     const handleClick = () => {
         navigate('/basket');
     }
 
-    const totalPrice = addedItems.reduce((acc, item) => {
+    const totalPrice = products.reduce((acc, item) => {
         return acc += item.price * item.count
     }, 0)
 

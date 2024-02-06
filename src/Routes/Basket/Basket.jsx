@@ -3,10 +3,11 @@ import {useNavigate} from "react-router-dom";
 import BasketList from "../../Components/BasketItems/BasketList/BasketList";
 import {useTelegram} from "../../hooks/useTelegram";
 import {useSelector} from "react-redux";
-import Carousel from "../../Components/BasketItems/Carousel/Carousel";
+import styles from './Basket.module.css'
 
 const Basket = () => {
     const {tg} = useTelegram()
+    const products = useSelector(state => state.products);
     const addedItems = useSelector(state => state.addedItems);
     const navigate = useNavigate()
 
@@ -26,12 +27,8 @@ const Basket = () => {
         }
     },[handleClickBack])
 
-    const totalPrice = addedItems.reduce((acc, item) => {
+    const totalPrice = products.reduce((acc, item) => {
         return acc += item.price * item.count
-    }, 0)
-
-    const totalCount = addedItems.reduce((acc, item) => {
-        return acc += item.count
     }, 0)
 
     if (addedItems.length === 0) {
@@ -40,7 +37,10 @@ const Basket = () => {
         tg.MainButton.show()
         tg.MainButton.setParams({
             text:
-                `К оформлению ${totalCount} шт, ${totalPrice} ₽`
+                `К оформлению ${totalPrice} ₽`,
+            css: {
+                padding: "0 20px"
+            }
         })
     }
 
@@ -52,16 +52,12 @@ const Basket = () => {
     }, [handleClick])
 
     return (
-        <div>
-            {/*<button onClick={handleClick}>FORMtest</button>*/}
-            <h1>Корзина</h1>
-            {addedItems.length === 0 && <div>В корзине пусто</div>}
+        <div >
+            <h3 className={styles.h3}>Корзина</h3>
+                {addedItems.length === 0 && <div className={styles.emptybascet}>В корзине пусто</div>}
             <div>
                 <BasketList/>
             </div>
-            {/*<div>*/}
-            {/*    <Carousel/>*/}
-            {/*</div>*/}
         </div>
     );
 };

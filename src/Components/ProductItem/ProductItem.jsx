@@ -1,33 +1,55 @@
 import React from 'react';
 import styles from './ProductItem.module.css'
 import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import Counter from "../Counter/Counter";
+import Button from "../Button/Button";
 
-const ProductItem = (props) => {
+const ProductItem = ({product}) => {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const handleClick = (event) => {
         if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
-            navigate(`/bigproructitem/${props.product.id}`);
+            navigate(`/bigproructitem/${product._id}`);
         }
+    }
+
+    const onAddHandler = () => {
+        dispatch({ type: 'ADD_ITEM', payload: {...product, count: 1 }})
     }
 
     return (
         <div className={styles.productlistitem}
              onClick={handleClick}>
-            <div className={styles.annotation}>
+            <div>
                 <div className={styles.img}>
-                    <img src={props.product.img[0]} alt="test"/>
+                    <img src={''} alt="test"/>
+                </div>
+                <div className={styles.title}>
+                    <b>{product.title}</b>
                 </div>
                 <div className={styles.price}>
-                    <span><b>{props.product.price}</b> ₽</span>
+                    <span>{product.price} ₽</span>
                 </div>
             </div>
-                <div className={styles.title}>{props.product.title}</div>
-                <div className={styles.container}>
-                    <div className={styles.description}>
-                        {props.product.description}
-                    </div>
-                </div>
+
+
+            {!product.count && (
+                <Button
+                    type={'productItem'}
+                    onClick={onAddHandler}>
+                    +
+                </Button>
+            )}
+
+            {!!product.count && (
+                <Counter
+                    _id={product._id}
+                    count={product.count}
+                    type={'productlistItem'}
+                />
+            )}
         </div>
     );
 };

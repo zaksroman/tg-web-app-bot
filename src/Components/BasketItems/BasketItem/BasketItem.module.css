@@ -1,68 +1,81 @@
+.basketItem {
+    display: flex; /* Используем flexbox для удобного расположения элементов */
+    align-items: start; /* Вертикально выравниваем содержимое по центру */
+    width: 95%; /* Ширина компонента 95% от родительского элемента */
+    height: 170px; /* Фиксированная высота для всего компонента, можно изменить на нужное значение */
+    position: relative; /* Относительное позиционирование для размещения DeleteButton */
+    /* Автоматические отступы для центрирования по горизонтали */
+    margin: auto auto 10px;
+    padding-bottom: 10px;
+    border-bottom: 0.12rem solid rgb(221, 223, 227);
 
-.basketitem {
-    position: relative;
+}
+
+.productImage {
+    height: 100%; /* Высота изображения равна высоте родительского элемента */
+    width: 70%; /* Ширина изображения автоматически подстраивается под высоту */
+    object-fit: contain; /* Сохранение пропорций изображения при изменении размеров */
+
+    border-radius: 8px;
+}
+.productInfo {
+    display: flex;
+    width: 130%;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 100%
+}
+
+.productTitleContainer {
+    height: 100%;
+    width: 80%; /* Ширина области с информацией растягивается */
+    padding: 10px; /* Отступы справа и слева, чтобы текст не касался краев */
+    display: flex; /* Используем flexbox для организации внутреннего содержания */
+    flex-direction: column; /* Расположение дочерних элементов в колонку */
+
+}
+
+.productTitle {
+    font-size: 1.1em; /* Адекватный размер шрифта для названия */
+    font-weight: bold; /* Заголовок товара жирным */
+    margin: 0 0 0.5em;
+    text-align: left; /* Выравнивание текста по левому краю */
+    overflow: hidden;
+    white-space: normal; /* Перенос текста на другую строку */
+    text-overflow: ellipsis; /* Добавляем многоточие в конце обрезанного текста */
+    padding: 0;
+}
+
+.productBottomContainer {
+    margin-top: auto;
+    /*padding-top: 0;*/
     display: flex;
     align-items: center;
+    flex-shrink: 0; /* Запрещаем "сжатие" контейнера при нехватке места */
     justify-content: space-between;
-    padding: 10px;
-    margin: 10px;
-    font-size: 16px;
-    transition: transform 0.2s ease;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 7px 7px 20px #bebebe; /*,
-    -5px -5px 15px #ffffff;*/
-    min-height: 150px;
 }
 
-
-@media (prefers-color-scheme: dark) {
-    .basketitem {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        margin: 10px;
-        font-size: 16px;
-        transition: transform 0.2s ease;
-        border-radius: 10px;
-        background: #212121;
-        box-shadow: 7px 7px 20px rgb(25, 25, 25); /*,
-        -7px -7px 20px rgb(60, 60, 60);*/
-        min-height: 150px;
-    }
+.totalItemPrice {
+    /*width: 100%; !* Фиксируем ширину, чтобы текст не выходил за пределы *!*/
+    /*height: 100%;*/
+    /*font-size: 1.3em;*/
+    margin-top: auto;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    /*white-space: normal; !* Перенос текста на другую строку *!*/
+    /*overflow: hidden; !* Скрываем текст, выходящий за пределы элемента *!*/
+    /*text-overflow: ellipsis; !* Добавляем многоточие в конце обрезанного текста *!*/
+    /*!*text-align: center; !* Текст выравнивается по центру *!*!*/
+    /*text-align: initial;*/
 }
 
-/*.basketitem:active {*/
-/*    transform: scale(0.97);*/
-/*    outline: none;*/
-/*    box-shadow: none;*/
-/*}*/
-
-.basketitem .img {
-    background-color: #cccccc;
-    border-radius: 5px;
-    width: 150px; /* Или используйте фиксированный размер, например width: 300px; */
-    height: auto;
-    object-fit: contain; /* Это гарантирует, что изображение не будет искажено */
+.deleteButton {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Расстояние от верхнего края родительского элемента */
+    right: 10px; /* Расстояние от правого края родительского элемента */
 }
 
-.basketitem p {
-    /*width: 80%;*/
-    margin: 0;
-    font-size: 18px;
-    box-sizing: content-box;
-    display: inline-block;
-}
-
-.basketitem h3 {
-    margin: 0;
-    font-size: 25px;
-    box-sizing: content-box;
-    display: inline-block;
-}
-
-.basketitem .counter-wrapper {
-    display: flex;
+.counter {
+    margin-left: auto;
     align-items: center;
 }

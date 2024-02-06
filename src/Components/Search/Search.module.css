@@ -4,13 +4,15 @@
     position: sticky;
     top: 0;
     width: 95%;
-    padding-bottom: 8px;
+    padding: 10px 8px 15px;
     margin-left: auto;
     margin-right: auto;
+
     touch-action: pan-x pan-y;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
 }
 
 /* corrected .input styles */
@@ -24,6 +26,7 @@
     border-radius: 4px;
     box-sizing: border-box;
 
+
     /* Default (light theme) placeholder color */
     --placeholder-color: #aaa;
 }
@@ -34,14 +37,14 @@
 }
 
 /* Dark theme adaptation */
-@media (prefers-color-scheme: dark) {
-    .input {
-        background-color: #333;
-        border-color: #555;
-        color: #ddd;
-        --placeholder-color: #777;
-    }
-}
+/*@media (prefers-color-scheme: dark) {*/
+/*    .input {*/
+/*        background-color: #333;*/
+/*        border-color: #555;*/
+/*        color: #ddd;*/
+/*        --placeholder-color: #777;*/
+/*    }*/
+/*}*/
 
 /* Focus state for .input */
 .input:focus {

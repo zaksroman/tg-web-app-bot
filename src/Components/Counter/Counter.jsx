@@ -3,6 +3,7 @@ import styles from './Counter.module.css'
 import {useDispatch} from "react-redux";
 import clsx from "clsx";
 import {useNavigate} from "react-router-dom";
+import button from "../Button/Button";
 
 const Counter = (props) => {
 
@@ -17,36 +18,41 @@ const Counter = (props) => {
     const StylesCount = clsx({
         [styles.bigproductitembtn]: type === 'bigproductitem',
         [styles.basketitembtn]: type === 'basketitem',
+        [styles.productlistitembtn]: type === 'productlistItem',
     })
 
-    const onIncrease = (e) => {
-        dispatch({ type: 'INCREASE_ITEM', payload: props.id })
+    const onIncrease = () => {
+        dispatch({ type: 'INCREASE_ITEM', payload: props._id })
     }
 
-    const onDecrease = (e) => {
-        dispatch({ type: 'DECREASE_ITEM', payload: props.id })
+    const onDecrease = () => {
+        dispatch({ type: 'DECREASE_ITEM', payload: props._id })
     }
 
     return (
         <div className={StylesCount} onClick={(e)=> {e.stopPropagation()}}>
-            <div className={styles.buttoncontainer}>
+            <div className={styles.containerBtn}>
                 <button
                     onClick={onDecrease}
                     disabled={type === 'basketitem' ? props.count === 1 : false}
-                    className={`${styles.btn} ${StylesCount}`}>
+                    className={`${StylesCount} ${styles.btn}`}>
                     <b>-</b>
                 </button>
-                <h3 className={styles.number}>{props.count}
-                </h3>
+                <p className={`${StylesCount} ${styles.number}`}>
+                    {props.count}
+                </p>
                 <button
-                    onClick={onIncrease} className={`${styles.btn} ${StylesCount}`}><b>+</b></button>
+                    className={` ${StylesCount} ${styles.btn}`}
+                    onClick={onIncrease}>
+                    <b>+</b>
+                </button>
+                {type==='bigproductitem'
+                    && props.count !== 0
+                    && <button
+                        className={styles.basketButton}
+                        onClick={handleClick}
+                    >Корзина</button>}
             </div>
-            {type==='bigproductitem'
-                && props.count !== 0
-                && <button
-                    className={styles.basketButton}
-                    onClick={handleClick}
-                >Корзина</button>}
         </div>
     );
 };

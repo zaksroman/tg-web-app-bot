@@ -9,31 +9,41 @@ const BasketItem = (props) => {
     const navigate = useNavigate()
     const handleClick = (event) => {
         if (event.target.tagName !== 'BUTTON') {
-            navigate(`/bigproructitem/${props.product.id}`);
+            navigate(`/bigproructitem/${props.product._id}`);
         }
     }
+
     const totalItemPrice = props.product.price * props.product.count
     return (
-        <div className={styles.basketitem} onClick={handleClick}>
-            <div className={styles.img}>
-                <img src={props.product.img[0]} alt="test"/>
+        <div className={styles.basketItem} onClick={handleClick}>
+            <img src={''} alt="test" className={styles.productImage}/>
+
+            <div className={styles.productInfo}>
+                <div className={styles.productTitleContainer}>
+                    <p className={styles.productTitle}><b>{props.product.title}</b></p>
+                </div>
+
+                <div className={styles.productBottomContainer}>
+
+                    <h3 className={styles.totalItemPrice}>{totalItemPrice} ₽</h3>
+
+                    <div className={styles.counter}>
+                        <Counter
+                            _id={props.product._id}
+                            count={props.product.count}
+                            type={'basketitem'}
+                        />
+                    </div>
+                </div>
             </div>
-            <div>
-                <p><b>{props.product.title}</b></p>
-                    <h3>{totalItemPrice} ₽</h3>
-                    <Counter
-                        id={props.product.id}
-                        count={props.product.count}
-                        type={'basketitem'}
-                    />
-            </div>
-            <div>
+
                 <DeleteButton
-                    id={props.product.id}
+                    _id={props.product._id}
+                    className={styles.deleteButton}
                 />
-            </div>
         </div>
     );
+
 };
 
 export default BasketItem;

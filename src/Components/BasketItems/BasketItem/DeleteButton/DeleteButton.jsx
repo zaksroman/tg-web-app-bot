@@ -8,7 +8,7 @@ const DeleteButton = (props) => {
 
     const deleteHandler = (e) => {
         e.stopPropagation()
-        dispatch({ type: 'DELETE_ITEM', payload: props.id })
+        dispatch({ type: 'DELETE_ITEM', payload: props._id })
     }
 
     return (

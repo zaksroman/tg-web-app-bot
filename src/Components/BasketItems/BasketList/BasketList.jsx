@@ -4,14 +4,16 @@ import BasketItem from "../BasketItem/BasketItem";
 
 
 const BasketList = () => {
-    const addedItems = useSelector(state => state.addedItems);
+    const products = useSelector(state => state.products);
+    const chosenProducts = products.filter(item => item.count !== 0)
 
     return (
         <div>
             <div className={styles.basketlist}>
-                {addedItems.map(product => {
+                {chosenProducts.map(product => {
                     return (
                         <BasketItem
+                            key = {product._id}
                             product={product}
                             type={'basketitem'}
                         />

@@ -9,18 +9,18 @@ const CarouselItem = ({item}) => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
 
-    const prodCaracteristics = (id) => {
-        return products.find((product)=> product.id === id )
+    const prodCaracteristics = (_id) => {
+        return products.find((product)=> product._id === _id )
     }
 
     const handleClick = (event) => {
         if (event.target.tagName !== 'BUTTON' && event.target.tagName !== 'H3') {
-            navigate(`/bigproructitem/${item.id}`);
+            navigate(`/bigproructitem/${item._id}`);
         }
     }
 
     const onAddHandler = () => {
-        dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(item.id), count: 1 }})
+        dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(item._id), count: 1 }})
     }
 
     return (

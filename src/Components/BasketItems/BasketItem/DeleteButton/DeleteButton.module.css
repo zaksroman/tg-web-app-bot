@@ -1,10 +1,9 @@
 /* DeleteButton.module.css */
 .delButton {
     position: absolute; /* Позиционирование относительно basketitem */
-    top: 10px; /* Отступ сверху */
-    right: 10px; /* Отступ справа */
+    top: 1px; /* Отступ сверху */
+    right: 1px; /* Отступ справа */
     /* добавьте дополнительные стили, если нужно */
-    color: var(--tg-theme-text-color);
 }
 
 .delButton button {
@@ -23,13 +22,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px; /* Длина крестика */
+    width: 10px; /* Длина крестика */
     height: 2px; /* Толщина крестика */
-    background-color: var(--tg-theme-text-color);
+
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .delButton button::after {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-

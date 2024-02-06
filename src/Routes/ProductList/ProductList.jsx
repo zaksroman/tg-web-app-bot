@@ -5,13 +5,13 @@ import {useSelector} from "react-redux";
 import Search from "../../Components/Search/Search";
 import {useNavigate} from "react-router-dom";
 import {useTelegram} from "../../hooks/useTelegram";
-import BasketButton from "../../Components/BasketItems/BasketButton/BasketButton";
 
 const ProductList = () => {
     const {tg} = useTelegram()
-    const filteredProducts = useSelector(state => state.filteredProducts);
     const navigate = useNavigate();
     const addedItems = useSelector(state => state.addedItems);
+    const filter = useSelector(state => state.filter)
+    const products = useSelector(state => state.products)
 
     const handleClick = () => {
         navigate('/basket');
@@ -28,6 +28,32 @@ const ProductList = () => {
         }
     }, [handleClick])
 
+    const totalPrice = products.reduce((acc, item) => {
+        return acc += item.price * item.count
+    }, 0)
+
+    const totalCount = products.reduce((acc, item) => {
+        return acc += item.count
+    }, 0)
+
+    if (addedItems.length === 0) {
+        tg.MainButton.hide()
+    } else {
+        tg.MainButton.show()
+        tg.MainButton.setParams({
+            text:
+                `Корзина · ${totalCount}     ${totalPrice} ₽`,
+            css: {
+                padding: "0 20px"
+            }
+        })
+    }
+
+    const filteredProducts = products.filter((item) => {
+            return item.title.toLowerCase().startsWith(filter.toLowerCase())
+        })
+
+
     return (
         <div>
             {/*{<button onClick={handleClick}>Корзинаtest</button>}*/}
@@ -36,12 +62,12 @@ const ProductList = () => {
                     {filteredProducts.map(product => {
                         return (
                             <ProductItem
+                                key={product._id}
                                 product={product}
                                 type={'productlistitem'}
                             />
                         )})}
                 </div>
-            {addedItems.length !==0 && <div> <BasketButton/> </div>}
         </div>
     );
 };

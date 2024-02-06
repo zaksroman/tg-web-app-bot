@@ -9,9 +9,9 @@ import styles from './BigProductItem.module.css'
 const BigProductItem = () => {
     const {tg} = useTelegram()
     const products = useSelector(state => state.products)
-    const { id } = useParams()
+    const { _id } = useParams()
     const dispatch = useDispatch()
-    const count = useSelector(state => state.addedItems.find(el => el.id === id))?.count || 0
+    const count = useSelector(state => state.products.find(el => el._id === _id))?.count || 0
     const navigate = useNavigate()
     const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -20,12 +20,12 @@ const BigProductItem = () => {
         navigate(-1)
     }
 
-    const prodCaracteristics = (id) => {
-        return products.find((product)=> product.id === id )
+    const prodCaracteristics = (_id) => {
+        return products.find((product)=> product._id === _id)
     }
 
     const onAddHandler = () => {
-        dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(id), count: 1 }})
+        dispatch({ type: 'ADD_ITEM', payload: {...prodCaracteristics(_id), count: 1 }})
     }
 
     useEffect(() =>{
@@ -58,24 +58,28 @@ const BigProductItem = () => {
                 <Slider className={styles.slider}/>
             </div >
             <div>
-                <h2>{prodCaracteristics(id).title}</h2>
-                <h3>{prodCaracteristics(id).price} ₽</h3>
                 {isCollapsed ? (
-                    <p>{prodCaracteristics(id).description.substring(0, 100) + '...'}</p>
+                    <p>{prodCaracteristics(_id).description.substring(0, 100) + '...'}</p>
                 ) : (
-                    <p>{prodCaracteristics(id).description}</p>
+                    <p>{prodCaracteristics(_id).description}</p>
                 )}
                 <button className={`${styles.showHideButton} ${isCollapsed ? 'hidden' : ''}`} onClick={() => setIsCollapsed(!isCollapsed)}>
-                    {isCollapsed ? 'Показать полностью' : 'Свернуть'}
+                    {isCollapsed ? 'Показать все' : 'Свернуть'}
                 </button>
             </div>
 
-            {!!count && (
-                <Counter
-                    type={'bigproductitem'}
-                    id={id}
-                    count={count}
-                />)}
+            <div className={styles.bottom}>
+                <div className={styles.titlePrice}>
+                    <h3><>{prodCaracteristics(_id).title}</></h3>
+                    <p>{prodCaracteristics(_id).price} ₽</p>
+                </div>
+                {!!count && (
+                    <Counter
+                        type={'bigproductitem'}
+                        _id={_id}
+                        count={count}
+                    />)}
+            </div>
         </div>
     );
 };
