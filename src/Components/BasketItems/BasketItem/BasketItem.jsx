@@ -16,8 +16,7 @@ const BasketItem = (props) => {
     const totalItemPrice = props.product.price * props.product.count
     return (
         <div className={styles.basketItem} onClick={handleClick}>
-            <img src={''} alt="test" className={styles.productImage}/>
-
+            <img src={'https://appstorrent.ru/uploads/fotos/foto_90458.jpg'} alt="test" className={styles.productImage}/>
             <div className={styles.productInfo}>
                 <div className={styles.productTitleContainer}>
                     <p className={styles.productTitle}><b>{props.product.title}</b></p>
@@ -36,7 +35,6 @@ const BasketItem = (props) => {
                     </div>
                 </div>
             </div>
-
                 <DeleteButton
                     _id={props.product._id}
                     className={styles.deleteButton}
