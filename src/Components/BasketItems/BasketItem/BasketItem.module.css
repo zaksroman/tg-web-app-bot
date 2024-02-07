@@ -8,16 +8,16 @@
     margin: auto auto 10px;
     padding-bottom: 10px;
     border-bottom: 0.12rem solid rgb(221, 223, 227);
-
 }
 
 .productImage {
     height: 100%; /* Высота изображения равна высоте родительского элемента */
     width: 70%; /* Ширина изображения автоматически подстраивается под высоту */
     object-fit: contain; /* Сохранение пропорций изображения при изменении размеров */
-
     border-radius: 8px;
+    background-color: green;
 }
+
 .productInfo {
     display: flex;
     width: 130%;
@@ -36,7 +36,7 @@
 }
 
 .productTitle {
-    font-size: 1.1em; /* Адекватный размер шрифта для названия */
+    font-size: 110%; /* Адекватный размер шрифта для названия */
     font-weight: bold; /* Заголовок товара жирным */
     margin: 0 0 0.5em;
     text-align: left; /* Выравнивание текста по левому краю */
@@ -56,17 +56,9 @@
 }
 
 .totalItemPrice {
-    /*width: 100%; !* Фиксируем ширину, чтобы текст не выходил за пределы *!*/
-    /*height: 100%;*/
-    /*font-size: 1.3em;*/
     margin-top: auto;
     margin-left: 20px;
     margin-bottom: 10px;
-    /*white-space: normal; !* Перенос текста на другую строку *!*/
-    /*overflow: hidden; !* Скрываем текст, выходящий за пределы элемента *!*/
-    /*text-overflow: ellipsis; !* Добавляем многоточие в конце обрезанного текста *!*/
-    /*!*text-align: center; !* Текст выравнивается по центру *!*!*/
-    /*text-align: initial;*/
 }
 
 .deleteButton {

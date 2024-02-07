@@ -1,17 +1,10 @@
 
 .bigproductitembtn {
-    /* Button */
-    /*bottom: 0;*/
-    /*right: 0;*/
-    /* Button */
-    /* Автолейаут */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0.38rem 0.5rem 0.38rem 0.5rem;
-    /* Inside Auto Layout */
-    /*flex: none;*/
     order: 1;
     font-size: 120%;
     font-weight: 100;
@@ -43,73 +36,52 @@
     position: static;
     width: 1.25rem;
     height: 1.25rem;
-    /* Inside Auto Layout */
-    flex: none;
     order: 0;
     flex-grow: 0;
-    /*margin: 0rem 10rem;*/
 }
 
 .bigproductitembtn .btn:last-child {
-    /* Edit / Add_Plus */
     position: static;
     width: 1.25rem;
     height: 1.25rem;
-    /* Inside Auto Layout */
-    flex: none;
     order: 2;
     flex-grow: 0;
-    /*margin: 0rem 10rem;*/
 }
 
 .bigproductitembtn .number {
-    /* 1 */
     position: static;
     width: 0.5rem;
     height: 1.5rem;
-    /* Автолейаут */
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    /*padding: 0.38rem 0.5rem 0.38rem 0.5rem;*/
-
-
-    /* Inside Auto Layout */
-    flex: none;
     order: 1;
     flex-grow: 0;
-    /*margin: 0rem 10rem;*/
-
     color: rgb(0, 0, 0);
-    /*font-family: Inter;*/
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5rem;
-    letter-spacing: 0rem;
+    letter-spacing: 0;
     /*text-align: left;*/
 }
 
 .basketButton {
-
     height: 3rem;
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     order: 2;
-
     flex: none;
     flex-grow: 1;
-
     border-radius: 0.5rem;
     border: 0;
     background: rgb(58, 131, 241);
-
     color: rgb(255, 255, 255);
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.19rem;
-    letter-spacing: 0rem;
+    letter-spacing: 0;
     text-align: center;
 }
 
@@ -138,10 +110,11 @@
     /*padding: 5px 15px;       !* внутренние отступы *!*/
     border: 0;
     background-color: rgba(0,0,0,0);  /* цвет кнопок */
+    color: black;
     cursor: pointer;         /* указатель курсора */
     flex-shrink: 0;          /* предотвращаем сжатие */
-    min-width: 20px;         /* минимальная ширина */
-    font-size: 1rem;
+    min-width: 40px;         /* минимальная ширина */
+    font-size: 1.5rem;
     justify-content: center;
 }
 
@@ -184,7 +157,7 @@
     font-weight: 100;
     margin: auto auto 8px;
     border-radius: 8px;
-    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
     background: rgb(255, 255, 255);
 }
 
@@ -214,7 +187,7 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
 .productlistitembtn .btn:last-child {
@@ -225,7 +198,7 @@
     flex: none;
     order: 3;
     flex-grow: 0;
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
 .productlistitembtn .number {
