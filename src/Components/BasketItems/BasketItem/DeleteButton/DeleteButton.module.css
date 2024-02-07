@@ -4,7 +4,7 @@
     top: 1px; /* Отступ сверху */
     right: 1px; /* Отступ справа */
     /* добавьте дополнительные стили, если нужно */
-    z-index: 1000;
+
 }
 
 .delButton button {
@@ -23,6 +23,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    background-color: black;
     width: 10px; /* Длина крестика */
     height: 2px; /* Толщина крестика */
 

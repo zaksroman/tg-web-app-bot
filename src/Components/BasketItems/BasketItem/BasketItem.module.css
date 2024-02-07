@@ -14,7 +14,7 @@
     width: 70%; /* Ширина изображения автоматически подстраивается под высоту */
     object-fit: contain; /* Сохранение пропорций изображения при изменении размеров */
     border-radius: 8px;
-    background-color: green;
+
 }
 
 .productInfo {
