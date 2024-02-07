@@ -23,8 +23,8 @@ const ProductItem = ({product}) => {
         <div className={styles.productlistitem}
              onClick={handleClick}>
             <div>
-                <div className={styles.img}>
-                    <img src={'https://i.pinimg.com/564x/ab/54/ae/ab54ae7e83cdfd75aaf1a501d825d29b.jpg'} alt="test"/>
+                <div className={styles.imgConteiner}>
+                    <img src={'https://i.pinimg.com/564x/ab/54/ae/ab54ae7e83cdfd75aaf1a501d825d29b.jpg'} alt="test" className={styles.imgConteiner}/>
                 </div>
                 <div className={styles.title}>
                     <b>{product.title}</b>
