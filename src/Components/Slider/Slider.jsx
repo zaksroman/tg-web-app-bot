@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import styles from './Slider.module.css'
 
 const Slider = () => {
-    const photos = ['https://appstorrent.ru/uploads/fotos/foto_90458.jpg', 'https://sun9-69.userapi.com/s/v1/ig2/gcOWJCE0-Ev3SVdrgkmyR-WuWIzpgljePQGjmaX0oq_vFTt-K-sOOUjoEdLf-VQurGL7XqheFlc_fhQMTc1PQGtV.jpg?size=200x200&quality=95&crop=0,0,841,841&ava=1', 'https://cosplay2.ru/files/453/logo.png?preview&size=537x'];
+    const photos = ['https://i.pinimg.com/564x/ab/54/ae/ab54ae7e83cdfd75aaf1a501d825d29b.jpg','https://appstorrent.ru/uploads/fotos/foto_90458.jpg', 'https://sun9-69.userapi.com/s/v1/ig2/gcOWJCE0-Ev3SVdrgkmyR-WuWIzpgljePQGjmaX0oq_vFTt-K-sOOUjoEdLf-VQurGL7XqheFlc_fhQMTc1PQGtV.jpg?size=200x200&quality=95&crop=0,0,841,841&ava=1', 'https://cosplay2.ru/files/453/logo.png?preview&size=537x'];
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const handleSwipeLeft = () => {
