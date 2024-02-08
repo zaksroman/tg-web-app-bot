@@ -21,16 +21,7 @@
     width: 70%; /* Ширина изображения автоматически подстраивается под высоту */
     object-fit: contain; /* Сохранение пропорций изображения при изменении размеров */
     border-radius: 8px;
-    /*width: 100%;*/
-    /*!*padding-bottom: 133%; *!*/
-    /*background: rgb(245, 244, 242);*/
-    /*padding: 2px;*/
-    /*border-radius: 10px;*/
-    /*height: auto;*/
-    /*align-items: center;*/
-    /*text-align: center;*/
     justify-content: center;
-    /*object-fit: contain;*/
     overflow: hidden;
 }
 

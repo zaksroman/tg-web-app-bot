@@ -46,13 +46,17 @@ const Counter = (props) => {
                     onClick={onIncrease}>
                     <b>+</b>
                 </button>
-                {type==='bigproductitem'
-                    && props.count !== 0
-                    && <button
-                        className={styles.basketButton}
-                        onClick={handleClick}
-                    >Корзина</button>}
             </div>
+
+            <div className={styles.containerBasketButton}>
+            {type==='bigproductitem'
+                && props.count !== 0
+                && <button
+                    className={styles.basketButton}
+                    onClick={handleClick}
+                >Корзина</button>}
+            </div>
+
         </div>
     );
 };

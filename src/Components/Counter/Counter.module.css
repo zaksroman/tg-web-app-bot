@@ -1,17 +1,18 @@
 
 .bigproductitembtn {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding: 0.38rem 0.5rem 0.38rem 0.5rem;
+    padding: 2%;
     order: 1;
     font-size: 120%;
     font-weight: 100;
+    width: 90%
 }
 
 .bigproductitembtn .containerBtn {
-    width: 200%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,38 +24,34 @@
 }
 
 .bigproductitembtn .btn {
+    height: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 0;
     box-shadow: none;
     color: rgb(0, 0, 0);
+    margin: 5px;
     background-color: rgba(0,0,0,0)
 }
 
 .bigproductitembtn .btn:first-child {
     position: static;
-    width: 1.25rem;
-    height: 1.25rem;
     order: 0;
-    flex-grow: 0;
 }
 
 .bigproductitembtn .btn:last-child {
     position: static;
-    width: 1.25rem;
-    height: 1.25rem;
     order: 2;
-    flex-grow: 0;
 }
 
 .bigproductitembtn .number {
     position: static;
-    width: 0.5rem;
     height: 1.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     order: 1;
     flex-grow: 0;
@@ -65,15 +62,20 @@
     letter-spacing: 0;
     /*text-align: left;*/
 }
+.containerBasketButton {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
 
 .basketButton {
-    height: 3rem;
-    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+    justify-content: center;
     align-items: center;
     padding: 0.75rem 1.5rem 0.75rem 1.5rem;
-    order: 2;
-    flex: none;
-    flex-grow: 1;
+    order: 3;
     border-radius: 0.5rem;
     border: 0;
     background: rgb(58, 131, 241);
