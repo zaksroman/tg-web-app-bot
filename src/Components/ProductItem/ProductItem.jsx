@@ -24,7 +24,7 @@ const ProductItem = ({product}) => {
              onClick={handleClick}>
             <div>
                 <div className={styles.imgConteiner}>
-                    <img src={'https://i.pinimg.com/564x/ab/54/ae/ab54ae7e83cdfd75aaf1a501d825d29b.jpg'}
+                    <img src={`/api/uploads/${product.images[0]}`}
                          alt="sorry"
                          className={styles.imgConteiner}/>
                 </div>
