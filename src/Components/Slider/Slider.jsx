@@ -3,7 +3,11 @@ import React, {useState} from 'react';
 import styles from './Slider.module.css'
 
 const Slider = ({product}) => {
-    const photos = product.images.map(imageName => `/api/uploads/${imageName}`)
+    const photos = [
+        'https://baon.ru/public/shopcatalog-resize/card/baon/B1722512/WHITE/FRONT.jpg',
+        'https://baon.ru/public/shopcatalog-resize/card/baon/B1722528/ARGANNUT/1.jpg'
+    ]
+    // const photos = product.images.map(imageName => `/api/uploads/${imageName}`)
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const handleSwipeLeft = () => {

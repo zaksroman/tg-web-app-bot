@@ -1,9 +1,9 @@
 import { createStore } from 'redux';
-// import products from "./Products";
+import products from "./Products";
 
 const initialState = {
     addedItems: [],
-    products: [],
+    products/*: []*/,
     filter: ''
 }
 

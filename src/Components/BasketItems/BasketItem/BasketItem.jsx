@@ -16,7 +16,7 @@ const BasketItem = (props) => {
     const totalItemPrice = props.product.price * props.product.count
     return (
         <div className={styles.basketItem} onClick={handleClick}>
-            <img src={`/api/uploads/${props.product.images[0]}`} alt="test" className={styles.productImage}/>
+            <img src={'https://baon.ru/public/shopcatalog-resize/card/baon/B1722512/WHITE/FRONT.jpg'} alt="test" className={styles.productImage}/> {/*///`/api/uploads/${props.product.images[0]}`*/}
             <div className={styles.productInfo}>
                 <div className={styles.productTitleContainer}>
                     <p className={styles.productTitle}><b>{props.product.title}</b></p>
