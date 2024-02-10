@@ -55,7 +55,7 @@ const BigProductItem = () => {
         <div className={styles.container}>
             {/*{<button onClick={onAddHandler}> корзинаtest</button>}*/}
             <div className={styles.sliderContainer}>
-                <Slider className={styles.slider}/>
+                <Slider className={styles.slider} _id={_id}/>
             </div >
             <div>
                 {isCollapsed ? (
