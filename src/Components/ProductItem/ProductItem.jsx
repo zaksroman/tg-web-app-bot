@@ -36,7 +36,6 @@ const ProductItem = ({product}) => {
                 </div>
             </div>
 
-
             {!product.count && (
                 <Button
                     type={'productItem'}
