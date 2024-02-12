@@ -24,7 +24,7 @@ const ProductItem = ({product}) => {
              onClick={handleClick}>
             <div>
                 <div className={styles.imgConteiner}>
-                    <img src={`https://baon.ru/public/shopcatalog-resize/card/baon/B1722512/WHITE/FRONT.jpg`} ///api/uploads/${product.images[0]}
+                    <img src={`https://cdn-ru.bitrix24.ru/b5909725/landing/b9b/b9bd86928228ab172f0f8bbc40af4247/IMG_1261_1x.jpg`} ///api/uploads/${product.images[0]}
                          alt="sorry"
                          className={styles.imgConteiner}/>
                 </div>
