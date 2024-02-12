@@ -32,7 +32,7 @@ const ProductItem = ({product}) => {
                     <b>{product.title}</b>
                 </div>
                 <div className={styles.price}>
-                    <span>{product.price} ₽</span>
+                    <span></span>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@ const ProductItem = ({product}) => {
                 <Button
                     type={'productItem'}
                     onClick={onAddHandler}>
-                    +
+                    {product.price} ₽
                 </Button>
             )}
 
