@@ -1,13 +1,14 @@
 import {useSwipeable} from 'react-swipeable';
 import React, {useState} from 'react';
 import styles from './Slider.module.css'
+import {imgDataApi} from "../../Variables";
 
 const Slider = ({product}) => {
-    const photos = [
-        'https://cdn-ru.bitrix24.ru/b5909725/landing/b9b/b9bd86928228ab172f0f8bbc40af4247/IMG_1261_1x.jpg',
-        'https://cdn-ru.bitrix24.ru/b5909725/landing/cc2/cc2149a4307557e61eab2c43cfb1dca1/IMG_1302_1x.jpg'
-    ]
-    // const photos = product.images.map(imageName => `/api/uploads/${imageName}`)
+    // const photos = [
+    //     'https://cdn-ru.bitrix24.ru/b5909725/landing/b9b/b9bd86928228ab172f0f8bbc40af4247/IMG_1261_1x.jpg',
+    //     'https://cdn-ru.bitrix24.ru/b5909725/landing/cc2/cc2149a4307557e61eab2c43cfb1dca1/IMG_1302_1x.jpg'
+    // ]
+    const photos = product.images.map(imageName => imgDataApi + imageName + '.jpg')
     const [currentSlide, setCurrentSlide] = useState(0)
 
     const handleSwipeLeft = () => {

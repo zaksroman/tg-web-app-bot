@@ -7,21 +7,22 @@ import BigProductItem from "./Routes/BigItem/BigProductItem";
 import Basket from "./Routes/Basket/Basket";
 import PersonalData from "./Routes/PersaanalData/PersonalData";
 import {useDispatch} from "react-redux";
+import {getDataApi} from "./Variables";
 
 function App() {
     const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     (async () => {
-    //         try {
-    //             const response = await fetch('/api/getProducts');
-    //             const data = await response.json();
-    //             dispatch({ type: 'SET_PRODUCTS', payload: data});
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     })();
-    // }, []);
+    useEffect(() => {
+        (async () => {
+            try {
+                const response = await fetch(getDataApi);
+                const data = await response.json();
+                dispatch({ type: 'SET_PRODUCTS', payload: data});
+            } catch (error) {
+                console.log(error);
+            }
+        })();
+    }, []);
 
 
   const {tg} = useTelegram()

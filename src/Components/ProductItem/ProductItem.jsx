@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import Counter from "../Counter/Counter";
 import Button from "../Button/Button";
+import {imgDataApi} from "../../Variables";
 
 const ProductItem = ({product}) => {
     const navigate = useNavigate()
@@ -24,7 +25,7 @@ const ProductItem = ({product}) => {
              onClick={handleClick}>
             <div>
                 <div className={styles.imgConteiner}>
-                    <img src={`https://cdn-ru.bitrix24.ru/b5909725/landing/b9b/b9bd86928228ab172f0f8bbc40af4247/IMG_1261_1x.jpg`} ///api/uploads/${product.images[0]}
+                    <img src={imgDataApi + product.images[0] + '.jpg'} ///api/uploads/${product.images[0]}
                          alt="sorry"
                          className={styles.imgConteiner}/>
                 </div>
